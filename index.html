@@ -1,0 +1,783 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10243a">
+<meta name="description" content="Mogatek Consulting - Procurement, supply chain, industrial operations and process improvement consulting.">
+<title>Mogatek Consulting | Industrial Excellence</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --navy: #10243a;
+  --blue: #1675c5;
+  --light-blue: #eaf4fc;
+  --text: #25364a;
+  --muted: #718096;
+  --white: #ffffff;
+  --bg: #f7f9fc;
+  --border: #e5ebf2;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Inter', 'Heebo', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.7;
+}
+
+body[dir="rtl"] { font-family: 'Heebo', sans-serif; }
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+header {
+  background: rgba(255,255,255,.96);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+}
+
+.nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 800;
+  color: var(--navy);
+  letter-spacing: -1px;
+}
+
+.logo span { color: var(--blue); }
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.nav-links a:hover { color: var(--blue); }
+
+.lang-btn {
+  background: var(--light-blue);
+  color: var(--navy);
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.hero {
+  position: relative;
+  min-height: 590px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(9,27,47,.94), rgba(13,43,70,.78)),
+    url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=2000&q=85')
+    center/cover no-repeat;
+}
+
+.hero-content {
+  max-width: 760px;
+  padding: 100px 0;
+}
+
+.eyebrow {
+  color: #75c4ff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 5.5vw, 65px);
+  line-height: 1.12;
+  letter-spacing: -2px;
+  margin-bottom: 25px;
+  font-weight: 800;
+}
+
+.hero h1 span { color: #65b9f5; }
+
+.hero p {
+  font-size: 18px;
+  color: #d5e1ed;
+  max-width: 640px;
+  margin-bottom: 35px;
+}
+
+.buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 25px;
+  border-radius: 7px;
+  font-weight: 700;
+  font-size: 14px;
+  transition: .2s;
+}
+
+.btn-primary {
+  background: var(--blue);
+  color: white;
+}
+
+.btn-primary:hover { background: #0e61a6; transform: translateY(-2px); }
+
+.btn-outline {
+  border: 1px solid rgba(255,255,255,.65);
+  color: white;
+}
+
+.btn-outline:hover { background: white; color: var(--navy); }
+
+section { padding: 90px 0; }
+
+.section-title {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.section-title .eyebrow {
+  color: var(--blue);
+  margin-bottom: 10px;
+}
+
+.section-title h2 {
+  color: var(--navy);
+  font-size: clamp(29px, 4vw, 40px);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
+.section-title p { color: var(--muted); font-size: 16px; }
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-text h2 {
+  color: var(--navy);
+  font-size: 36px;
+  line-height: 1.25;
+  margin-bottom: 22px;
+}
+
+.about-text p {
+  color: var(--muted);
+  margin-bottom: 18px;
+}
+
+.about-panel {
+  background: var(--navy);
+  color: white;
+  padding: 42px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-panel:after {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border: 35px solid rgba(50,145,220,.15);
+  border-radius: 50%;
+  bottom: -100px;
+  right: -80px;
+}
+
+.about-panel h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.about-panel p {
+  color: #d1deea;
+  font-size: 15px;
+  margin-bottom: 13px;
+}
+
+.services { background: var(--bg); }
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.service-card {
+  background: white;
+  padding: 30px;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  transition: .25s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  border-color: #a7d3f4;
+  box-shadow: 0 12px 30px rgba(20,50,80,.07);
+}
+
+.service-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 10px;
+  background: var(--light-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 22px;
+}
+
+.service-card h3 {
+  color: var(--navy);
+  font-size: 19px;
+  margin-bottom: 12px;
+}
+
+.service-card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.approach-item {
+  border-top: 3px solid var(--blue);
+  padding: 25px 20px;
+  background: var(--bg);
+  border-radius: 0 0 9px 9px;
+}
+
+.approach-number {
+  color: var(--blue);
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+
+.approach-item h3 {
+  color: var(--navy);
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.approach-item p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.cta {
+  background: linear-gradient(120deg, #10243a, #174c78);
+  color: white;
+  text-align: center;
+}
+
+.cta h2 {
+  font-size: clamp(30px, 4vw, 42px);
+  margin-bottom: 18px;
+}
+
+.cta p {
+  color: #d4e3f0;
+  margin-bottom: 30px;
+}
+
+.contact {
+  background: var(--bg);
+}
+
+.contact-box {
+  max-width: 700px;
+  margin: auto;
+  background: white;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 38px;
+  text-align: center;
+}
+
+.contact-box h3 {
+  font-size: 25px;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.contact-box p {
+  color: var(--muted);
+  margin-bottom: 25px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+footer {
+  background: #0b1b2c;
+  color: #b8c7d7;
+  padding: 30px 0;
+  font-size: 13px;
+  text-align: center;
+}
+
+footer strong { color: white; }
+
+[dir="rtl"] .hero h1,
+[dir="rtl"] .about-text,
+[dir="rtl"] .about-panel,
+[dir="rtl"] .service-card,
+[dir="rtl"] .approach-item {
+  text-align: right;
+}
+
+[dir="rtl"] .about-panel:after {
+  right: auto;
+  left: -80px;
+}
+
+@media(max-width:850px) {
+  .nav-links { gap: 12px; font-size: 12px; }
+  .about-grid { grid-template-columns: 1fr; gap: 35px; }
+  .services-grid { grid-template-columns: repeat(2,1fr); }
+  .approach-grid { grid-template-columns: repeat(2,1fr); }
+}
+
+@media(max-width:600px) {
+  .nav { flex-wrap: wrap; padding: 14px 0; }
+  .nav-links { order: 3; width: 100%; justify-content: space-between; }
+  .hero { min-height: 550px; }
+  .hero h1 { letter-spacing: -1px; }
+  .hero p { font-size: 16px; }
+  section { padding: 65px 0; }
+  .services-grid, .approach-grid { grid-template-columns: 1fr; }
+  .contact-box { padding: 25px 18px; }
+}
+</style>
+</head>
+
+<body dir="ltr">
+
+<header>
+  <div class="container nav">
+    <a href="#" class="logo">MOGA<span>TEK</span></a>
+
+    <nav class="nav-links">
+      <a href="#about" data-en="About" data-he="אודות">About</a>
+      <a href="#services" data-en="Services" data-he="שירותים">Services</a>
+      <a href="#approach" data-en="Our Approach" data-he="שיטת העבודה">Our Approach</a>
+      <a href="#contact" data-en="Contact" data-he="יצירת קשר">Contact</a>
+    </nav>
+
+    <button class="lang-btn" onclick="toggleLanguage()" id="languageBtn">עברית</button>
+  </div>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow"
+        data-en="Industrial Consulting & Management"
+        data-he="ייעוץ וניהול לתעשייה">
+        Industrial Consulting & Management
+      </div>
+
+      <h1
+        data-en-html="Turning Industrial Challenges<br>Into <span>Business Results.</span>"
+        data-he-html="הופכים אתגרי תעשייה<br>ל<span>תוצאות עסקיות.</span>">
+        Turning Industrial Challenges<br>Into <span>Business Results.</span>
+      </h1>
+
+      <p
+        data-en="Practical management solutions in procurement, supply chain, production and industrial operations. Helping businesses improve performance, reduce costs and build stronger processes."
+        data-he="פתרונות ניהול מעשיים בתחומי הרכש, שרשרת האספקה, הייצור והתפעול התעשייתי. מסייעים לארגונים לשפר ביצועים, להפחית עלויות ולבנות תהליכים יעילים יותר.">
+        Practical management solutions in procurement, supply chain, production and industrial operations.
+      </p>
+
+      <div class="buttons">
+        <a href="#contact" class="btn btn-primary"
+          data-en="Let's Talk"
+          data-he="בואו נדבר">Let's Talk</a>
+
+        <a href="#services" class="btn btn-outline"
+          data-en="Explore Services"
+          data-he="הכירו את השירותים">Explore Services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-text">
+      <div class="eyebrow"
+        data-en="About Mogatek"
+        data-he="אודות Mogatek">About Mogatek</div>
+
+      <h2
+        data-en="Management Experience. Industrial Thinking. Measurable Results."
+        data-he="ניסיון ניהולי. חשיבה תעשייתית. תוצאות מדידות.">
+        Management Experience. Industrial Thinking. Measurable Results.
+      </h2>
+
+      <p
+        data-en="Mogatek Consulting provides professional management and operational support to industrial companies and growing businesses."
+        data-he="Mogatek Consulting מספקת שירותי ניהול, ייעוץ וליווי תפעולי לחברות תעשייתיות ולעסקים בצמיחה.">
+        Mogatek Consulting provides professional management and operational support to industrial companies and growing businesses.
+      </p>
+
+      <p
+        data-en="Our approach combines hands-on management experience with engineering, analytical thinking and a deep understanding of industrial processes."
+        data-he="הגישה שלנו משלבת ניסיון ניהולי מעשי עם חשיבה הנדסית ואנליטית והבנה מעמיקה של תהליכים תעשייתיים.">
+        Our approach combines hands-on management experience with engineering and analytical thinking.
+      </p>
+
+      <p
+        data-en="We focus on practical solutions that create real business value — from strategic planning to daily operational execution."
+        data-he="אנחנו מתמקדים בפתרונות מעשיים שמייצרים ערך עסקי אמיתי — מתכנון אסטרטגי ועד לביצוע תפעולי יומיומי.">
+        We focus on practical solutions that create real business value.
+      </p>
+    </div>
+
+    <div class="about-panel">
+      <h3
+        data-en="Beyond Consulting"
+        data-he="מעבר לייעוץ">
+        Beyond Consulting
+      </h3>
+
+      <p
+        data-en="We believe effective consulting is not just about recommendations. It is about taking responsibility, implementing solutions and achieving measurable improvements."
+        data-he="אנחנו מאמינים שייעוץ אפקטיבי אינו מסתכם בהמלצות. הוא דורש לקיחת אחריות, הטמעת פתרונות והשגת שיפורים מדידים.">
+        We believe effective consulting is not just about recommendations.
+      </p>
+
+      <p
+        data-en="Your operational partner — from identifying challenges to delivering results."
+        data-he="השותף התפעולי שלכם — מזיהוי האתגרים ועד להשגת התוצאות.">
+        Your operational partner — from identifying challenges to delivering results.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow"
+        data-en="What We Do"
+        data-he="תחומי הפעילות">What We Do</div>
+
+      <h2
+        data-en="Integrated Industrial Solutions"
+        data-he="פתרונות משולבים לתעשייה">
+        Integrated Industrial Solutions
+      </h2>
+
+      <p
+        data-en="Professional support across the core functions that drive industrial performance."
+        data-he="ליווי מקצועי בתחומי הליבה שמניעים את הביצועים של ארגונים תעשייתיים.">
+        Professional support across the core functions that drive industrial performance.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-icon">📦</div>
+        <h3 data-en="Procurement Management" data-he="ניהול רכש">
+          Procurement Management
+        </h3>
+        <p
+          data-en="Procurement strategy, sourcing, supplier management, negotiations, cost reduction and purchasing process optimization."
+          data-he="אסטרטגיית רכש, איתור ספקים, ניהול ספקים, משא ומתן, הפחתת עלויות ושיפור תהליכי רכש.">
+          Procurement strategy, sourcing, supplier management and cost reduction.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🔗</div>
+        <h3 data-en="Supply Chain Management" data-he="ניהול שרשרת אספקה">
+          Supply Chain Management
+        </h3>
+        <p
+          data-en="End-to-end supply chain improvement, logistics, inventory management, planning and supplier performance."
+          data-he="שיפור שרשרת האספקה, לוגיסטיקה, ניהול מלאי, תכנון ובקרת ביצועי ספקים.">
+          End-to-end supply chain improvement and logistics.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🏭</div>
+        <h3 data-en="Industrial Operations" data-he="ניהול תפעול תעשייתי">
+          Industrial Operations
+        </h3>
+        <p
+          data-en="Operational management, production planning, workflow optimization and performance improvement."
+          data-he="ניהול תפעולי, תכנון ייצור, אופטימיזציה של זרימות עבודה ושיפור ביצועים.">
+          Operational management and production planning.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">⚙️</div>
+        <h3 data-en="Process Improvement" data-he="שיפור תהליכים">
+          Process Improvement
+        </h3>
+        <p
+          data-en="Lean management, process analysis, KPI development, bottleneck identification and continuous improvement."
+          data-he="ניהול רזה, ניתוח תהליכים, פיתוח מדדי KPI, זיהוי צווארי בקבוק ושיפור מתמיד.">
+          Lean management, KPI development and continuous improvement.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🛠️</div>
+        <h3 data-en="Maintenance & Infrastructure" data-he="אחזקה ותשתיות">
+          Maintenance & Infrastructure
+        </h3>
+        <p
+          data-en="Maintenance strategy, equipment management, infrastructure projects and operational reliability."
+          data-he="אסטרטגיית אחזקה, ניהול ציוד, פרויקטי תשתיות ושיפור אמינות תפעולית.">
+          Maintenance strategy and infrastructure projects.
+        </p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-icon">🤝</div>
+        <h3 data-en="Outsourced Management" data-he="ניהול במיקור חוץ">
+          Outsourced Management
+        </h3>
+        <p
+          data-en="Ongoing professional management services for businesses that need expertise, execution and operational support."
+          data-he="שירותי ניהול מקצועיים ומתמשכים לעסקים הזקוקים למומחיות, ביצוע וליווי תפעולי.">
+          Ongoing professional management services.
+        </p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="approach">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow"
+        data-en="How We Work"
+        data-he="שיטת העבודה">How We Work</div>
+
+      <h2
+        data-en="From Analysis to Results"
+        data-he="מאבחון ועד לתוצאות">
+        From Analysis to Results
+      </h2>
+
+      <p
+        data-en="A structured approach that connects business objectives with practical execution."
+        data-he="תהליך עבודה מובנה המחבר בין יעדים עסקיים לבין ביצוע מעשי.">
+        A structured approach that connects business objectives with practical execution.
+      </p>
+    </div>
+
+    <div class="approach-grid">
+
+      <div class="approach-item">
+        <div class="approach-number">01</div>
+        <h3 data-en="Understand" data-he="הבנת המצב">Understand</h3>
+        <p data-en="Learn the business, identify challenges and understand operational needs."
+           data-he="היכרות עם העסק, זיהוי אתגרים והבנת הצרכים התפעוליים.">
+           Learn the business and identify challenges.
+        </p>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-number">02</div>
+        <h3 data-en="Analyze" data-he="ניתוח ואבחון">Analyze</h3>
+        <p data-en="Evaluate processes, data, costs, risks and improvement opportunities."
+           data-he="בחינת תהליכים, נתונים, עלויות, סיכונים והזדמנויות לשיפור.">
+           Evaluate processes and improvement opportunities.
+        </p>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-number">03</div>
+        <h3 data-en="Implement" data-he="הטמעה וביצוע">Implement</h3>
+        <p data-en="Build solutions and work with the organization to implement them."
+           data-he="בניית פתרונות ועבודה משותפת עם הארגון להטמעתם.">
+           Build solutions and implement them.
+        </p>
+      </div>
+
+      <div class="approach-item">
+        <div class="approach-number">04</div>
+        <h3 data-en="Improve" data-he="מדידה ושיפור">Improve</h3>
+        <p data-en="Measure performance, track results and continuously improve."
+           data-he="מדידת ביצועים, מעקב אחר תוצאות ושיפור מתמיד.">
+           Measure performance and continuously improve.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <h2
+      data-en="Let's Improve Your Business Performance"
+      data-he="בואו נשפר יחד את הביצועים העסקיים שלכם">
+      Let's Improve Your Business Performance
+    </h2>
+
+    <p
+      data-en="Looking for a professional partner to improve procurement, operations or supply chain performance?"
+      data-he="מחפשים שותף מקצועי לשיפור הרכש, התפעול או שרשרת האספקה?">
+      Looking for a professional partner?
+    </p>
+
+    <a href="#contact" class="btn btn-primary"
+      data-en="Contact Us"
+      data-he="צרו קשר">
+      Contact Us
+    </a>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-title">
+      <div class="eyebrow"
+        data-en="Get In Touch"
+        data-he="יצירת קשר">Get In Touch</div>
+
+      <h2
+        data-en="Start a Conversation"
+        data-he="בואו נתחיל בשיחה">
+        Start a Conversation
+      </h2>
+
+      <p
+        data-en="Tell us about your business challenges and let's explore how we can help."
+        data-he="ספרו לנו על האתגרים העסקיים שלכם ונבדוק כיצד נוכל לעזור.">
+        Tell us about your business challenges.
+      </p>
+    </div>
+
+    <div class="contact-box">
+      <h3
+        data-en="Mogatek Consulting"
+        data-he="Mogatek Consulting">
+        Mogatek Consulting
+      </h3>
+
+      <p
+        data-en="Professional management and consulting for industry."
+        data-he="ייעוץ וניהול מקצועי לתעשייה.">
+        Professional management and consulting for industry.
+      </p>
+
+      <div class="contact-actions">
+        <a class="btn btn-primary" id="emailLink"
+           href="mailto:YOUR_EMAIL@example.com"
+           data-en="Send an Email"
+           data-he="שלחו לנו מייל">
+          Send an Email
+        </a>
+
+        <a class="btn" id="whatsappLink"
+           href="https://wa.me/972XXXXXXXXX"
+           target="_blank" rel="noopener"
+           style="background:#e8f7ef;color:#187c4b"
+           data-en="WhatsApp"
+           data-he="WhatsApp">
+          WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <strong>MOGATEK CONSULTING</strong>
+    <p>© <span id="year"></span> Mogatek Consulting. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+let currentLanguage = "en";
+
+function toggleLanguage() {
+  currentLanguage = currentLanguage === "en" ? "he" : "en";
+
+  document.documentElement.lang = currentLanguage;
+  document.body.dir = currentLanguage === "he" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en]").forEach(element => {
+    element.textContent = element.getAttribute("data-" + currentLanguage);
+  });
+
+  document.querySelectorAll("[data-en-html]").forEach(element => {
+    element.innerHTML = element.getAttribute("data-" + currentLanguage + "-html");
+  });
+
+  document.getElementById("languageBtn").textContent =
+    currentLanguage === "en" ? "עברית" : "English";
+}
+
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
