@@ -6,6 +6,7 @@
 <meta name="theme-color" content="#173b67">
 <meta name="description" content="Mogatek Consulting - ליווי ניהולי מתמשך, שיפור תהליכים ותמיכה מקצועית למחלקות רכש, אחזקה ומשאבי אנוש.">
 <title>Mogatek Consulting | Management & Industrial Support</title>
+<link rel="icon" href="favicon.ico">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -20,7 +21,6 @@
   --yellow:#ffd166;
   --text:#26384d;
   --muted:#718096;
-  --white:#fff;
   --bg:#f5f8fc;
   --border:#e5edf5;
   --shadow:0 16px 42px rgba(30,65,105,.11);
@@ -71,6 +71,7 @@ header {
   top:0;
   z-index:100;
   backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
 }
 
 .nav {
@@ -654,11 +655,6 @@ section {
   width:100%;
 }
 
-.email-btn {
-  background:#eaf2ff;
-  color:#225eaa;
-}
-
 .whatsapp-btn {
   background:#e3f8ed;
   color:#16834b;
@@ -732,26 +728,27 @@ footer p {
 
 /* Animations */
 
-.reveal {
+/* Progressive enhancement: hidden only when JS is active */
+html.js .reveal {
   opacity:0;
   transform:translateY(28px);
   transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
 }
 
-.reveal.visible {
+html.js .reveal.visible {
   opacity:1;
   transform:translateY(0);
 }
 
-.reveal-left {
+html.js .reveal-left {
   transform:translateX(35px);
 }
 
-[dir=ltr] .reveal-left {
+html.js [dir=ltr] .reveal-left {
   transform:translateX(-35px);
 }
 
-.reveal-left.visible {
+html.js .reveal-left.visible {
   transform:translateX(0);
 }
 
@@ -931,7 +928,7 @@ footer p {
     transition-duration:.01ms!important;
   }
 
-  .reveal {
+  html.js .reveal {
     opacity:1;
     transform:none;
   }
@@ -946,7 +943,7 @@ footer p {
 
     <a href="#top" class="logo">MOGA<span>TEK</span></a>
 
-    <nav class="nav-links" id="navLinks">
+    <nav class="nav-links" id="navLinks" aria-label="ניווט ראשי">
       <a href="#about" data-en="About" data-he="אודות">אודות</a>
       <a href="#services" data-en="Services" data-he="שירותים">שירותים</a>
       <a href="#approach" data-en="Our Approach" data-he="שיטת העבודה">שיטת העבודה</a>
@@ -955,7 +952,7 @@ footer p {
 
     <div class="nav-actions">
       <button class="lang-btn" onclick="toggleLanguage()" id="languageBtn">English</button>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">☰</button>
     </div>
 
   </div>
@@ -966,7 +963,7 @@ footer p {
 <!-- Hero -->
 
 <section class="hero">
-  <div class="hero-orb"></div>
+  <div class="hero-orb" aria-hidden="true"></div>
 
   <div class="container">
     <div class="hero-content">
@@ -1089,7 +1086,7 @@ footer p {
     <div class="services-grid">
 
       <article class="service-card reveal">
-        <div class="service-icon">🎯</div>
+        <div class="service-icon" aria-hidden="true">🎯</div>
         <h3 data-en="Executive & Management Support" data-he="ליווי מנהלים">ליווי מנהלים</h3>
         <p
           data-en="Ongoing personal support for managers, including structured work plans, goal setting, performance monitoring, decision-making and practical implementation."
@@ -1099,7 +1096,7 @@ footer p {
       </article>
 
       <article class="service-card reveal">
-        <div class="service-icon">🚀</div>
+        <div class="service-icon" aria-hidden="true">🚀</div>
         <h3 data-en="New Role Transition" data-he="ליווי מנהלים בכניסה לתפקיד">ליווי מנהלים בכניסה לתפקיד</h3>
         <p
           data-en="Focused support for managers entering new positions. Understanding the organization, mapping challenges, setting priorities and building a practical 90-day work plan."
@@ -1109,7 +1106,7 @@ footer p {
       </article>
 
       <article class="service-card reveal">
-        <div class="service-icon">⚙️</div>
+        <div class="service-icon" aria-hidden="true">⚙️</div>
         <h3 data-en="Maintenance Department Support" data-he="ליווי מחלקות אחזקה">ליווי מחלקות אחזקה</h3>
         <p
           data-en="Improving maintenance management, work planning, preventive maintenance, equipment reliability, maintenance budgets and operational performance."
@@ -1119,7 +1116,7 @@ footer p {
       </article>
 
       <article class="service-card reveal">
-        <div class="service-icon">👥</div>
+        <div class="service-icon" aria-hidden="true">👥</div>
         <h3 data-en="Human Resources Department Support" data-he="ליווי מחלקות משאבי אנוש">ליווי מחלקות משאבי אנוש</h3>
         <p
           data-en="Organizational process improvement, workforce planning, management routines, performance indicators and operational support for HR teams."
@@ -1129,7 +1126,7 @@ footer p {
       </article>
 
       <article class="service-card reveal">
-        <div class="service-icon">📦</div>
+        <div class="service-icon" aria-hidden="true">📦</div>
         <h3 data-en="Procurement Department Support" data-he="ליווי מחלקות רכש">ליווי מחלקות רכש</h3>
         <p
           data-en="Procurement strategy, supplier management, sourcing, negotiations, cost reduction, purchasing processes and team performance."
@@ -1139,7 +1136,7 @@ footer p {
       </article>
 
       <article class="service-card reveal">
-        <div class="service-icon">📊</div>
+        <div class="service-icon" aria-hidden="true">📊</div>
         <h3 data-en="Business & Process Improvement" data-he="שיפור תהליכים וביצועים עסקיים">שיפור תהליכים וביצועים עסקיים</h3>
         <p
           data-en="Identifying organizational gaps, optimizing workflows, developing KPIs, improving productivity and implementing measurable improvements."
@@ -1276,15 +1273,20 @@ footer p {
         </p>
 
         <div class="contact-detail">
-          <span>✉️</span>
-          <a href="mailto:IZHAKTOASHI@GMAIL.COM">IZHAKTOASHI@GMAIL.COM</a>
+          <span aria-hidden="true">✉️</span>
+          <a href="mailto:izhaktoashi@gmail.com">izhaktoashi@gmail.com</a>
         </div>
 
         <div class="contact-detail">
-          <span>💬</span>
+          <span aria-hidden="true">💬</span>
           <a href="https://wa.me/972545363347" target="_blank" rel="noopener noreferrer">
             +972 54-536-3347
           </a>
+        </div>
+
+        <div class="contact-detail">
+          <span aria-hidden="true">📞</span>
+          <a href="tel:+972545363347">+972 54-536-3347</a>
         </div>
 
         <a class="btn whatsapp-btn"
@@ -1299,8 +1301,9 @@ footer p {
       </aside>
 
       <form class="contact-form reveal"
-        action="https://formsubmit.co/IZHAKTOASHI@GMAIL.COM"
-        method="POST">
+        action="https://formsubmit.co/izhaktoashi@gmail.com"
+        method="POST"
+        accept-charset="UTF-8">
 
         <input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek Consulting">
         <input type="hidden" name="_template" value="table">
@@ -1389,6 +1392,9 @@ footer p {
 <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 
 <script>
+/* Enable JS-dependent styles */
+document.documentElement.classList.add('js');
+
 let currentLanguage = 'he';
 
 function toggleLanguage() {
@@ -1428,6 +1434,18 @@ function toggleLanguage() {
   document.getElementById('menuToggle').setAttribute(
     'aria-label',
     currentLanguage === 'he' ? 'פתיחת תפריט' : 'Open menu'
+  );
+
+  /* Update page title and meta description */
+  document.title = currentLanguage === 'he'
+    ? 'Mogatek Consulting | Management & Industrial Support'
+    : 'Mogatek Consulting | Management & Industrial Support';
+
+  document.querySelector('meta[name="description"]').setAttribute(
+    'content',
+    currentLanguage === 'he'
+      ? 'Mogatek Consulting - ליווי ניהולי מתמשך, שיפור תהליכים ותמיכה מקצועית למחלקות רכש, אחזקה ומשאבי אנוש.'
+      : 'Mogatek Consulting - Ongoing management support, process improvement and professional support for procurement, maintenance and HR departments.'
   );
 }
 
