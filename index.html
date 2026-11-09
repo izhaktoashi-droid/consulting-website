@@ -1,1113 +1,200 @@
-<!DOCTYPE html>
-<html lang="he" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173b67">
+/* =========================
+   ADVANCED ANIMATIONS
+========================= */
 
-<meta name="description" content="Mogatek Consulting - ליווי ניהולי מתמשך, שיפור תהליכים ותמיכה מקצועית למחלקות רכש, אחזקה ומשאבי אנוש.">
-
-<title>Mogatek Consulting | Management & Industrial Support</title>
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-<style>
-:root {
-  --navy: #173b67;
-  --blue: #2878d0;
-  --turquoise: #16b8aa;
-  --orange: #ff9852;
-  --purple: #8170db;
-  --yellow: #ffd166;
-
-  --text: #26384d;
-  --muted: #718096;
-  --white: #ffffff;
-  --bg: #f5f8fc;
-  --border: #e5edf5;
-
-  --shadow: 0 12px 35px rgba(30,65,105,.09);
+@keyframes gradientMove{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+.hero{
+  background-size:200% 200%;
+  animation:gradientMove 15s ease infinite;
 }
 
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
+.reveal{
+  opacity:0;
+  transform:translateY(60px);
+  transition:
+    opacity .9s ease,
+    transform .9s ease;
 }
 
-body {
-  font-family: 'Heebo', 'Inter', sans-serif;
-  color: var(--text);
-  background: white;
-  line-height: 1.75;
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
 }
 
-body[dir="ltr"] {
-  font-family: 'Inter', 'Heebo', sans-serif;
+.service-card,
+.approach-item,
+.about-panel,
+.contact-box{
+  transform-style:preserve-3d;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+.service-card:hover,
+.approach-item:hover{
+  transform:translateY(-10px);
 }
 
-button {
-  font-family: inherit;
+/* Floating particles */
+
+.particles{
+  position:absolute;
+  inset:0;
+  overflow:hidden;
+  pointer-events:none;
 }
 
-.container {
-  width: min(1160px, 90%);
-  margin: auto;
+.particles span{
+  position:absolute;
+  display:block;
+  border-radius:50%;
+  background:rgba(255,255,255,.15);
+  bottom:-150px;
+  animation:floatParticle linear infinite;
 }
 
-/* NAVIGATION */
-
-header {
-  background: rgba(255,255,255,.96);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(12px);
+.particles span:nth-child(1){
+  left:10%;
+  width:12px;
+  height:12px;
+  animation-duration:15s;
 }
 
-.nav {
-  min-height: 78px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 25px;
+.particles span:nth-child(2){
+  left:25%;
+  width:25px;
+  height:25px;
+  animation-duration:22s;
 }
 
-.logo {
-  font-size: 27px;
-  font-weight: 800;
-  color: var(--navy);
-  letter-spacing: -1px;
+.particles span:nth-child(3){
+  left:45%;
+  width:18px;
+  height:18px;
+  animation-duration:17s;
 }
 
-.logo span {
-  color: var(--turquoise);
+.particles span:nth-child(4){
+  left:65%;
+  width:30px;
+  height:30px;
+  animation-duration:20s;
 }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 600;
+.particles span:nth-child(5){
+  left:85%;
+  width:14px;
+  height:14px;
+  animation-duration:18s;
 }
 
-.nav-links a {
-  transition: .2s;
+.particles span:nth-child(6){
+  left:95%;
+  width:22px;
+  height:22px;
+  animation-duration:25s;
 }
 
-.nav-links a:hover {
-  color: var(--turquoise);
+@keyframes floatParticle {
+
+  0%{
+    transform:
+      translateY(0)
+      rotate(0deg);
+    opacity:0;
+  }
+
+  10%{
+    opacity:1;
+  }
+
+  100%{
+    transform:
+      translateY(-120vh)
+      rotate(360deg);
+    opacity:0;
+  }
 }
 
-.lang-btn {
-  background: #e7f7f5;
-  color: #087e76;
-  border: 1px solid #c7eeea;
-  border-radius: 30px;
-  padding: 9px 18px;
-  cursor: pointer;
-  font-weight: 800;
-  font-size: 13px;
-  transition: .2s;
+/* Shine buttons */
+
+.btn-primary{
+  position:relative;
+  overflow:hidden;
 }
 
-.lang-btn:hover {
-  background: var(--turquoise);
-  color: white;
-}
-
-/* HERO */
-
-.hero {
-  position: relative;
-  min-height: 620px;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  color: white;
+.btn-primary::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:70%;
+  height:100%;
+  transform:skewX(-25deg);
 
   background:
-    radial-gradient(circle at 85% 15%, rgba(255,152,82,.35), transparent 27%),
-    radial-gradient(circle at 15% 85%, rgba(22,184,170,.30), transparent 30%),
-    linear-gradient(120deg, #173b67 0%, #205c91 55%, #2878a7 100%);
+  linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.5),
+      transparent
+  );
 }
 
-.hero:before {
-  content: "";
-  position: absolute;
-  width: 480px;
-  height: 480px;
-  border: 75px solid rgba(255,255,255,.055);
-  border-radius: 50%;
-  top: -230px;
-  right: -100px;
+.btn-primary:hover::before{
+  animation:shine .8s ease;
 }
 
-.hero:after {
-  content: "";
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  border: 50px solid rgba(255,209,102,.12);
-  border-radius: 50%;
-  bottom: -190px;
-  left: 8%;
-}
-
-.hero-content {
-  max-width: 780px;
-  padding: 100px 0;
-  position: relative;
-  z-index: 2;
-}
-
-.eyebrow {
-  color: var(--turquoise);
-  font-size: 13px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  margin-bottom: 17px;
-}
-
-.hero .eyebrow {
-  color: var(--yellow);
-}
-
-.hero h1 {
-  font-size: clamp(39px, 5.5vw, 66px);
-  line-height: 1.18;
-  margin-bottom: 25px;
-  font-weight: 800;
-  letter-spacing: -1.5px;
-}
-
-.hero h1 span {
-  color: var(--yellow);
-}
-
-.hero p {
-  font-size: 18px;
-  color: #e4eff9;
-  max-width: 680px;
-  margin-bottom: 35px;
-}
-
-.buttons {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 13px 26px;
-  border-radius: 30px;
-  font-weight: 800;
-  font-size: 14px;
-  transition: .25s;
-  cursor: pointer;
-  border: none;
-}
-
-.btn-primary {
-  background: var(--orange);
-  color: #173b67;
-  box-shadow: 0 7px 20px rgba(255,152,82,.2);
-}
-
-.btn-primary:hover {
-  background: var(--yellow);
-  transform: translateY(-3px);
-}
-
-.btn-outline {
-  border: 1px solid rgba(255,255,255,.7);
-  color: white;
-  background: transparent;
-}
-
-.btn-outline:hover {
-  background: white;
-  color: var(--navy);
-}
-
-/* GENERAL SECTIONS */
-
-section {
-  padding: 90px 0;
-}
-
-.section-title {
-  text-align: center;
-  max-width: 750px;
-  margin: 0 auto 52px;
-}
-
-.section-title .eyebrow {
-  margin-bottom: 10px;
-}
-
-.section-title h2 {
-  color: var(--navy);
-  font-size: clamp(29px, 4vw, 41px);
-  line-height: 1.3;
-  margin-bottom: 15px;
-}
-
-.section-title p {
-  color: var(--muted);
-  font-size: 16px;
-}
-
-/* ABOUT */
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1.1fr .9fr;
-  gap: 65px;
-  align-items: center;
-}
-
-.about-text h2 {
-  color: var(--navy);
-  font-size: clamp(30px, 4vw, 39px);
-  line-height: 1.3;
-  margin-bottom: 22px;
-}
-
-.about-text p {
-  color: var(--muted);
-  margin-bottom: 17px;
-  font-size: 16px;
-}
-
-.about-panel {
-  background:
-    radial-gradient(circle at 100% 0%, rgba(255,152,82,.35), transparent 35%),
-    linear-gradient(140deg, #173b67, #2878a7);
-  color: white;
-  padding: 43px;
-  border-radius: 22px;
-  position: relative;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-}
-
-.about-panel h3 {
-  font-size: 26px;
-  margin-bottom: 18px;
-  color: var(--yellow);
-}
-
-.about-panel p {
-  color: #e2edf7;
-  font-size: 15px;
-  margin-bottom: 15px;
-}
-
-.about-highlight {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 8px 15px;
-  border-radius: 30px;
-  background: rgba(255,255,255,.13);
-  color: white;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-/* SERVICES */
-
-.services {
-  background:
-    radial-gradient(circle at 5% 10%, rgba(22,184,170,.07), transparent 25%),
-    radial-gradient(circle at 95% 90%, rgba(129,112,219,.07), transparent 25%),
-    var(--bg);
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 23px;
-}
-
-.service-card {
-  background: white;
-  padding: 30px;
-  border: 1px solid var(--border);
-  border-radius: 17px;
-  transition: .25s;
-  box-shadow: 0 5px 18px rgba(30,65,105,.035);
-}
-
-.service-card:hover {
-  transform: translateY(-7px);
-  box-shadow: var(--shadow);
-  border-color: #c4ddec;
-}
-
-.service-icon {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 27px;
-  margin-bottom: 22px;
-}
-
-.service-card:nth-child(4n+1) .service-icon {
-  background: #e4f5f3;
-}
-
-.service-card:nth-child(4n+2) .service-icon {
-  background: #fff0e5;
-}
-
-.service-card:nth-child(4n+3) .service-icon {
-  background: #eeeaff;
-}
-
-.service-card:nth-child(4n) .service-icon {
-  background: #fff5d9;
-}
-
-.service-card h3 {
-  color: var(--navy);
-  font-size: 19px;
-  line-height: 1.4;
-  margin-bottom: 12px;
-}
-
-.service-card p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* APPROACH */
-
-.approach-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.approach-item {
-  padding: 27px 22px;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 15px;
-  box-shadow: 0 5px 18px rgba(30,65,105,.04);
-  transition: .2s;
-}
-
-.approach-item:hover {
-  transform: translateY(-4px);
-}
-
-.approach-item:nth-child(1) {
-  border-top: 4px solid var(--turquoise);
-}
-
-.approach-item:nth-child(2) {
-  border-top: 4px solid var(--orange);
-}
-
-.approach-item:nth-child(3) {
-  border-top: 4px solid var(--purple);
-}
-
-.approach-item:nth-child(4) {
-  border-top: 4px solid var(--blue);
-}
-
-.approach-number {
-  color: var(--blue);
-  font-size: 32px;
-  font-weight: 800;
-  margin-bottom: 12px;
-}
-
-.approach-item h3 {
-  color: var(--navy);
-  font-size: 18px;
-  margin-bottom: 9px;
-}
-
-.approach-item p {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-/* CTA */
-
-.cta {
-  background:
-    radial-gradient(circle at 90% 10%, rgba(255,152,82,.28), transparent 28%),
-    linear-gradient(120deg, #173b67, #2878a7);
-  color: white;
-  text-align: center;
-}
-
-.cta h2 {
-  font-size: clamp(29px, 4vw, 43px);
-  margin-bottom: 18px;
-}
-
-.cta p {
-  color: #e1edf7;
-  margin: 0 auto 30px;
-  max-width: 700px;
-}
-
-/* CONTACT */
-
-.contact {
-  background: #f5f8fc;
-}
-
-.contact-box {
-  max-width: 760px;
-  margin: auto;
-  background: white;
-  border: 1px solid var(--border);
-  border-radius: 22px;
-  padding: 42px;
-  text-align: center;
-  box-shadow: var(--shadow);
-}
-
-.contact-box h3 {
-  font-size: 27px;
-  color: var(--navy);
-  margin-bottom: 10px;
-}
-
-.contact-box p {
-  color: var(--muted);
-  margin-bottom: 27px;
-}
-
-.contact-actions {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.email-btn {
-  background: #eaf2ff;
-  color: #225eaa;
-}
-
-.email-btn:hover {
-  background: #d8e8ff;
-  transform: translateY(-2px);
-}
-
-.whatsapp-btn {
-  background: #e3f8ed;
-  color: #16834b;
-}
-
-.whatsapp-btn:hover {
-  background: #c9f1dc;
-  transform: translateY(-2px);
-}
-
-/* FOOTER */
-
-footer {
-  background: #122d4b;
-  color: #c8d8e8;
-  padding: 32px 0;
-  font-size: 13px;
-  text-align: center;
-}
-
-footer strong {
-  color: white;
-  font-size: 16px;
-  letter-spacing: .5px;
-}
-
-footer p {
-  margin-top: 7px;
-}
-
-/* RTL */
-
-[dir="rtl"] .hero-content,
-[dir="rtl"] .about-text,
-[dir="rtl"] .about-panel,
-[dir="rtl"] .service-card,
-[dir="rtl"] .approach-item {
-  text-align: right;
-}
-
-[dir="ltr"] .hero-content,
-[dir="ltr"] .about-text,
-[dir="ltr"] .about-panel,
-[dir="ltr"] .service-card,
-[dir="ltr"] .approach-item {
-  text-align: left;
-}
-
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 35px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .approach-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .nav-links {
-    gap: 15px;
+@keyframes shine{
+  100%{
+     left:150%;
   }
 }
 
-@media (max-width: 600px) {
-  .nav {
-    flex-wrap: wrap;
-    padding: 13px 0;
-    gap: 12px;
-  }
+/* Stats */
 
-  .logo {
-    font-size: 24px;
-  }
-
-  .nav-links {
-    order: 3;
-    width: 100%;
-    justify-content: space-between;
-    gap: 8px;
-    font-size: 12px;
-  }
-
-  .hero {
-    min-height: 570px;
-  }
-
-  .hero-content {
-    padding: 75px 0;
-  }
-
-  .hero h1 {
-    font-size: 39px;
-    letter-spacing: -.7px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  section {
-    padding: 65px 0;
-  }
-
-  .services-grid,
-  .approach-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .about-panel {
-    padding: 30px 25px;
-  }
-
-  .contact-box {
-    padding: 30px 20px;
-  }
-
-  .btn {
-    padding: 12px 20px;
-  }
+.stats{
+  background:white;
+  padding:80px 0;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    transition-duration: .01ms !important;
-  }
-}
-</style>
-</head>
-
-<body dir="rtl">
-
-<header>
-  <div class="container nav">
-
-    <a href="#" class="logo">MOGA<span>TEK</span></a>
-
-    <nav class="nav-links">
-      <a href="#about" data-en="About" data-he="אודות">אודות</a>
-      <a href="#services" data-en="Services" data-he="שירותים">שירותים</a>
-      <a href="#approach" data-en="Our Approach" data-he="שיטת העבודה">שיטת העבודה</a>
-      <a href="#contact" data-en="Contact" data-he="יצירת קשר">יצירת קשר</a>
-    </nav>
-
-    <button class="lang-btn" onclick="toggleLanguage()" id="languageBtn">
-      English
-    </button>
-
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-
-<section class="hero">
-  <div class="container">
-    <div class="hero-content">
-
-      <div class="eyebrow"
-        data-en="Industrial Consulting & Management"
-        data-he="ייעוץ וליווי ניהולי לתעשייה">
-        ייעוץ וליווי ניהולי לתעשייה
-      </div>
-
-      <h1
-        data-en-html="Professional Management Support<br>Driving <span>Real Results.</span>"
-        data-he-html="ליווי ניהולי מקצועי<br>שמייצר <span>תוצאות אמיתיות.</span>">
-        ליווי ניהולי מקצועי<br>שמייצר <span>תוצאות אמיתיות.</span>
-      </h1>
-
-      <p
-        data-en="We provide ongoing, hands-on management support for businesses, managers and professional departments. From entering a new role to building structured work plans and delivering measurable operational improvements."
-        data-he="אנחנו מספקים ליווי ניהולי צמוד ומתמשך לעסקים, למנהלים ולמחלקות מקצועיות. מכניסה לתפקיד חדש ועד לבניית תוכניות עבודה סדורות, שיפור תהליכים והשגת תוצאות מדידות.">
-        אנחנו מספקים ליווי ניהולי צמוד ומתמשך לעסקים, למנהלים ולמחלקות מקצועיות. מכניסה לתפקיד חדש ועד לבניית תוכניות עבודה סדורות, שיפור תהליכים והשגת תוצאות מדידות.
-      </p>
-
-      <div class="buttons">
-        <a href="#contact" class="btn btn-primary"
-          data-en="Let's Talk"
-          data-he="בואו נדבר">
-          בואו נדבר
-        </a>
-
-        <a href="#services" class="btn btn-outline"
-          data-en="Explore Services"
-          data-he="הכירו את השירותים">
-          הכירו את השירותים
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-  <div class="container about-grid">
-
-    <div class="about-text">
-
-      <div class="eyebrow"
-        data-en="About Mogatek"
-        data-he="אודות Mogatek">
-        אודות Mogatek
-      </div>
-
-      <h2
-        data-en="Management Experience. Industrial Thinking. Measurable Results."
-        data-he="ניסיון ניהולי. חשיבה תעשייתית. תוצאות מדידות.">
-        ניסיון ניהולי. חשיבה תעשייתית. תוצאות מדידות.
-      </h2>
-
-      <p
-        data-en="Mogatek Consulting provides professional management and operational support to industrial companies and growing businesses."
-        data-he="Mogatek Consulting מספקת שירותי ניהול, ייעוץ וליווי תפעולי לחברות תעשייתיות ולעסקים בצמיחה.">
-        Mogatek Consulting מספקת שירותי ניהול, ייעוץ וליווי תפעולי לחברות תעשייתיות ולעסקים בצמיחה.
-      </p>
-
-      <p
-        data-en="Our approach combines hands-on management experience with engineering, analytical thinking and a deep understanding of industrial processes."
-        data-he="הגישה שלנו משלבת ניסיון ניהולי מעשי עם חשיבה הנדסית ואנליטית והבנה מעמיקה של תהליכים תעשייתיים.">
-        הגישה שלנו משלבת ניסיון ניהולי מעשי עם חשיבה הנדסית ואנליטית והבנה מעמיקה של תהליכים תעשייתיים.
-      </p>
-
-      <p
-        data-en="We focus on practical solutions that create real business value — from strategic planning to daily operational execution."
-        data-he="אנחנו מתמקדים בפתרונות מעשיים שמייצרים ערך עסקי אמיתי — מתכנון אסטרטגי ועד לביצוע תפעולי יומיומי.">
-        אנחנו מתמקדים בפתרונות מעשיים שמייצרים ערך עסקי אמיתי — מתכנון אסטרטגי ועד לביצוע תפעולי יומיומי.
-      </p>
-
-    </div>
-
-    <div class="about-panel">
-
-      <h3
-        data-en="Beyond Consulting"
-        data-he="מעבר לייעוץ">
-        מעבר לייעוץ
-      </h3>
-
-      <p
-        data-en="Effective consulting is not just about recommendations. It is about working alongside management, taking responsibility, implementing solutions and achieving measurable improvements."
-        data-he="ייעוץ אפקטיבי אינו מסתכם בהמלצות. הוא דורש עבודה לצד ההנהלה, לקיחת אחריות, הטמעת פתרונות והשגת שיפורים מדידים.">
-        ייעוץ אפקטיבי אינו מסתכם בהמלצות. הוא דורש עבודה לצד ההנהלה, לקיחת אחריות, הטמעת פתרונות והשגת שיפורים מדידים.
-      </p>
-
-      <p
-        data-en="We aim to become your ongoing professional partner — helping turn plans into action and challenges into results."
-        data-he="המטרה שלנו היא להיות השותף המקצועי שלכם לאורך זמן — להפוך תוכניות לעשייה ואתגרים לתוצאות.">
-        המטרה שלנו היא להיות השותף המקצועי שלכם לאורך זמן — להפוך תוכניות לעשייה ואתגרים לתוצאות.
-      </p>
-
-      <span class="about-highlight"
-        data-en="Practical. Focused. Results-driven."
-        data-he="מעשי. ממוקד. מכוון תוצאות.">
-        מעשי. ממוקד. מכוון תוצאות.
-      </span>
-
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-
-<section id="services" class="services">
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="eyebrow"
-        data-en="Our Expertise"
-        data-he="תחומי ההתמחות שלנו">
-        תחומי ההתמחות שלנו
-      </div>
-
-      <h2
-        data-en="Management Support & Professional Services"
-        data-he="ליווי מנהלים ושירותים מקצועיים">
-        ליווי מנהלים ושירותים מקצועיים
-      </h2>
-
-      <p
-        data-en="Practical, ongoing support for managers and professional departments, built around structured work plans and measurable results."
-        data-he="ליווי מעשי ומתמשך למנהלים ולמחלקות מקצועיות, המבוסס על תוכניות עבודה סדורות ותוצאות מדידות.">
-        ליווי מעשי ומתמשך למנהלים ולמחלקות מקצועיות, המבוסס על תוכניות עבודה סדורות ותוצאות מדידות.
-      </p>
-
-    </div>
-
-    <div class="services-grid">
-
-      <article class="service-card">
-        <div class="service-icon">🎯</div>
-        <h3 data-en="Executive & Management Support"
-            data-he="ליווי מנהלים">
-          ליווי מנהלים
-        </h3>
-        <p
-          data-en="Ongoing personal support for managers, including structured work plans, goal setting, performance monitoring, decision-making and practical implementation."
-          data-he="ליווי אישי ומתמשך למנהלים, הכולל בניית תוכנית עבודה סדורה, הגדרת יעדים, מעקב אחר ביצועים, קבלת החלטות והטמעת תהליכים.">
-          ליווי אישי ומתמשך למנהלים, הכולל בניית תוכנית עבודה סדורה, הגדרת יעדים, מעקב אחר ביצועים, קבלת החלטות והטמעת תהליכים.
-        </p>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">🚀</div>
-        <h3 data-en="New Role Transition"
-            data-he="ליווי מנהלים בכניסה לתפקיד">
-          ליווי מנהלים בכניסה לתפקיד
-        </h3>
-        <p
-          data-en="Focused support for managers entering new positions. Understanding the organization, mapping challenges, setting priorities and building a practical 90-day work plan."
-          data-he="ליווי מנהלים הנכנסים לתפקיד חדש: היכרות עם הארגון, מיפוי אתגרים, קביעת סדרי עדיפויות ובניית תוכנית עבודה מעשית ל-90 הימים הראשונים.">
-          ליווי מנהלים הנכנסים לתפקיד חדש: היכרות עם הארגון, מיפוי אתגרים, קביעת סדרי עדיפויות ובניית תוכנית עבודה מעשית ל-90 הימים הראשונים.
-        </p>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">⚙️</div>
-        <h3 data-en="Maintenance Department Support"
-            data-he="ליווי מחלקות אחזקה">
-          ליווי מחלקות אחזקה
-        </h3>
-        <p
-          data-en="Improving maintenance management, work planning, preventive maintenance, equipment reliability, maintenance budgets and operational performance."
-          data-he="שיפור ניהול האחזקה, תכנון העבודה, אחזקה מונעת, אמינות ציוד, תקציבי אחזקה ושיפור הביצועים התפעוליים.">
-          שיפור ניהול האחזקה, תכנון העבודה, אחזקה מונעת, אמינות ציוד, תקציבי אחזקה ושיפור הביצועים התפעוליים.
-        </p>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">👥</div>
-        <h3 data-en="Human Resources Department Support"
-            data-he="ליווי מחלקות משאבי אנוש">
-          ליווי מחלקות משאבי אנוש
-        </h3>
-        <p
-          data-en="Organizational process improvement, workforce planning, management routines, performance indicators and operational support for HR teams."
-          data-he="שיפור תהליכים ארגוניים, תכנון כוח אדם, שגרות ניהול, מדדי ביצוע וליווי תפעולי למחלקות משאבי אנוש.">
-          שיפור תהליכים ארגוניים, תכנון כוח אדם, שגרות ניהול, מדדי ביצוע וליווי תפעולי למחלקות משאבי אנוש.
-        </p>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">📦</div>
-        <h3 data-en="Procurement Department Support"
-            data-he="ליווי מחלקות רכש">
-          ליווי מחלקות רכש
-        </h3>
-        <p
-          data-en="Procurement strategy, supplier management, sourcing, negotiations, cost reduction, purchasing processes and team performance."
-          data-he="אסטרטגיית רכש, ניהול ספקים, איתור מקורות אספקה, משא ומתן, הפחתת עלויות, תהליכי רכש ושיפור ביצועי הצוות.">
-          אסטרטגיית רכש, ניהול ספקים, איתור מקורות אספקה, משא ומתן, הפחתת עלויות, תהליכי רכש ושיפור ביצועי הצוות.
-        </p>
-      </article>
-
-      <article class="service-card">
-        <div class="service-icon">📊</div>
-        <h3 data-en="Business & Process Improvement"
-            data-he="שיפור תהליכים וביצועים עסקיים">
-          שיפור תהליכים וביצועים עסקיים
-        </h3>
-        <p
-          data-en="Identifying organizational gaps, optimizing workflows, developing KPIs, improving productivity and implementing measurable improvements."
-          data-he="זיהוי פערים ארגוניים, ייעול תהליכי עבודה, פיתוח מדדי KPI, שיפור פריון והטמעת שיפורים מדידים.">
-          זיהוי פערים ארגוניים, ייעול תהליכי עבודה, פיתוח מדדי KPI, שיפור פריון והטמעת שיפורים מדידים.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- APPROACH -->
-
-<section id="approach">
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="eyebrow"
-        data-en="How We Work"
-        data-he="שיטת העבודה">
-        שיטת העבודה
-      </div>
-
-      <h2
-        data-en="From Analysis to Results"
-        data-he="מאבחון ועד לתוצאות">
-        מאבחון ועד לתוצאות
-      </h2>
-
-      <p
-        data-en="A structured approach that connects business objectives with practical execution."
-        data-he="תהליך עבודה מובנה המחבר בין יעדים עסקיים לבין ביצוע מעשי.">
-        תהליך עבודה מובנה המחבר בין יעדים עסקיים לבין ביצוע מעשי.
-      </p>
-
-    </div>
-
-    <div class="approach-grid">
-
-      <div class="approach-item">
-        <div class="approach-number">01</div>
-        <h3 data-en="Understand" data-he="הבנת המצב">הבנת המצב</h3>
-        <p
-          data-en="Learn the business, identify challenges and understand operational needs."
-          data-he="היכרות עם העסק, זיהוי אתגרים והבנת הצרכים הניהוליים והתפעוליים.">
-          היכרות עם העסק, זיהוי אתגרים והבנת הצרכים הניהוליים והתפעוליים.
-        </p>
-      </div>
-
-      <div class="approach-item">
-        <div class="approach-number">02</div>
-        <h3 data-en="Analyze" data-he="ניתוח ואבחון">ניתוח ואבחון</h3>
-        <p
-          data-en="Evaluate processes, data, costs, risks and improvement opportunities."
-          data-he="בחינת תהליכים, נתונים, עלויות, סיכונים והזדמנויות לשיפור.">
-          בחינת תהליכים, נתונים, עלויות, סיכונים והזדמנויות לשיפור.
-        </p>
-      </div>
-
-      <div class="approach-item">
-        <div class="approach-number">03</div>
-        <h3 data-en="Implement" data-he="הטמעה וביצוע">הטמעה וביצוע</h3>
-        <p
-          data-en="Build solutions and work with the organization to implement them."
-          data-he="בניית פתרונות ועבודה משותפת עם הארגון להטמעתם.">
-          בניית פתרונות ועבודה משותפת עם הארגון להטמעתם.
-        </p>
-      </div>
-
-      <div class="approach-item">
-        <div class="approach-number">04</div>
-        <h3 data-en="Improve" data-he="מדידה ושיפור">מדידה ושיפור</h3>
-        <p
-          data-en="Measure performance, track results and continuously improve."
-          data-he="מדידת ביצועים, מעקב אחר תוצאות ושיפור מתמיד.">
-          מדידת ביצועים, מעקב אחר תוצאות ושיפור מתמיד.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- CALL TO ACTION -->
-
-<section class="cta">
-  <div class="container">
-
-    <h2
-      data-en="Let's Improve Your Business Performance"
-      data-he="בואו נשפר יחד את הביצועים העסקיים שלכם">
-      בואו נשפר יחד את הביצועים העסקיים שלכם
-    </h2>
-
-    <p
-      data-en="Looking for an ongoing professional partner to support your management team and improve organizational performance?"
-      data-he="מחפשים שותף מקצועי לאורך זמן, שילווה את ההנהלה ויסייע בשיפור הביצועים של הארגון?">
-      מחפשים שותף מקצועי לאורך זמן, שילווה את ההנהלה ויסייע בשיפור הביצועים של הארגון?
-    </p>
-
-    <a href="#contact" class="btn btn-primary"
-      data-en="Contact Us"
-      data-he="צרו קשר">
-      צרו קשר
-    </a>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-  <div class="container">
-
-    <div class="section-title">
-
-      <div class="eyebrow"
-        data-en="Get In Touch"
-        data-he="יצירת קשר">
-        יצירת קשר
-      </div>
-
-      <h2
-        data-en="Start a Conversation"
-        data-he="בואו נתחיל בשיחה">
-        בואו נתחיל בשיחה
-      </h2>
-
-      <p
-        data-en="Tell us about your business challenges and let's explore how we can help."
-        data-he="ספרו לנו על האתגרים העסקיים שלכם ונבדוק כיצד נוכל לעזור.">
-        ספרו לנו על האתגרים העסקיים שלכם ונבדוק כיצד נוכל לעזור.
-      </p>
-
-    </div>
-
-    <div class="contact-box">
-
-      <h3>Mogatek Consulting</h3>
-
-      <p
-        data-en="Professional management and operational support for industry and business."
-        data-he="ליווי ניהולי ותפעולי מקצועי לתעשייה ולעסקים.">
-        ליווי ניהולי ותפעולי מקצועי לתעשייה ולעסקים.
-      </p>
-
-      <div class="contact-actions">
-
-        <a class="btn email-btn"
-           href="mailto:izhaktoashi@gmail.com"
-           data-en="✉ Send an Email"
-           data-he="✉ שלחו לנו מייל">
-          ✉ שלחו לנו מייל
-        </a>
-
-        <a class="btn whatsapp-btn"
-           href="https://wa.me/972545363347"
-           target="_blank"
-           rel="noopener noreferrer"
-           data-en="WhatsApp"
-           data-he="WhatsApp">
-          WhatsApp
-        </a>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <strong>MOGATEK CONSULTING</strong>
-    <p>© <span id="year"></span> Mogatek Consulting. All rights reserved.</p>
-  </div>
-</footer>
-
-<script>
-let currentLanguage = "he";
-
-function toggleLanguage() {
-  currentLanguage = currentLanguage === "he" ? "en" : "he";
-
-  document.documentElement.lang = currentLanguage;
-  document.documentElement.dir = currentLanguage === "he" ? "rtl" : "ltr";
-  document.body.dir = currentLanguage === "he" ? "rtl" : "ltr";
-
-  document.querySelectorAll("[data-en], [data-he]").forEach(element => {
-    const translation = element.getAttribute("data-" + currentLanguage);
-
-    if (translation !== null) {
-      element.textContent = translation;
-    }
-  });
-
-  document.querySelectorAll("[data-en-html], [data-he-html]").forEach(element => {
-    const translation = element.getAttribute("data-" + currentLanguage + "-html");
-
-    if (translation !== null) {
-      element.innerHTML = translation;
-    }
-  });
-
-  document.getElementById("languageBtn").textContent =
-    currentLanguage === "he" ? "English" : "עברית";
+.stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:25px;
 }
 
-document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+.stat-card{
+  background:#fff;
+  text-align:center;
+  border-radius:20px;
+  padding:35px;
+  box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
 
-</body>
-</html>
+.stat-card h3{
+  font-size:48px;
+  color:var(--turquoise);
+  margin-bottom:10px;
+}
+
+.stat-card p{
+  color:var(--muted);
+}
+
+header.scrolled{
+  background:rgba(255,255,255,.85);
+  box-shadow:0 10px 25px rgba(0,0,0,.06);
+  backdrop-filter:blur(18px);
+}
+
+@media(max-width:768px){
+
+.stats-grid{
+grid-template-columns:1fr 1fr;
+}
+
+}
