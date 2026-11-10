@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://izhaktoashi-droid.github.io/consulting-website/sitemap.xml

@@ -1,1542 +1,186 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#173b67">
-<meta name="description" content="Mogatek Consulting - ליווי ניהולי מתמשך, שיפור תהליכים ותמיכה מקצועית למחלקות רכש, אחזקה ומשאבי אנוש.">
-<title>Mogatek Consulting | Management & Industrial Support</title>
-<link rel="icon" href="favicon.ico">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#12365b">
+<title>Mogatek | שירותי מיקור חוץ לתעשייה, אחזקה, הדרכה ו-BI בישראל</title>
+<meta name="description" content="Mogatek מספקת שירותי מיקור חוץ בישראל: ניהול פרויקטי אחזקה ותשתיות, קורסים והכשרות ברכש, לוגיסטיקה, תפעול ותפ״י, ושירותי BI ומדדים ארגוניים.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://izhaktoashi-droid.github.io/consulting-website/">
+<meta property="og:type" content="website"><meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="Mogatek"><meta property="og:title" content="Mogatek | שירותי מיקור חוץ לתעשייה, אחזקה, הדרכה ו-BI בישראל">
+<meta property="og:description" content="Mogatek מספקת שירותי מיקור חוץ בישראל: ניהול פרויקטי אחזקה ותשתיות, קורסים והכשרות ברכש, לוגיסטיקה, תפעול ותפ״י, ושירותי BI ומדדים ארגוניים.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-:root {
-  --navy:#173b67;
-  --blue:#2878d0;
-  --turquoise:#16b8aa;
-  --orange:#ff9852;
-  --purple:#8170db;
-  --yellow:#ffd166;
-  --text:#26384d;
-  --muted:#718096;
-  --bg:#f5f8fc;
-  --border:#e5edf5;
-  --shadow:0 16px 42px rgba(30,65,105,.11);
-}
-
-* {
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
-}
-
-html {
-  scroll-behavior:smooth;
-  scroll-padding-top:90px;
-}
-
-body {
-  font-family:'Heebo','Inter',sans-serif;
-  color:var(--text);
-  background:#fff;
-  line-height:1.75;
-}
-
-body[dir=ltr] {
-  font-family:'Inter','Heebo',sans-serif;
-}
-
-a {
-  text-decoration:none;
-  color:inherit;
-}
-
-button,input,select,textarea {
-  font:inherit;
-}
-
-.container {
-  width:min(1160px,90%);
-  margin:auto;
-}
-
-/* Header */
-
-header {
-  background:rgba(255,255,255,.94);
-  border-bottom:1px solid var(--border);
-  position:sticky;
-  top:0;
-  z-index:100;
-  backdrop-filter:blur(14px);
-  -webkit-backdrop-filter:blur(14px);
-}
-
-.nav {
-  min-height:78px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:25px;
-}
-
-.logo {
-  font-size:27px;
-  font-weight:800;
-  color:var(--navy);
-  letter-spacing:-1px;
-}
-
-.logo span {
-  color:var(--turquoise);
-}
-
-.nav-links {
-  display:flex;
-  gap:28px;
-  align-items:center;
-  font-size:14px;
-  font-weight:700;
-}
-
-.nav-links a {
-  transition:color .2s;
-}
-
-.nav-links a:hover {
-  color:var(--turquoise);
-}
-
-.nav-actions {
-  display:flex;
-  align-items:center;
-  gap:10px;
-}
-
-.lang-btn {
-  background:#e7f7f5;
-  color:#087e76;
-  border:1px solid #c7eeea;
-  border-radius:30px;
-  padding:9px 18px;
-  cursor:pointer;
-  font-weight:800;
-  font-size:13px;
-  transition:.2s;
-}
-
-.lang-btn:hover {
-  background:var(--turquoise);
-  color:white;
-}
-
-.menu-toggle {
-  display:none;
-  border:0;
-  background:#edf4fa;
-  color:var(--navy);
-  border-radius:12px;
-  padding:9px 12px;
-  font-size:20px;
-  cursor:pointer;
-}
-
-/* Hero */
-
-.hero {
-  position:relative;
-  min-height:650px;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  color:white;
-  background:
-    radial-gradient(circle at 85% 15%,rgba(255,152,82,.35),transparent 27%),
-    radial-gradient(circle at 15% 85%,rgba(22,184,170,.3),transparent 30%),
-    linear-gradient(120deg,#173b67 0%,#205c91 55%,#2878a7 100%);
-}
-
-.hero:before,
-.hero:after {
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  pointer-events:none;
-}
-
-.hero:before {
-  width:480px;
-  height:480px;
-  border:75px solid rgba(255,255,255,.055);
-  top:-230px;
-  right:-100px;
-  animation:float 13s ease-in-out infinite;
-}
-
-.hero:after {
-  width:300px;
-  height:300px;
-  border:50px solid rgba(255,209,102,.12);
-  bottom:-190px;
-  left:8%;
-  animation:float 11s ease-in-out infinite reverse;
-}
-
-.hero-orb {
-  position:absolute;
-  width:150px;
-  height:150px;
-  border-radius:50%;
-  background:rgba(255,255,255,.055);
-  filter:blur(1px);
-  left:24%;
-  top:18%;
-  animation:drift 9s ease-in-out infinite;
-}
-
-.hero-content {
-  max-width:790px;
-  padding:105px 0;
-  position:relative;
-  z-index:2;
-}
-
-.eyebrow {
-  color:var(--turquoise);
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:1.2px;
-  margin-bottom:17px;
-}
-
-.hero .eyebrow {
-  color:var(--yellow);
-}
-
-.hero h1 {
-  font-size:clamp(39px,5.5vw,66px);
-  line-height:1.18;
-  margin-bottom:25px;
-  font-weight:800;
-  letter-spacing:-1.5px;
-}
-
-.hero h1 span {
-  color:var(--yellow);
-}
-
-.hero p {
-  font-size:18px;
-  color:#e4eff9;
-  max-width:680px;
-  margin-bottom:35px;
-}
-
-.buttons {
-  display:flex;
-  gap:14px;
-  flex-wrap:wrap;
-}
-
-.btn {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  padding:13px 26px;
-  border-radius:30px;
-  font-weight:800;
-  font-size:14px;
-  transition:transform .25s,box-shadow .25s,background .25s;
-  cursor:pointer;
-  border:0;
-}
-
-.btn:hover {
-  transform:translateY(-4px);
-  box-shadow:0 12px 25px rgba(0,0,0,.14);
-}
-
-.btn-primary {
-  background:var(--orange);
-  color:#173b67;
-  box-shadow:0 7px 20px rgba(255,152,82,.2);
-}
-
-.btn-primary:hover {
-  background:var(--yellow);
-}
-
-.btn-outline {
-  border:1px solid rgba(255,255,255,.7);
-  color:white;
-  background:transparent;
-}
-
-.btn-outline:hover {
-  background:white;
-  color:var(--navy);
-}
-
-/* General sections */
-
-section {
-  padding:92px 0;
-}
-
-.section-title {
-  text-align:center;
-  max-width:750px;
-  margin:0 auto 52px;
-}
-
-.section-title .eyebrow {
-  margin-bottom:10px;
-}
-
-.section-title h2 {
-  color:var(--navy);
-  font-size:clamp(29px,4vw,41px);
-  line-height:1.3;
-  margin-bottom:15px;
-}
-
-.section-title p {
-  color:var(--muted);
-  font-size:16px;
-}
-
-/* About */
-
-.about-grid {
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  gap:65px;
-  align-items:center;
-}
-
-.about-text h2 {
-  color:var(--navy);
-  font-size:clamp(30px,4vw,39px);
-  line-height:1.3;
-  margin-bottom:22px;
-}
-
-.about-text p {
-  color:var(--muted);
-  margin-bottom:17px;
-  font-size:16px;
-}
-
-.about-panel {
-  background:
-    radial-gradient(circle at 100% 0%,rgba(255,152,82,.35),transparent 35%),
-    linear-gradient(140deg,#173b67,#2878a7);
-  color:white;
-  padding:43px;
-  border-radius:22px;
-  position:relative;
-  overflow:hidden;
-  box-shadow:var(--shadow);
-}
-
-.about-panel:after {
-  content:"";
-  position:absolute;
-  width:180px;
-  height:180px;
-  border:30px solid rgba(255,255,255,.07);
-  border-radius:50%;
-  left:-70px;
-  bottom:-90px;
-}
-
-.about-panel h3 {
-  font-size:26px;
-  margin-bottom:18px;
-  color:var(--yellow);
-}
-
-.about-panel p {
-  color:#e2edf7;
-  font-size:15px;
-  margin-bottom:15px;
-}
-
-.about-highlight {
-  display:inline-block;
-  margin-top:12px;
-  padding:8px 15px;
-  border-radius:30px;
-  background:rgba(255,255,255,.13);
-  color:white;
-  font-size:13px;
-  font-weight:700;
-}
-
-/* Services */
-
-.services {
-  background:
-    radial-gradient(circle at 5% 10%,rgba(22,184,170,.07),transparent 25%),
-    radial-gradient(circle at 95% 90%,rgba(129,112,219,.07),transparent 25%),
-    var(--bg);
-}
-
-.services-grid {
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:23px;
-}
-
-.service-card {
-  background:white;
-  padding:30px;
-  border:1px solid var(--border);
-  border-radius:17px;
-  transition:transform .3s,box-shadow .3s,border-color .3s;
-  box-shadow:0 5px 18px rgba(30,65,105,.035);
-  height:100%;
-}
-
-.service-card:hover {
-  transform:translateY(-9px);
-  box-shadow:var(--shadow);
-  border-color:#b8d9ed;
-}
-
-.service-icon {
-  width:58px;
-  height:58px;
-  border-radius:16px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:27px;
-  margin-bottom:22px;
-  transition:transform .35s;
-}
-
-.service-card:hover .service-icon {
-  transform:rotate(-8deg) scale(1.1);
-}
-
-.service-card:nth-child(4n+1) .service-icon {
-  background:#e4f5f3;
-}
-
-.service-card:nth-child(4n+2) .service-icon {
-  background:#fff0e5;
-}
-
-.service-card:nth-child(4n+3) .service-icon {
-  background:#eeeaff;
-}
-
-.service-card:nth-child(4n) .service-icon {
-  background:#fff5d9;
-}
-
-.service-card h3 {
-  color:var(--navy);
-  font-size:19px;
-  line-height:1.4;
-  margin-bottom:12px;
-}
-
-.service-card p {
-  color:var(--muted);
-  font-size:14px;
-}
-
-/* Our approach */
-
-.approach-grid {
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:20px;
-}
-
-.approach-item {
-  padding:27px 22px;
-  background:white;
-  border:1px solid var(--border);
-  border-radius:15px;
-  box-shadow:0 5px 18px rgba(30,65,105,.04);
-  transition:transform .25s,box-shadow .25s;
-}
-
-.approach-item:hover {
-  transform:translateY(-6px);
-  box-shadow:var(--shadow);
-}
-
-.approach-item:nth-child(1) {
-  border-top:4px solid var(--turquoise);
-}
-
-.approach-item:nth-child(2) {
-  border-top:4px solid var(--orange);
-}
-
-.approach-item:nth-child(3) {
-  border-top:4px solid var(--purple);
-}
-
-.approach-item:nth-child(4) {
-  border-top:4px solid var(--blue);
-}
-
-.approach-number {
-  color:var(--blue);
-  font-size:32px;
-  font-weight:800;
-  margin-bottom:12px;
-}
-
-.approach-item h3 {
-  color:var(--navy);
-  font-size:18px;
-  margin-bottom:9px;
-}
-
-.approach-item p {
-  color:var(--muted);
-  font-size:13px;
-}
-
-/* Call to action */
-
-.cta {
-  background:
-    radial-gradient(circle at 90% 10%,rgba(255,152,82,.28),transparent 28%),
-    linear-gradient(120deg,#173b67,#2878a7);
-  color:white;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-}
-
-.cta h2 {
-  font-size:clamp(29px,4vw,43px);
-  margin-bottom:18px;
-}
-
-.cta p {
-  color:#e1edf7;
-  margin:0 auto 30px;
-  max-width:700px;
-}
-
-/* Contact */
-
-.contact {
-  background:#f5f8fc;
-}
-
-.contact-layout {
-  display:grid;
-  grid-template-columns:.8fr 1.2fr;
-  gap:25px;
-  max-width:1000px;
-  margin:auto;
-  align-items:stretch;
-}
-
-.contact-info,
-.contact-form {
-  background:white;
-  border:1px solid var(--border);
-  border-radius:22px;
-  padding:35px;
-  box-shadow:var(--shadow);
-}
-
-.contact-info {
-  background:linear-gradient(145deg,#173b67,#2878a7);
-  color:white;
-  position:relative;
-  overflow:hidden;
-}
-
-.contact-info h3 {
-  font-size:26px;
-  color:var(--yellow);
-  margin-bottom:12px;
-}
-
-.contact-info p {
-  color:#e2edf7;
-  margin-bottom:22px;
-}
-
-.contact-detail {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin:16px 0;
-  color:white;
-  direction:ltr;
-  justify-content:flex-end;
-}
-
-.contact-detail span:first-child {
-  font-size:20px;
-}
-
-.contact-form h3 {
-  font-size:24px;
-  color:var(--navy);
-  margin-bottom:6px;
-}
-
-.form-intro {
-  color:var(--muted);
-  font-size:14px;
-  margin-bottom:22px;
-}
-
-.form-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:15px;
-}
-
-.field {
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-
-.field.full {
-  grid-column:1/-1;
-}
-
-.field label {
-  font-size:13px;
-  font-weight:700;
-  color:var(--navy);
-}
-
-.field input,
-.field select,
-.field textarea {
-  width:100%;
-  border:1px solid #dce6ef;
-  border-radius:11px;
-  padding:12px 13px;
-  background:#fbfdff;
-  color:var(--text);
-  outline:none;
-  transition:border-color .2s,box-shadow .2s;
-}
-
-.field input:focus,
-.field select:focus,
-.field textarea:focus {
-  border-color:var(--turquoise);
-  box-shadow:0 0 0 3px rgba(22,184,170,.12);
-}
-
-.field textarea {
-  min-height:115px;
-  resize:vertical;
-}
-
-.form-note {
-  font-size:11px;
-  color:var(--muted);
-  margin-top:12px;
-}
-
-.contact-form .btn {
-  margin-top:18px;
-  width:100%;
-}
-
-.whatsapp-btn {
-  background:#e3f8ed;
-  color:#16834b;
-}
-
-/* Footer */
-
-footer {
-  background:#122d4b;
-  color:#c8d8e8;
-  padding:32px 0;
-  font-size:13px;
-  text-align:center;
-}
-
-footer strong {
-  color:white;
-  font-size:16px;
-  letter-spacing:.5px;
-}
-
-footer p {
-  margin-top:7px;
-}
-
-/* Back to top */
-
-.back-top {
-  position:fixed;
-  bottom:22px;
-  left:22px;
-  width:46px;
-  height:46px;
-  border:0;
-  border-radius:50%;
-  background:var(--turquoise);
-  color:#fff;
-  font-size:21px;
-  box-shadow:var(--shadow);
-  cursor:pointer;
-  z-index:50;
-  opacity:0;
-  visibility:hidden;
-  transform:translateY(10px);
-  transition:.25s;
-}
-
-.back-top.show {
-  opacity:1;
-  visibility:visible;
-  transform:translateY(0);
-}
-
-/* Text direction */
-
-[dir=rtl] .hero-content,
-[dir=rtl] .about-text,
-[dir=rtl] .about-panel,
-[dir=rtl] .service-card,
-[dir=rtl] .approach-item {
-  text-align:right;
-}
-
-[dir=ltr] .hero-content,
-[dir=ltr] .about-text,
-[dir=ltr] .about-panel,
-[dir=ltr] .service-card,
-[dir=ltr] .approach-item {
-  text-align:left;
-}
-
-/* Animations */
-
-/* Progressive enhancement: hidden only when JS is active */
-html.js .reveal {
-  opacity:0;
-  transform:translateY(28px);
-  transition:opacity .75s ease,transform .75s cubic-bezier(.2,.7,.2,1);
-}
-
-html.js .reveal.visible {
-  opacity:1;
-  transform:translateY(0);
-}
-
-html.js .reveal-left {
-  transform:translateX(35px);
-}
-
-html.js [dir=ltr] .reveal-left {
-  transform:translateX(-35px);
-}
-
-html.js .reveal-left.visible {
-  transform:translateX(0);
-}
-
-.hero-content>* {
-  animation:heroIn .8s both;
-}
-
-.hero-content>*:nth-child(1) {
-  animation-delay:.1s;
-}
-
-.hero-content>*:nth-child(2) {
-  animation-delay:.25s;
-}
-
-.hero-content>*:nth-child(3) {
-  animation-delay:.4s;
-}
-
-.hero-content>*:nth-child(4) {
-  animation-delay:.55s;
-}
-
-@keyframes heroIn {
-  from {
-    opacity:0;
-    transform:translateY(22px);
-  }
-  to {
-    opacity:1;
-    transform:translateY(0);
-  }
-}
-
-@keyframes float {
-  0%,100% {
-    transform:translateY(0) rotate(0);
-  }
-  50% {
-    transform:translateY(24px) rotate(8deg);
-  }
-}
-
-@keyframes drift {
-  0%,100% {
-    transform:translate(0,0) scale(1);
-  }
-  50% {
-    transform:translate(35px,25px) scale(1.12);
-  }
-}
-
-/* Responsive */
-
-@media(max-width:900px) {
-  .about-grid {
-    grid-template-columns:1fr;
-    gap:35px;
-  }
-
-  .services-grid {
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .approach-grid {
-    grid-template-columns:repeat(2,1fr);
-  }
-
-  .nav-links {
-    gap:15px;
-  }
-
-  .contact-layout {
-    grid-template-columns:1fr;
-  }
-}
-
-@media(max-width:600px) {
-  .nav {
-    flex-wrap:wrap;
-    padding:13px 0;
-    gap:12px;
-  }
-
-  .logo {
-    font-size:24px;
-  }
-
-  .menu-toggle {
-    display:block;
-  }
-
-  .nav-links {
-    display:none;
-    order:3;
-    width:100%;
-    flex-direction:column;
-    align-items:stretch;
-    gap:0;
-    background:#fff;
-    border-top:1px solid var(--border);
-    padding:8px 0;
-  }
-
-  .nav-links.open {
-    display:flex;
-  }
-
-  .nav-links a {
-    padding:10px 5px;
-  }
-
-  .hero {
-    min-height:570px;
-  }
-
-  .hero-content {
-    padding:75px 0;
-  }
-
-  .hero h1 {
-    font-size:39px;
-    letter-spacing:-.7px;
-  }
-
-  .hero p {
-    font-size:16px;
-  }
-
-  section {
-    padding:65px 0;
-  }
-
-  .services-grid,
-  .approach-grid {
-    grid-template-columns:1fr;
-  }
-
-  .about-panel {
-    padding:30px 25px;
-  }
-
-  .contact-info,
-  .contact-form {
-    padding:27px 21px;
-  }
-
-  .form-grid {
-    grid-template-columns:1fr;
-  }
-
-  .field.full {
-    grid-column:auto;
-  }
-
-  .btn {
-    padding:12px 20px;
-  }
-
-  .contact-detail {
-    justify-content:flex-start;
-  }
-}
-
-/* Accessibility */
-
-@media(prefers-reduced-motion:reduce) {
-  html {
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-    animation-duration:.01ms!important;
-    animation-iteration-count:1!important;
-    transition-duration:.01ms!important;
-  }
-
-  html.js .reveal {
-    opacity:1;
-    transform:none;
-  }
-}
+:root{--navy:#12365b;--blue:#2476c8;--teal:#12a99b;--orange:#ff9b55;--purple:#7868d7;--ink:#24364b;--muted:#68798d;--bg:#f4f8fc;--line:#e2eaf2;--white:#fff;--shadow:0 18px 48px rgba(18,54,91,.12)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px}
+body{font-family:Arial,"Heebo",sans-serif;color:var(--ink);line-height:1.75;background:#fff}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit}
+.container{width:min(1160px,91%);margin:auto}
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+.logo{font-size:27px;font-weight:900;color:var(--navy);letter-spacing:-1px}
+.logo span{color:var(--teal)}
+.navlinks{display:flex;align-items:center;gap:24px;font-size:14px;font-weight:700}
+.navlinks a:hover{color:var(--teal)}
+.navcta{background:var(--navy);color:#fff;padding:10px 19px;border-radius:28px;font-weight:800;font-size:13px}
+.menu{display:none;border:0;background:#edf3f8;color:var(--navy);padding:8px 12px;border-radius:10px;font-size:22px}
+.hero{position:relative;overflow:hidden;color:#fff;background:radial-gradient(circle at 12% 85%,rgba(18,169,155,.28),transparent 28%),radial-gradient(circle at 90% 12%,rgba(255,155,85,.3),transparent 26%),linear-gradient(120deg,#12365b,#205e91 62%,#247ba5);padding:105px 0 100px}
+.hero:before{content:"";position:absolute;width:440px;height:440px;border:70px solid rgba(255,255,255,.06);border-radius:50%;left:-180px;top:-220px;animation:float 12s ease-in-out infinite}
+.hero:after{content:"";position:absolute;width:230px;height:230px;border:36px solid rgba(255,209,102,.12);border-radius:50%;right:8%;bottom:-170px;animation:float 10s ease-in-out infinite reverse}
+.hero-inner{position:relative;z-index:1;max-width:850px}
+.kicker{color:var(--teal);font-size:13px;font-weight:900;letter-spacing:.6px;margin-bottom:13px}
+.hero .kicker{color:#ffcf79}
+h1{font-size:clamp(36px,5.4vw,63px);line-height:1.17;letter-spacing:-1px;margin-bottom:22px;font-weight:900}
+.hero h1 span{color:#ffcf79}
+.hero p{font-size:18px;color:#e2edf7;max-width:760px;margin-bottom:30px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:30px;padding:13px 25px;font-weight:800;font-size:14px;cursor:pointer;transition:.25s}
+.btn:hover{transform:translateY(-3px);box-shadow:0 12px 25px rgba(0,0,0,.16)}
+.primary{background:var(--orange);color:#173b60}
+.outline{border:1px solid rgba(255,255,255,.7);color:#fff}
+.outline:hover{background:#fff;color:var(--navy)}
+section{padding:82px 0}
+.sectionhead{text-align:center;max-width:790px;margin:0 auto 43px}
+.sectionhead h2{font-size:clamp(28px,4vw,40px);line-height:1.25;color:var(--navy);margin:7px 0 13px}
+.sectionhead p{color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{border:1px solid var(--line);border-radius:19px;padding:29px;background:#fff;box-shadow:0 7px 25px rgba(18,54,91,.045);transition:.3s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-7px);box-shadow:var(--shadow);border-color:#b9d9eb}
+.icon{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;font-size:27px;margin-bottom:18px;background:#e5f6f3}
+.card:nth-child(2) .icon{background:#fff0e4}.card:nth-child(3) .icon{background:#eeebff}
+.card h3{font-size:21px;color:var(--navy);line-height:1.35;margin-bottom:11px}
+.card p{font-size:14px;color:var(--muted);margin-bottom:17px}
+.card ul,.detail-list{padding-right:19px;color:var(--muted);font-size:14px;margin:0 0 20px}
+.card li,.detail-list li{margin:5px 0}
+.card .more{margin-top:auto;color:var(--blue);font-weight:900;font-size:14px}
+.soft{background:var(--bg)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}
+.panel{padding:35px;border-radius:22px;background:linear-gradient(140deg,#12365b,#2476a5);color:#fff;box-shadow:var(--shadow)}
+.panel h3{font-size:25px;color:#ffcf79;margin-bottom:12px}
+.panel p{color:#e1edf7}
+.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.benefit{padding:22px;border:1px solid var(--line);border-radius:15px;background:#fff}
+.benefit b{display:block;color:var(--navy);font-size:17px;margin-bottom:7px}
+.benefit p{font-size:13px;color:var(--muted)}
+.cta{background:linear-gradient(115deg,#12365b,#2476a5);color:#fff;text-align:center}
+.cta h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px}
+.cta p{max-width:720px;margin:0 auto 25px;color:#e2edf7}
+.contactgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px;max-width:1020px;margin:auto}
+.contactinfo,.formbox{border:1px solid var(--line);border-radius:20px;padding:30px;background:#fff;box-shadow:var(--shadow)}
+.contactinfo{background:linear-gradient(145deg,#12365b,#2476a5);color:#fff}
+.contactinfo h3{font-size:25px;color:#ffcf79;margin-bottom:10px}
+.contactinfo p{color:#e1edf7;margin-bottom:20px}
+.contactline{direction:ltr;text-align:right;margin:14px 0;font-weight:700}
+.formbox h3{color:var(--navy);font-size:24px;margin-bottom:4px}
+.formbox>p{font-size:13px;color:var(--muted);margin-bottom:18px}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.field{display:flex;flex-direction:column;gap:5px}
+.field.full{grid-column:1/-1}
+.field label{font-size:13px;font-weight:800;color:var(--navy)}
+.field input,.field select,.field textarea{border:1px solid #d9e4ee;border-radius:10px;padding:12px;background:#fbfdff;outline:none;width:100%}
+.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px rgba(18,169,155,.12)}
+.field textarea{min-height:105px;resize:vertical}
+.formbox button{width:100%;margin-top:16px}
+.note{font-size:11px;color:var(--muted);margin-top:10px}
+footer{background:#102b48;color:#c9d8e7;padding:29px 0;text-align:center;font-size:13px}
+footer strong{color:#fff;font-size:17px;letter-spacing:.5px}
+footer p{margin-top:5px}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+.backtop{position:fixed;bottom:20px;left:20px;width:44px;height:44px;border:0;border-radius:50%;background:var(--teal);color:white;font-size:22px;z-index:40;box-shadow:var(--shadow);opacity:0;visibility:hidden;transition:.2s;cursor:pointer}
+.backtop.show{opacity:1;visibility:visible}
+.faq{max-width:850px;margin:auto}
+.faq details{padding:17px 20px;border:1px solid var(--line);border-radius:13px;margin:10px 0;background:#fff}
+.faq summary{font-weight:800;color:var(--navy);cursor:pointer}
+.faq details p{color:var(--muted);font-size:14px;margin-top:10px}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(22px) rotate(7deg)}}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.benefits{grid-template-columns:1fr 1fr}.split{grid-template-columns:1fr}.contactgrid{grid-template-columns:1fr}}
+@media(max-width:650px){.nav{min-height:68px;flex-wrap:wrap;padding:10px 0}.menu{display:block}.navlinks{display:none;order:3;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:7px 0;border-top:1px solid var(--line)}.navlinks.open{display:flex}.navlinks a{padding:9px 4px}.navcta{display:none}.hero{padding:76px 0}.hero p{font-size:16px}section{padding:62px 0}.cards,.benefits{grid-template-columns:1fr}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.contactinfo,.formbox{padding:24px 20px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
 </style>
-</head>
-
-<body dir="rtl">
-
-<header>
-  <div class="container nav">
-
-    <a href="#top" class="logo">MOGA<span>TEK</span></a>
-
-    <nav class="nav-links" id="navLinks" aria-label="ניווט ראשי">
-      <a href="#about" data-en="About" data-he="אודות">אודות</a>
-      <a href="#services" data-en="Services" data-he="שירותים">שירותים</a>
-      <a href="#approach" data-en="Our Approach" data-he="שיטת העבודה">שיטת העבודה</a>
-      <a href="#contact" data-en="Contact" data-he="יצירת קשר">יצירת קשר</a>
-    </nav>
-
-    <div class="nav-actions">
-      <button class="lang-btn" onclick="toggleLanguage()" id="languageBtn">English</button>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">☰</button>
-    </div>
-
-  </div>
-</header>
-
-<main id="top">
-
-<!-- Hero -->
-
-<section class="hero">
-  <div class="hero-orb" aria-hidden="true"></div>
-
-  <div class="container">
-    <div class="hero-content">
-
-      <div class="eyebrow"
-        data-en="Industrial Consulting & Management"
-        data-he="ייעוץ וליווי ניהולי לתעשייה">
-        ייעוץ וליווי ניהולי לתעשייה
-      </div>
-
-      <h1
-        data-en-html="Professional Management Support<br>Driving <span>Real Results.</span>"
-        data-he-html="ליווי ניהולי מקצועי<br>שמייצר <span>תוצאות אמיתיות.</span>">
-        ליווי ניהולי מקצועי<br>שמייצר <span>תוצאות אמיתיות.</span>
-      </h1>
-
-      <p
-        data-en="We provide ongoing, hands-on management support for businesses, managers and professional departments. From entering a new role to building structured work plans and delivering measurable operational improvements."
-        data-he="אנחנו מספקים ליווי ניהולי צמוד ומתמשך לעסקים, למנהלים ולמחלקות מקצועיות. מכניסה לתפקיד חדש ועד לבניית תוכניות עבודה סדורות, שיפור תהליכים והשגת תוצאות מדידות.">
-        אנחנו מספקים ליווי ניהולי צמוד ומתמשך לעסקים, למנהלים ולמחלקות מקצועיות. מכניסה לתפקיד חדש ועד לבניית תוכניות עבודה סדורות, שיפור תהליכים והשגת תוצאות מדידות.
-      </p>
-
-      <div class="buttons">
-        <a href="#contact" class="btn btn-primary"
-          data-en="Let's Talk" data-he="בואו נדבר">בואו נדבר</a>
-
-        <a href="#services" class="btn btn-outline"
-          data-en="Explore Services" data-he="הכירו את השירותים">הכירו את השירותים</a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- About -->
-
-<section id="about">
-  <div class="container about-grid">
-
-    <div class="about-text reveal reveal-left">
-
-      <div class="eyebrow" data-en="About Mogatek" data-he="אודות Mogatek">אודות Mogatek</div>
-
-      <h2
-        data-en="Management Experience. Industrial Thinking. Measurable Results."
-        data-he="ניסיון ניהולי. חשיבה תעשייתית. תוצאות מדידות.">
-        ניסיון ניהולי. חשיבה תעשייתית. תוצאות מדידות.
-      </h2>
-
-      <p
-        data-en="Mogatek Consulting provides professional management and operational support to industrial companies and growing businesses."
-        data-he="Mogatek Consulting מספקת שירותי ניהול, ייעוץ וליווי תפעולי לחברות תעשייתיות ולעסקים בצמיחה.">
-        Mogatek Consulting מספקת שירותי ניהול, ייעוץ וליווי תפעולי לחברות תעשייתיות ולעסקים בצמיחה.
-      </p>
-
-      <p
-        data-en="Our approach combines hands-on management experience with engineering, analytical thinking and a deep understanding of industrial processes."
-        data-he="הגישה שלנו משלבת ניסיון ניהולי מעשי עם חשיבה הנדסית ואנליטית והבנה מעמיקה של תהליכים תעשייתיים.">
-        הגישה שלנו משלבת ניסיון ניהולי מעשי עם חשיבה הנדסית ואנליטית והבנה מעמיקה של תהליכים תעשייתיים.
-      </p>
-
-      <p
-        data-en="We focus on practical solutions that create real business value — from strategic planning to daily operational execution."
-        data-he="אנחנו מתמקדים בפתרונות מעשיים שמייצרים ערך עסקי אמיתי — מתכנון אסטרטגי ועד לביצוע תפעולי יומיומי.">
-        אנחנו מתמקדים בפתרונות מעשיים שמייצרים ערך עסקי אמיתי — מתכנון אסטרטגי ועד לביצוע תפעולי יומיומי.
-      </p>
-
-    </div>
-
-    <div class="about-panel reveal">
-
-      <h3 data-en="Beyond Consulting" data-he="מעבר לייעוץ">מעבר לייעוץ</h3>
-
-      <p
-        data-en="Effective consulting is not just about recommendations. It is about working alongside management, taking responsibility, implementing solutions and achieving measurable improvements."
-        data-he="ייעוץ אפקטיבי אינו מסתכם בהמלצות. הוא דורש עבודה לצד ההנהלה, לקיחת אחריות, הטמעת פתרונות והשגת שיפורים מדידים.">
-        ייעוץ אפקטיבי אינו מסתכם בהמלצות. הוא דורש עבודה לצד ההנהלה, לקיחת אחריות, הטמעת פתרונות והשגת שיפורים מדידים.
-      </p>
-
-      <p
-        data-en="We aim to become your ongoing professional partner — helping turn plans into action and challenges into results."
-        data-he="המטרה שלנו היא להיות השותף המקצועי שלכם לאורך זמן — להפוך תוכניות לעשייה ואתגרים לתוצאות.">
-        המטרה שלנו היא להיות השותף המקצועי שלכם לאורך זמן — להפוך תוכניות לעשייה ואתגרים לתוצאות.
-      </p>
-
-      <span class="about-highlight"
-        data-en="Practical. Focused. Results-driven."
-        data-he="מעשי. ממוקד. מכוון תוצאות.">
-        מעשי. ממוקד. מכוון תוצאות.
-      </span>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- Services -->
-
-<section id="services" class="services">
-  <div class="container">
-
-    <div class="section-title reveal">
-
-      <div class="eyebrow" data-en="Our Expertise" data-he="תחומי ההתמחות שלנו">תחומי ההתמחות שלנו</div>
-
-      <h2
-        data-en="Management Support & Professional Services"
-        data-he="ליווי מנהלים ושירותים מקצועיים">
-        ליווי מנהלים ושירותים מקצועיים
-      </h2>
-
-      <p
-        data-en="Practical, ongoing support for managers and professional departments, built around structured work plans and measurable results."
-        data-he="ליווי מעשי ומתמשך למנהלים ולמחלקות מקצועיות, המבוסס על תוכניות עבודה סדורות ותוצאות מדידות.">
-        ליווי מעשי ומתמשך למנהלים ולמחלקות מקצועיות, המבוסס על תוכניות עבודה סדורות ותוצאות מדידות.
-      </p>
-
-    </div>
-
-    <div class="services-grid">
-
-      <article class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">🎯</div>
-        <h3 data-en="Executive & Management Support" data-he="ליווי מנהלים">ליווי מנהלים</h3>
-        <p
-          data-en="Ongoing personal support for managers, including structured work plans, goal setting, performance monitoring, decision-making and practical implementation."
-          data-he="ליווי אישי ומתמשך למנהלים, הכולל בניית תוכנית עבודה סדורה, הגדרת יעדים, מעקב אחר ביצועים, קבלת החלטות והטמעת תהליכים.">
-          ליווי אישי ומתמשך למנהלים, הכולל בניית תוכנית עבודה סדורה, הגדרת יעדים, מעקב אחר ביצועים, קבלת החלטות והטמעת תהליכים.
-        </p>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">🚀</div>
-        <h3 data-en="New Role Transition" data-he="ליווי מנהלים בכניסה לתפקיד">ליווי מנהלים בכניסה לתפקיד</h3>
-        <p
-          data-en="Focused support for managers entering new positions. Understanding the organization, mapping challenges, setting priorities and building a practical 90-day work plan."
-          data-he="ליווי מנהלים הנכנסים לתפקיד חדש: היכרות עם הארגון, מיפוי אתגרים, קביעת סדרי עדיפויות ובניית תוכנית עבודה מעשית ל-90 הימים הראשונים.">
-          ליווי מנהלים הנכנסים לתפקיד חדש: היכרות עם הארגון, מיפוי אתגרים, קביעת סדרי עדיפויות ובניית תוכנית עבודה מעשית ל-90 הימים הראשונים.
-        </p>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">⚙️</div>
-        <h3 data-en="Maintenance Department Support" data-he="ליווי מחלקות אחזקה">ליווי מחלקות אחזקה</h3>
-        <p
-          data-en="Improving maintenance management, work planning, preventive maintenance, equipment reliability, maintenance budgets and operational performance."
-          data-he="שיפור ניהול האחזקה, תכנון העבודה, אחזקה מונעת, אמינות ציוד, תקציבי אחזקה ושיפור הביצועים התפעוליים.">
-          שיפור ניהול האחזקה, תכנון העבודה, אחזקה מונעת, אמינות ציוד, תקציבי אחזקה ושיפור הביצועים התפעוליים.
-        </p>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">👥</div>
-        <h3 data-en="Human Resources Department Support" data-he="ליווי מחלקות משאבי אנוש">ליווי מחלקות משאבי אנוש</h3>
-        <p
-          data-en="Organizational process improvement, workforce planning, management routines, performance indicators and operational support for HR teams."
-          data-he="שיפור תהליכים ארגוניים, תכנון כוח אדם, שגרות ניהול, מדדי ביצוע וליווי תפעולי למחלקות משאבי אנוש.">
-          שיפור תהליכים ארגוניים, תכנון כוח אדם, שגרות ניהול, מדדי ביצוע וליווי תפעולי למחלקות משאבי אנוש.
-        </p>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">📦</div>
-        <h3 data-en="Procurement Department Support" data-he="ליווי מחלקות רכש">ליווי מחלקות רכש</h3>
-        <p
-          data-en="Procurement strategy, supplier management, sourcing, negotiations, cost reduction, purchasing processes and team performance."
-          data-he="אסטרטגיית רכש, ניהול ספקים, איתור מקורות אספקה, משא ומתן, הפחתת עלויות, תהליכי רכש ושיפור ביצועי הצוות.">
-          אסטרטגיית רכש, ניהול ספקים, איתור מקורות אספקה, משא ומתן, הפחתת עלויות, תהליכי רכש ושיפור ביצועי הצוות.
-        </p>
-      </article>
-
-      <article class="service-card reveal">
-        <div class="service-icon" aria-hidden="true">📊</div>
-        <h3 data-en="Business & Process Improvement" data-he="שיפור תהליכים וביצועים עסקיים">שיפור תהליכים וביצועים עסקיים</h3>
-        <p
-          data-en="Identifying organizational gaps, optimizing workflows, developing KPIs, improving productivity and implementing measurable improvements."
-          data-he="זיהוי פערים ארגוניים, ייעול תהליכי עבודה, פיתוח מדדי KPI, שיפור פריון והטמעת שיפורים מדידים.">
-          זיהוי פערים ארגוניים, ייעול תהליכי עבודה, פיתוח מדדי KPI, שיפור פריון והטמעת שיפורים מדידים.
-        </p>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- Approach -->
-
-<section id="approach">
-  <div class="container">
-
-    <div class="section-title reveal">
-
-      <div class="eyebrow" data-en="How We Work" data-he="שיטת העבודה">שיטת העבודה</div>
-
-      <h2 data-en="From Analysis to Results" data-he="מאבחון ועד לתוצאות">
-        מאבחון ועד לתוצאות
-      </h2>
-
-      <p
-        data-en="A structured approach that connects business objectives with practical execution."
-        data-he="תהליך עבודה מובנה המחבר בין יעדים עסקיים לבין ביצוע מעשי.">
-        תהליך עבודה מובנה המחבר בין יעדים עסקיים לבין ביצוע מעשי.
-      </p>
-
-    </div>
-
-    <div class="approach-grid">
-
-      <div class="approach-item reveal">
-        <div class="approach-number">01</div>
-        <h3 data-en="Understand" data-he="הבנת המצב">הבנת המצב</h3>
-        <p
-          data-en="Learn the business, identify challenges and understand operational needs."
-          data-he="היכרות עם העסק, זיהוי אתגרים והבנת הצרכים הניהוליים והתפעוליים.">
-          היכרות עם העסק, זיהוי אתגרים והבנת הצרכים הניהוליים והתפעוליים.
-        </p>
-      </div>
-
-      <div class="approach-item reveal">
-        <div class="approach-number">02</div>
-        <h3 data-en="Analyze" data-he="ניתוח ואבחון">ניתוח ואבחון</h3>
-        <p
-          data-en="Evaluate processes, data, costs, risks and improvement opportunities."
-          data-he="בחינת תהליכים, נתונים, עלויות, סיכונים והזדמנויות לשיפור.">
-          בחינת תהליכים, נתונים, עלויות, סיכונים והזדמנויות לשיפור.
-        </p>
-      </div>
-
-      <div class="approach-item reveal">
-        <div class="approach-number">03</div>
-        <h3 data-en="Implement" data-he="הטמעה וביצוע">הטמעה וביצוע</h3>
-        <p
-          data-en="Build solutions and work with the organization to implement them."
-          data-he="בניית פתרונות ועבודה משותפת עם הארגון להטמעתם.">
-          בניית פתרונות ועבודה משותפת עם הארגון להטמעתם.
-        </p>
-      </div>
-
-      <div class="approach-item reveal">
-        <div class="approach-number">04</div>
-        <h3 data-en="Improve" data-he="מדידה ושיפור">מדידה ושיפור</h3>
-        <p
-          data-en="Measure performance, track results and continuously improve."
-          data-he="מדידת ביצועים, מעקב אחר תוצאות ושיפור מתמיד.">
-          מדידת ביצועים, מעקב אחר תוצאות ושיפור מתמיד.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- Call to action -->
-
-<section class="cta">
-  <div class="container reveal">
-
-    <h2
-      data-en="Let's Improve Your Business Performance"
-      data-he="בואו נשפר יחד את הביצועים העסקיים שלכם">
-      בואו נשפר יחד את הביצועים העסקיים שלכם
-    </h2>
-
-    <p
-      data-en="Looking for an ongoing professional partner to support your management team and improve organizational performance?"
-      data-he="מחפשים שותף מקצועי לאורך זמן, שילווה את ההנהלה ויסייע בשיפור הביצועים של הארגון?">
-      מחפשים שותף מקצועי לאורך זמן, שילווה את ההנהלה ויסייע בשיפור הביצועים של הארגון?
-    </p>
-
-    <a href="#contact" class="btn btn-primary"
-      data-en="Contact Us" data-he="צרו קשר">צרו קשר</a>
-
-  </div>
-</section>
-
-<!-- Contact -->
-
-<section id="contact" class="contact">
-  <div class="container">
-
-    <div class="section-title reveal">
-
-      <div class="eyebrow" data-en="Get In Touch" data-he="יצירת קשר">יצירת קשר</div>
-
-      <h2 data-en="Start a Conversation" data-he="בואו נתחיל בשיחה">
-        בואו נתחיל בשיחה
-      </h2>
-
-      <p
-        data-en="Tell us about your business challenges and let's explore how we can help."
-        data-he="ספרו לנו על האתגרים העסקיים שלכם ונבדוק כיצד נוכל לעזור.">
-        ספרו לנו על האתגרים העסקיים שלכם ונבדוק כיצד נוכל לעזור.
-      </p>
-
-    </div>
-
-    <div class="contact-layout">
-
-      <aside class="contact-info reveal">
-
-        <h3>Mogatek Consulting</h3>
-
-        <p
-          data-en="Professional management and operational support for industry and business."
-          data-he="ליווי ניהולי ותפעולי מקצועי לתעשייה ולעסקים.">
-          ליווי ניהולי ותפעולי מקצועי לתעשייה ולעסקים.
-        </p>
-
-        <div class="contact-detail">
-          <span aria-hidden="true">✉️</span>
-          <a href="mailto:izhaktoashi@gmail.com">izhaktoashi@gmail.com</a>
-        </div>
-
-        <div class="contact-detail">
-          <span aria-hidden="true">💬</span>
-          <a href="https://wa.me/972545363347" target="_blank" rel="noopener noreferrer">
-            +972 54-536-3347
-          </a>
-        </div>
-
-        <div class="contact-detail">
-          <span aria-hidden="true">📞</span>
-          <a href="tel:+972545363347">+972 54-536-3347</a>
-        </div>
-
-        <a class="btn whatsapp-btn"
-          href="https://wa.me/972545363347"
-          target="_blank"
-          rel="noopener noreferrer"
-          data-en="Message on WhatsApp"
-          data-he="שלחו הודעה ב-WhatsApp">
-          שלחו הודעה ב-WhatsApp
-        </a>
-
-      </aside>
-
-      <form class="contact-form reveal"
-        action="https://formsubmit.co/izhaktoashi@gmail.com"
-        method="POST"
-        accept-charset="UTF-8">
-
-        <input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek Consulting">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="true">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-        <h3 data-en="Leave Your Details" data-he="השאירו פרטים ונחזור אליכם">
-          השאירו פרטים ונחזור אליכם
-        </h3>
-
-        <p class="form-intro"
-          data-en="Fill in the form and we'll get back to you as soon as possible."
-          data-he="מלאו את הפרטים ונחזור אליכם בהקדם האפשרי.">
-          מלאו את הפרטים ונחזור אליכם בהקדם האפשרי.
-        </p>
-
-        <div class="form-grid">
-
-          <div class="field">
-            <label for="name" data-en="Full name *" data-he="שם מלא *">שם מלא *</label>
-            <input id="name" name="name" type="text" autocomplete="name" required placeholder="שם מלא">
-          </div>
-
-          <div class="field">
-            <label for="company" data-en="Company" data-he="חברה">חברה</label>
-            <input id="company" name="company" type="text" autocomplete="organization" placeholder="שם החברה">
-          </div>
-
-          <div class="field">
-            <label for="phone" data-en="Phone *" data-he="טלפון *">טלפון *</label>
-            <input id="phone" name="phone" type="tel" autocomplete="tel" required placeholder="מספר טלפון">
-          </div>
-
-          <div class="field">
-            <label for="email" data-en="Email *" data-he="כתובת מייל *">כתובת מייל *</label>
-            <input id="email" name="email" type="email" autocomplete="email" required placeholder="name@example.com">
-          </div>
-
-          <div class="field full">
-            <label for="interest" data-en="Area of interest" data-he="תחום פנייה">תחום פנייה</label>
-
-            <select id="interest" name="area_of_interest">
-              <option value="" data-en="Choose a topic" data-he="בחרו תחום">בחרו תחום</option>
-              <option value="Management support" data-en="Management support" data-he="ליווי מנהלים">ליווי מנהלים</option>
-              <option value="Procurement" data-en="Procurement" data-he="רכש">רכש</option>
-              <option value="Maintenance" data-en="Maintenance" data-he="אחזקה">אחזקה</option>
-              <option value="HR" data-en="Human Resources" data-he="משאבי אנוש">משאבי אנוש</option>
-              <option value="Process improvement" data-en="Process improvement" data-he="שיפור תהליכים">שיפור תהליכים</option>
-              <option value="Other" data-en="Other" data-he="אחר">אחר</option>
-            </select>
-          </div>
-
-          <div class="field full">
-            <label for="message" data-en="How can we help?" data-he="במה נוכל לעזור?">במה נוכל לעזור?</label>
-            <textarea id="message" name="message" placeholder="ספרו לנו בקצרה על הצורך שלכם..."></textarea>
-          </div>
-
-        </div>
-
-        <button class="btn btn-primary" type="submit"
-          data-en="Send Inquiry" data-he="שליחת פנייה">
-          שליחת פנייה
-        </button>
-
-        <p class="form-note"
-          data-en="Your details will be used only to respond to your inquiry."
-          data-he="הפרטים ישמשו לצורך מענה לפנייתכם בלבד.">
-          הפרטים ישמשו לצורך מענה לפנייתכם בלבד.
-        </p>
-
-      </form>
-
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer>
-  <div class="container">
-    <strong>MOGATEK CONSULTING</strong>
-    <p>© <span id="year"></span> Mogatek Consulting. All rights reserved.</p>
-  </div>
-</footer>
-
-<button class="back-top" id="backTop" aria-label="Back to top">↑</button>
-
-<script>
-/* Enable JS-dependent styles */
-document.documentElement.classList.add('js');
-
-let currentLanguage = 'he';
-
-function toggleLanguage() {
-
-  currentLanguage = currentLanguage === 'he' ? 'en' : 'he';
-
-  document.documentElement.lang = currentLanguage;
-  document.documentElement.dir = currentLanguage === 'he' ? 'rtl' : 'ltr';
-  document.body.dir = document.documentElement.dir;
-
-  document.querySelectorAll('[data-he],[data-en]').forEach(el => {
-    const value = el.getAttribute('data-' + currentLanguage);
-    if (value !== null) {
-      el.textContent = value;
-    }
-  });
-
-  document.querySelectorAll('[data-he-html],[data-en-html]').forEach(el => {
-    const value = el.getAttribute('data-' + currentLanguage + '-html');
-    if (value !== null) {
-      el.innerHTML = value;
-    }
-  });
-
-  document.getElementById('languageBtn').textContent =
-    currentLanguage === 'he' ? 'English' : 'עברית';
-
-  document.querySelectorAll('input[placeholder],textarea[placeholder]').forEach(el => {
-    const he = el.dataset.placeholderHe;
-    const en = el.dataset.placeholderEn;
-
-    if (he && en) {
-      el.placeholder = currentLanguage === 'he' ? he : en;
-    }
-  });
-
-  document.getElementById('menuToggle').setAttribute(
-    'aria-label',
-    currentLanguage === 'he' ? 'פתיחת תפריט' : 'Open menu'
-  );
-
-  /* Update page title and meta description */
-  document.title = currentLanguage === 'he'
-    ? 'Mogatek Consulting | Management & Industrial Support'
-    : 'Mogatek Consulting | Management & Industrial Support';
-
-  document.querySelector('meta[name="description"]').setAttribute(
-    'content',
-    currentLanguage === 'he'
-      ? 'Mogatek Consulting - ליווי ניהולי מתמשך, שיפור תהליכים ותמיכה מקצועית למחלקות רכש, אחזקה ומשאבי אנוש.'
-      : 'Mogatek Consulting - Ongoing management support, process improvement and professional support for procurement, maintenance and HR departments.'
-  );
-}
-
-/* Current year */
-
-document.getElementById('year').textContent = new Date().getFullYear();
-
-/* Mobile menu */
-
-const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
-
-menuToggle.addEventListener('click', () => {
-
-  const open = navLinks.classList.toggle('open');
-
-  menuToggle.setAttribute('aria-expanded', String(open));
-  menuToggle.textContent = open ? '✕' : '☰';
-
-});
-
-navLinks.querySelectorAll('a').forEach(a => {
-
-  a.addEventListener('click', () => {
-
-    navLinks.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.textContent = '☰';
-
-  });
-
-});
-
-/* Scroll animations */
-
-const revealObserver = new IntersectionObserver(entries => {
-
-  entries.forEach(entry => {
-
-    if (entry.isIntersecting) {
-
-      entry.target.classList.add('visible');
-      revealObserver.unobserve(entry.target);
-
-    }
-
-  });
-
-}, {
-  threshold: .12
-});
-
-document.querySelectorAll('.reveal').forEach(el => {
-  revealObserver.observe(el);
-});
-
-/* Back to top */
-
-const backTop = document.getElementById('backTop');
-
-window.addEventListener('scroll', () => {
-  backTop.classList.toggle('show', window.scrollY > 500);
-}, {
-  passive: true
-});
-
-backTop.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
-/* Bilingual form placeholders */
-
-document.querySelector('#name').dataset.placeholderHe = 'שם מלא';
-document.querySelector('#name').dataset.placeholderEn = 'Full name';
-
-document.querySelector('#company').dataset.placeholderHe = 'שם החברה';
-document.querySelector('#company').dataset.placeholderEn = 'Company name';
-
-document.querySelector('#phone').dataset.placeholderHe = 'מספר טלפון';
-document.querySelector('#phone').dataset.placeholderEn = 'Phone number';
-
-document.querySelector('#email').dataset.placeholderHe = 'name@example.com';
-document.querySelector('#email').dataset.placeholderEn = 'name@example.com';
-
-document.querySelector('#message').dataset.placeholderHe = 'ספרו לנו בקצרה על הצורך שלכם...';
-document.querySelector('#message').dataset.placeholderEn = 'Briefly tell us what you need...';
-
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"ProfessionalService","name":"Mogatek","url":"https://izhaktoashi-droid.github.io/consulting-website/","email":"izhaktoashi@gmail.com","telephone":"+972545363347","description":"שירותי מיקור חוץ לפרויקטי אחזקה ותשתיות, קורסים והכשרות מקצועיות ושירותי BI ומדדים ארגוניים בישראל.","areaServed":{"@type":"Country","name":"Israel"},"availableLanguage":["Heb"]}
 </script>
+</head><body>
+<header><div class="container nav">
+<a class="logo" href="index.html">MOGA<span>TEK</span></a>
+<button class="menu" id="menuBtn" aria-label="פתיחת תפריט" aria-expanded="false">☰</button>
+<nav class="navlinks" id="navLinks">
+<a href="index.html#services">השירותים שלנו</a><a href="index.html#about">אודות</a><a href="index.html#method">שיטת העבודה</a><a href="index.html#contact">יצירת קשר</a>
+</nav><a class="navcta" href="index.html#contact">לתיאום שיחת היכרות</a>
+</div></header>
+<main>
+<section class="hero"><div class="container"><div class="hero-inner">
+<div class="kicker">OUTSOURCING • INDUSTRIAL SERVICES • BUSINESS INTELLIGENCE</div>
+<h1>הכוח המקצועי שהארגון שלכם צריך — <span>בדיוק בזמן.</span></h1>
+<p>Mogatek מספקת שירותי מיקור חוץ מקצועיים לחברות, מפעלים וארגונים בישראל: ניהול פרויקטי אחזקה ותשתיות, קורסים והכשרות מקצועיות, ושירותי BI ומדדים ארגוניים. אנחנו מביאים ניסיון, מומחיות ויכולת ביצוע — בלי להעמיס על המבנה הארגוני הקבוע.</p>
+<div class="actions"><a class="btn primary" href="#contact">בואו נבחן את הצורך שלכם</a><a class="btn outline" href="#services">הכירו את השירותים</a></div>
+</div></div></section>
+<section id="about"><div class="container split">
+<div class="reveal"><div class="kicker">MOGATEK | מיקור חוץ מקצועי</div><h2 style="font-size:clamp(29px,4vw,40px);color:var(--navy);line-height:1.3;margin:8px 0 16px">לא עוד המלצות מהצד. שירות מקצועי שמתחבר לעשייה.</h2>
+<p style="color:var(--muted);margin-bottom:14px">ארגונים נדרשים להתמודד עם פרויקטים מורכבים, פערי מומחיות, עומסי עבודה וצורך במדידה ובקרה. לא תמיד נכון או אפשרי להקים צוות פנימי לכל משימה.</p>
+<p style="color:var(--muted)">Mogatek מאפשרת לארגון לקבל שירות מקצועי ממוקד, בהתאם לצורך ולהיקף הפעילות — באמצעות ניהול פרויקטים, העברת ידע והכשרות, או הקמה ותחזוקה של מערכי מדידה ו-BI.</p></div>
+<div class="panel reveal"><h3>ניסיון ניהולי. חשיבה הנדסית. ביצוע מדיד.</h3><p>הגישה שלנו משלבת הבנה של תהליכים תעשייתיים וארגוניים, ניסיון בתחומי הרכש, הלוגיסטיקה, התפעול והאחזקה, ויכולת לתרגם צרכים לתוכנית עבודה ולתוצרים ברורים.</p><p style="margin-top:13px"><b>המודל:</b> מגדירים צורך, מסכמים תכולה ותוצרים, מבצעים, מודדים ומדווחים.</p></div>
+</div></section>
+<section id="services" class="soft"><div class="container">
+<div class="sectionhead reveal"><div class="kicker">שלושת תחומי הפעילות</div><h2>שירותי מיקור חוץ לארגונים ולתעשייה</h2><p>שלושה תחומי מומחיות המאפשרים לארגון לקבל יכולת מקצועית ממוקדת, בלי להקים מערך פנימי מלא.</p></div>
+<div class="cards">
+<article class="card reveal"><div class="icon">🏗️</div><h3>מיקור חוץ לפרויקטי אחזקה ותשתיות</h3><p>ניהול והובלת פרויקטים בתחום האחזקה, התשתיות והציוד — משלב הגדרת הצורך ועד למסירה ובקרה.</p><ul><li>ניהול פרויקטי אחזקה ושדרוג</li><li>ניהול קבלנים וספקים</li><li>תכנון, תקציב ולוחות זמנים</li><li>פיקוח, מעקב ודיווח התקדמות</li></ul><a class="more" href="maintenance.html">לפרטים על השירות ←</a></article>
+<article class="card reveal"><div class="icon">🎓</div><h3>מיקור חוץ לקורסים והכשרות מקצועיות</h3><p>תכנון והעברת הכשרות פנים-ארגוניות וקורסים מקצועיים בתחומי שרשרת האספקה והתפעול.</p><ul><li>רכש וניהול ספקים</li><li>לוגיסטיקה ושרשרת אספקה</li><li>תפעול ותפ"י</li><li>יבוא, יצוא וסחר בינלאומי</li></ul><a class="more" href="training.html">לפרטים על השירות ←</a></article>
+<article class="card reveal"><div class="icon">📊</div><h3>מיקור חוץ לשירותי BI ומדדים ארגוניים</h3><p>הפיכת נתונים לתמונת מצב ניהולית: מדדים, דוחות, לוחות מחוונים ותהליכי בקרה.</p><ul><li>הגדרת KPI ומילון מדדים</li><li>דוחות ולוחות מחוונים</li><li>מדדי רכש, מלאי ותפעול</li><li>ניתוח מגמות וחריגות</li></ul><a class="more" href="bi.html">לפרטים על השירות ←</a></article>
+</div></div></section>
+<section id="method"><div class="container"><div class="sectionhead reveal"><div class="kicker">שיטת העבודה</div><h2>שירות מוגדר. אחריות ברורה. תוצרים מדידים.</h2><p>תהליך עבודה שקוף שמחבר בין הצורך הארגוני לבין ביצוע בפועל.</p></div>
+<div class="benefits">
+<div class="benefit reveal"><b>01 | מיפוי הצורך</b><p>הבנת האתגר, המטרות, בעלי העניין והיקף השירות הנדרש.</p></div>
+<div class="benefit reveal"><b>02 | הגדרת תכולה</b><p>הגדרת משימות, תוצרים, לוחות זמנים, ממשקי עבודה ומדדי הצלחה.</p></div>
+<div class="benefit reveal"><b>03 | ביצוע השירות</b><p>הקצאת מומחיות וביצוע העבודה בשיתוף הגורמים בארגון.</p></div>
+<div class="benefit reveal"><b>04 | מדידה ודיווח</b><p>מעקב אחר התקדמות, הצגת תוצרים, מדידת ביצועים ושיפור.</p></div>
+</div></div></section>
+<section class="cta"><div class="container reveal"><h2>צריכים יכולת מקצועית — בלי להגדיל את כוח האדם הקבוע?</h2><p>נבחן יחד את הצורך ונבנה מתווה שירות שמתאים לארגון, להיקף הפעילות וליעדים שלכם.</p><a class="btn primary" href="#contact">לתיאום שיחת היכרות</a></div></section>
 
-</body>
-</html>
+<section id="contact" class="soft"><div class="container">
+<div class="sectionhead reveal"><div class="kicker">בואו נדבר</div><h2>ספרו לנו מה הארגון שלכם צריך</h2><p>השאירו פרטים ונחזור אליכם לבחינת הצורך, היקף השירות ואפשרויות ההתקשרות.</p></div>
+<div class="contactgrid">
+<aside class="contactinfo reveal"><h3>Mogatek</h3><p>שירותי מיקור חוץ מקצועיים לתעשייה ולארגונים בישראל.</p>
+<div class="contactline">✉️ <a href="mailto:izhaktoashi@gmail.com">izhaktoashi@gmail.com</a></div>
+<div class="contactline">☎️ <a href="tel:+972545363347">+972-54-536-3347</a></div>
+<p style="margin-top:22px">אפשר גם לפנות ישירות ב-WhatsApp</p>
+<a class="btn" style="background:#dff7e9;color:#167344" href="https://wa.me/972545363347" target="_blank" rel="noopener">שליחת הודעה ב-WhatsApp</a></aside>
+<form class="formbox reveal" action="https://formsubmit.co/izhaktoashi@gmail.com" method="POST">
+<input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek - שירותי מיקור חוץ">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+<h3>השאירו פרטים</h3><p>נחזור אליכם בהקדם האפשרי.</p>
+<div class="formgrid">
+<div class="field"><label for="name">שם מלא *</label><input id="name" name="שם מלא" required autocomplete="name"></div>
+<div class="field"><label for="company">שם הארגון</label><input id="company" name="שם הארגון" autocomplete="organization"></div>
+<div class="field"><label for="phone">טלפון *</label><input id="phone" name="טלפון" type="tel" required autocomplete="tel"></div>
+<div class="field"><label for="email">דוא"ל *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+<div class="field full"><label for="service">באיזה שירות אתם מתעניינים?</label><select id="service" name="תחום עניין"><option value="">בחרו תחום</option><option>מיקור חוץ לפרויקטי אחזקה ותשתיות</option><option>קורסים והכשרות מקצועיות</option><option>שירותי BI ומדדים ארגוניים</option><option>שירות משולב / אחר</option></select></div>
+<div class="field full"><label for="message">כמה מילים על הצורך שלכם</label><textarea id="message" name="תיאור הפנייה"></textarea></div>
+</div><button class="btn primary" type="submit">שליחת פנייה</button>
+<div class="note">הפרטים ישמשו לצורך טיפול בפנייה בלבד. טופס זה מופעל באמצעות FormSubmit.</div>
+</form></div></div></section>
+
+<section><div class="container faq"><div class="sectionhead"><div class="kicker">שאלות נפוצות</div><h2>איך עובד שירות מיקור החוץ?</h2></div>
+<details><summary>האם השירות ניתן כפרויקט חד-פעמי או כהתקשרות מתמשכת?</summary><p>בהתאם לצורך. ניתן להגדיר פרויקט עם תכולה ולוחות זמנים, שירות חודשי מתמשך או התקשרות לפי אבני דרך.</p></details>
+<details><summary>האם השירות מתאים גם למפעלים ולחברות תעשייתיות?</summary><p>כן. השירותים מיועדים לחברות תעשייתיות, ארגונים, מפעלים וחברות הנדסה, בהתאם לתחום ולתכולת העבודה.</p></details>
+<details><summary>האם ניתן להתאים הכשרה או מערך BI לצרכים שלנו?</summary><p>כן. התכנים, המדדים והתוצרים מוגדרים יחד עם הארגון ומותאמים לתהליכים, למערכות וליעדים שלו.</p></details>
+</div></section>
+</main>
+<footer><div class="container"><strong>MOGATEK</strong><p>מיקור חוץ מקצועי לתעשייה ולארגונים בישראל</p><p>© <span data-year></span> Mogatek. כל הזכויות שמורות.</p></div></footer>
+<button class="backtop" aria-label="חזרה לראש העמוד">↑</button>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('navLinks');
+if(menuBtn&&nav){menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰';});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';}));}
+const io=new IntersectionObserver(items=>items.forEach(i=>{if(i.isIntersecting){i.target.classList.add('show');io.unobserve(i.target);}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+const topBtn=document.querySelector('.backtop');if(topBtn){window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>450),{passive:true});topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));}
+document.querySelectorAll('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+</script>
+</body></html>
