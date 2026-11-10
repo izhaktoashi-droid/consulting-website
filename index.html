@@ -59,7 +59,7 @@ html[lang="en"] body{
 /* Header & Navigation */
 header{
   position:sticky;top:0;z-index:50;
-  background:rgba(255,255,255,.94);
+  background:rgba(255,255,255,.96);
   backdrop-filter:blur(16px);
   -webkit-backdrop-filter:blur(16px);
   border-bottom:1px solid rgba(225,232,240,.85);
@@ -69,42 +69,53 @@ header.scrolled{
   box-shadow:0 10px 30px rgba(11,34,61,.08);
 }
 .nav{
-  min-height:80px;
+  min-height:86px;
   display:flex;align-items:center;justify-content:space-between;
 }
 .logo{
-  display:inline-flex;align-items:center;gap:10px;
+  display:inline-flex;align-items:center;
   text-decoration:none;
   transition:transform .25s ease;
 }
 .logo:hover{
-  transform:scale(1.03);
+  transform:scale(1.02);
 }
 .logo img{
-  height:52px;
+  height:64px;
   width:auto;
   display:block;
   object-fit:contain;
+  mix-blend-mode:multiply;
 }
 .logo-fallback{
-  font-size:25px;font-weight:800;color:var(--navy);letter-spacing:-.5px;
+  font-size:28px;font-weight:800;color:var(--navy);letter-spacing:-.5px;
   display:none;
 }
 .logo-fallback span{color:var(--accent)}
 
 .nav-links{
-  display:flex;align-items:center;gap:24px;
+  display:flex;align-items:center;gap:20px;
 }
 .nav-links a{
   font-size:14.5px;font-weight:600;color:#44586a;text-decoration:none;
   position:relative;transition:color .25s;
 }
-.nav-links a:not(.cta-small)::after{
+.nav-links a:not(.cta-small):not(.quick-link)::after{
   content:"";position:absolute;bottom:-4px;inset-inline-start:0;
   width:0;height:2px;background:var(--accent);transition:width .3s ease;
 }
-.nav-links a:not(.cta-small):hover{color:var(--blue)}
-.nav-links a:not(.cta-small):hover::after{width:100%}
+.nav-links a:not(.cta-small):not(.quick-link):hover{color:var(--blue)}
+.nav-links a:not(.cta-small):not(.quick-link):hover::after{width:100%}
+
+.quick-link{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 12px;border-radius:10px;font-size:13px;font-weight:700;
+  transition:all .2s ease;
+}
+.whatsapp-link{background:#eafaf1;color:#25d366;}
+.whatsapp-link:hover{background:#25d366;color:#fff;}
+.email-link{background:#ebf5fb;color:#1b65a6;}
+.email-link:hover{background:#1b65a6;color:#fff;}
 
 .lang-btn{
   background:var(--bg);
@@ -130,7 +141,7 @@ header.scrolled{
 
 .cta-small{
   background:var(--navy);color:#fff !important;
-  padding:10px 22px;border-radius:99px;font-weight:700;font-size:13.5px;
+  padding:10px 20px;border-radius:99px;font-weight:700;font-size:13.5px;
   box-shadow:0 4px 14px rgba(11,34,61,.18);
   transition:all .3s ease !important;
 }
@@ -166,18 +177,16 @@ header.scrolled{
   z-index:2;
 }
 .badge{
-  display:inline-flex;align-items:center;gap:8px;
-  background:rgba(255,255,255,.09);
-  border:1px solid rgba(255,255,255,.18);
-  padding:6px 16px;border-radius:99px;
-  font-size:13px;font-weight:600;color:var(--gold-light);
+  display:inline-flex;align-items:center;gap:10px;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  padding:7px 16px;border-radius:99px;
+  font-size:13.5px;font-weight:600;color:var(--gold-light);
   margin-bottom:20px;
   backdrop-filter:blur(8px);
 }
-.badge-dot{
-  width:8px;height:8px;border-radius:50%;background:var(--accent);
-  box-shadow:0 0 10px var(--accent);
-  animation:pulse 2s infinite;
+.badge-trophy{
+  font-size:18px;
 }
 .hero h1{
   font-size:clamp(34px,4.2vw,52px);
@@ -218,14 +227,14 @@ header.scrolled{
   transform:translateY(-3px);
   box-shadow:0 15px 32px rgba(240,127,26,.48);
 }
-.btn-ghost{
-  border:1px solid rgba(255,255,255,.35);
+.btn-whatsapp-hero{
+  background:linear-gradient(135deg,#25d366,#1eb857);
   color:#fff;
-  background:rgba(255,255,255,.04);
+  box-shadow:0 10px 25px rgba(37,211,102,.35);
 }
-.btn-ghost:hover{
-  background:#fff;color:var(--navy);
+.btn-whatsapp-hero:hover{
   transform:translateY(-3px);
+  box-shadow:0 15px 32px rgba(37,211,102,.48);
 }
 
 /* Hero Visual Showcase */
@@ -248,30 +257,6 @@ header.scrolled{
   border-radius:16px;
   object-fit:cover;
   aspect-ratio:16/10;
-}
-.floating-card{
-  position:absolute;
-  bottom:-22px;
-  inset-inline-start:-20px;
-  background:rgba(255,255,255,.97);
-  color:var(--navy);
-  padding:14px 20px;
-  border-radius:16px;
-  box-shadow:0 18px 40px rgba(9,23,38,.25);
-  display:flex;align-items:center;gap:14px;
-  border:1px solid rgba(255,255,255,.8);
-}
-.floating-icon{
-  width:42px;height:42px;border-radius:12px;
-  background:linear-gradient(135deg,var(--blue),var(--accent));
-  color:#fff;display:grid;place-items:center;
-  font-weight:800;font-size:18px;flex-shrink:0;
-}
-.floating-card strong{
-  display:block;font-size:14.5px;line-height:1.2;
-}
-.floating-card span{
-  font-size:12px;color:var(--muted);
 }
 
 /* Sections */
@@ -471,16 +456,15 @@ footer p{margin-top:8px}
 }
 
 /* Responsive */
-@media(max-width:920px){
+@media(max-width:980px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
-  .floating-card{inset-inline-start:12px;bottom:-18px}
+  .nav-links a:not(.cta-small):not(.lang-btn){display:none}
 }
 @media(max-width:760px){
   .grid{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr;gap:0}
-  .nav-links a:not(.cta-small){display:none}
   .cta-small{display:none}
-  .logo img{height:42px}
+  .logo img{height:50px}
   .hero{padding:65px 0 80px}
   section{padding:68px 0}
   .form{padding:28px 22px}
@@ -493,16 +477,21 @@ footer p{margin-top:8px}
 <header id="header">
   <div class="container nav">
     <a class="logo" href="./" aria-label="Mogatek Home">
-      <!-- תמיכה בשמות קבצים נפוצים: logo.jpg, logo.png או LOGO.jpg -->
       <img src="logo.jpg" alt="MOGATEK Logo" onerror="this.onerror=null; this.src='logo.png';">
+      <span class="logo-fallback">MOGA<span>TEK</span></span>
     </a>
     <nav class="nav-links">
       <a href="#services" data-i18n="nav_services">השירותים</a>
-      <a href="#contact" data-i18n="nav_contact">יצירת קשר</a>
+      <a href="https://wa.me/972545363347" target="_blank" class="quick-link whatsapp-link" aria-label="WhatsApp">
+        💬 WhatsApp
+      </a>
+      <a href="mailto:izhaktoashi@gmail.com" class="quick-link email-link" aria-label="Email">
+        ✉️ Email
+      </a>
       <button type="button" class="lang-btn" id="langToggle" aria-label="Switch Language">
         🌐 <span id="langLabel">English</span>
       </button>
-      <a class="cta-small" href="#contact" data-i18n="nav_cta">לתיאום שיחה</a>
+      <a class="cta-small" href="#contact" data-i18n="nav_cta">תיאום שיחת ייעוץ</a>
     </nav>
   </div>
 </header>
@@ -513,8 +502,8 @@ footer p{margin-top:8px}
   <div class="container hero-grid">
     <div class="hero-content reveal visible">
       <div class="badge">
-        <span class="badge-dot"></span>
-        <span data-i18n="hero_badge">מחלקת מצוינות תפעולית במיקור חוץ</span>
+        <span class="badge-trophy">🏆</span>
+        <span data-i18n="hero_badge">מובילים ארגונים למקום הראשון במצוינות תפעולית</span>
       </div>
 
       <h1 data-i18n="hero_title">
@@ -527,21 +516,14 @@ footer p{margin-top:8px}
       </p>
 
       <div class="hero-actions">
-        <a class="btn btn-primary" href="#contact" data-i18n="hero_btn_primary">לתיאום שיחת היכרות</a>
-        <a class="btn btn-ghost" href="#services" data-i18n="hero_btn_ghost">להכיר את השירותים</a>
+        <a class="btn btn-primary" href="#contact" data-i18n="hero_btn_primary">תיאום שיחת ייעוץ ללא עלות</a>
+        <a class="btn btn-whatsapp-hero" href="https://wa.me/972545363347" target="_blank" data-i18n="hero_btn_wa">שוחח בוואטסאפ</a>
       </div>
     </div>
 
     <div class="hero-visual reveal visible">
       <div class="image-frame">
         <img src="team-hero.jpg" alt="נבחרת המומחים של Mogatek במיקור חוץ" data-i18n-alt="hero_img_alt">
-      </div>
-      <div class="floating-card">
-        <div class="floating-icon">✓</div>
-        <div>
-          <strong data-i18n="float_title">נבחרת מומחים ייעודית</strong>
-          <span data-i18n="float_sub">גמישות מלאה ללא הגדלת תקני כוח אדם</span>
-        </div>
       </div>
     </div>
   </div>
@@ -595,14 +577,14 @@ footer p{margin-top:8px}
   <div class="container">
     <div class="section-header reveal">
       <span class="section-tag" data-i18n="contact_tag">מתחילים מכאן</span>
-      <h2 data-i18n="contact_title">בואו נדבר על הצורך שלכם</h2>
+      <h2 data-i18n="contact_title">תיאום שיחת ייעוץ ללא עלות</h2>
       <p class="section-p" data-i18n="contact_desc">
-        השאירו פרטים ונחזור אליכם לבחינת הצורך, היקף השירות ואפשרויות ההתקשרות.
+        השאירו פרטים ונחזור אליכם לבחינת הצורך, היקף השירות ואפשרויות ההתקשרות ישירות למייל.
       </p>
     </div>
 
     <form class="form reveal" action="https://formsubmit.co/izhaktoashi@gmail.com" method="POST">
-      <input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek">
+      <input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek - תיאום שיחת ייעוץ">
       <input type="hidden" name="_template" value="table">
       <input type="hidden" name="_captcha" value="true">
       <input type="hidden" name="_next" value="https://izhaktoashi-droid.github.io/consulting-website/thank-you.html">
@@ -649,10 +631,10 @@ footer p{margin-top:8px}
         <textarea id="message" name="message"></textarea>
       </div>
 
-      <button type="submit" data-i18n="btn_submit">שליחת פנייה</button>
+      <button type="submit" data-i18n="btn_submit">שליחת פנייה ותיאום שיחה</button>
 
       <div class="note" data-i18n="form_note">
-        הפרטים ישמשו לצורך טיפול בפנייה בלבד. הטופס מופעל באמצעות FormSubmit.
+        הפרטים יישלחו ישירות לאימייל של יצחק (izhaktoashi@gmail.com). הטופס מופעל באמצעות FormSubmit.
       </div>
     </form>
   </div>
@@ -666,7 +648,7 @@ footer p{margin-top:8px}
       <img src="logo.jpg" alt="MOGATEK Logo" onerror="this.onerror=null; this.src='logo.png';">
     </div>
     <p data-i18n="footer_desc">מיקור חוץ למצוינות תפעולית, ניהול פרויקטים, הכשרות וניהול KPI לארגונים בישראל.</p>
-    <p>© <span id="year"></span> Mogatek. <span data-i18n="footer_rights">כל הזכויות שמורות.</span></p>
+    <p>© <span id="year"></span> Mogatek. <span data-i18n="footer_rights">כל הזכויות שמורות.</span> | <a href="https://wa.me/972545363347" target="_blank" style="color:var(--accent);text-decoration:none;">WhatsApp: 054-5363347</a></p>
   </div>
 </footer>
 
@@ -699,16 +681,13 @@ const translations = {
     page_title: "Mogatek | מצוינות תפעולית במיקור חוץ לארגונים בישראל",
     lang_btn: "English",
     nav_services: "השירותים",
-    nav_contact: "יצירת קשר",
-    nav_cta: "לתיאום שיחה",
-    hero_badge: "מחלקת מצוינות תפעולית במיקור חוץ",
+    nav_cta: "תיאום שיחת ייעוץ",
+    hero_badge: "מובילים ארגונים למקום הראשון במצוינות תפעולית",
     hero_title: 'מצוינות תפעולית במיקור חוץ —<br><em>בלי להעמיס על הארגון.</em>',
     hero_desc: "Mogatek מקימה ומנהלת עבורכם מחלקות מצוינות תפעולית חוץ-ארגוניות: ניהול פרויקטי רכש, אחזקה ותשתיות; הכשרות וייעוץ; וניהול KPI, מדדים ובקרה — כדי שתוכלו להתמקד בליבה העסקית.",
-    hero_btn_primary: "לתיאום שיחת היכרות",
-    hero_btn_ghost: "להכיר את השירותים",
+    hero_btn_primary: "תיאום שיחת ייעוץ ללא עלות",
+    hero_btn_wa: "שוחח בוואטסאפ",
     hero_img_alt: "נבחרת המומחים של Mogatek במיקור חוץ",
-    float_title: "נבחרת מומחים ייעודית",
-    float_sub: "גמישות מלאה ללא הגדלת תקני כוח אדם",
     services_tag: "תחומי התמחות",
     services_title: "מה אנחנו עושים עבורכם",
     services_desc: "אנחנו מספקים יכולת ניהולית ומקצועית במיקור חוץ — בלי צורך להקים מחלקות פנימיות או להגדיל את מבנה הכוח אדם הקבוע.",
@@ -719,8 +698,8 @@ const translations = {
     srv3_title: "ניהול KPI, מדדים ובקרה",
     srv3_desc: "הקמה וניהול של מערך מדידה ארגוני: KPI, דוחות, לוחות מחוונים, ניתוח חריגות ושיפור מתמשך.",
     contact_tag: "מתחילים מכאן",
-    contact_title: "בואו נדבר על הצורך שלכם",
-    contact_desc: "השאירו פרטים ונחזור אליכם לבחינת הצורך, היקף השירות ואפשרויות ההתקשרות.",
+    contact_title: "תיאום שיחת ייעוץ ללא עלות",
+    contact_desc: "השאירו פרטים ונחזור אליכם לבחינת הצורך, היקף השירות ואפשרויות ההתקשרות ישירות למייל.",
     lbl_name: "שם מלא *",
     lbl_company: "שם הארגון",
     lbl_phone: "טלפון *",
@@ -733,8 +712,8 @@ const translations = {
     opt_outsourcing: "מחלקת מצוינות תפעולית במיקור חוץ",
     opt_other: "שירות משולב / אחר",
     lbl_message: "כמה מילים על הצורך שלכם",
-    btn_submit: "שליחת פנייה",
-    form_note: "הפרטים ישמשו לצורך טיפול בפנייה בלבד. הטופס מופעל באמצעות FormSubmit.",
+    btn_submit: "שליחת פנייה ותיאום שיחה",
+    form_note: "הפרטים יישלחו ישירות לאימייל של יצחק (izhaktoashi@gmail.com). הטופס מופעל באמצעות FormSubmit.",
     footer_desc: "מיקור חוץ למצוינות תפעולית, ניהול פרויקטים, הכשרות וניהול KPI לארגונים בישראל.",
     footer_rights: "כל הזכויות שמורות."
   },
@@ -742,16 +721,13 @@ const translations = {
     page_title: "Mogatek | Outsourced Operational Excellence for Organizations",
     lang_btn: "עברית",
     nav_services: "Services",
-    nav_contact: "Contact",
-    nav_cta: "Schedule a Call",
-    hero_badge: "Outsourced Operational Excellence Department",
+    nav_cta: "Free Consultation",
+    hero_badge: "Leading Organizations to #1 in Operational Excellence",
     hero_title: 'Outsourced Operational Excellence —<br><em>Without Overloading Your Organization.</em>',
     hero_desc: "Mogatek builds and manages external operational excellence departments for your business: procurement, maintenance & infrastructure project management; training & consulting; and KPI & performance control — so you can focus on your core business.",
-    hero_btn_primary: "Book an Intro Call",
-    hero_btn_ghost: "Explore Services",
+    hero_btn_primary: "Book a Free Consultation",
+    hero_btn_wa: "Chat on WhatsApp",
     hero_img_alt: "Mogatek Outsourced Specialist Team",
-    float_title: "Dedicated Specialist Team",
-    float_sub: "Full agility without increasing permanent headcount",
     services_tag: "Areas of Expertise",
     services_title: "What We Do For You",
     services_desc: "We deliver high-level managerial and professional capabilities via outsourcing — eliminating the need to build internal departments or expand permanent headcount.",
@@ -762,8 +738,8 @@ const translations = {
     srv3_title: "KPI Management, Metrics & Control",
     srv3_desc: "Designing and operating organizational measurement frameworks: KPIs, executive reports, dashboards, variance analysis, and continuous improvement.",
     contact_tag: "Get Started",
-    contact_title: "Let's Discuss Your Needs",
-    contact_desc: "Leave your details and we will get back to you to evaluate your goals, scope of service, and engagement options.",
+    contact_title: "Book a Free Consultation",
+    contact_desc: "Leave your details and we will get back to you directly via email to evaluate your goals and scope of service.",
     lbl_name: "Full Name *",
     lbl_company: "Organization Name",
     lbl_phone: "Phone *",
@@ -776,8 +752,8 @@ const translations = {
     opt_outsourcing: "Outsourced Operational Excellence Department",
     opt_other: "Combined Service / Other",
     lbl_message: "Tell us briefly about your needs",
-    btn_submit: "Send Inquiry",
-    form_note: "Your details will be used solely to respond to your inquiry. Powered by FormSubmit.",
+    btn_submit: "Send Inquiry & Book Call",
+    form_note: "Details will be sent directly to Izhak's email (izhaktoashi@gmail.com). Powered by FormSubmit.",
     footer_desc: "Outsourcing for operational excellence, project management, training, and KPI control.",
     footer_rights: "All rights reserved."
   }
