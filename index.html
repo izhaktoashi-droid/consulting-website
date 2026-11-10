@@ -4,708 +4,351 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Mogatek | מיקור חוץ למצוינות תפעולית, פרויקטים ו-KPI לארגונים בישראל</title>
-<meta name="description" content="Mogatek מספקת מחלקות מצוינות תפעולית במיקור חוץ: ניהול פרויקטי רכש, אחזקה ותשתיות, הכשרות וייעוץ, וניהול KPI ומדדים ארגוניים — בלי להגדיל את מבנה הכוח אדם הקבוע.">
-<meta name="robots" content="index,follow,max-image-preview:large">
+<title>Mogatek | מצוינות תפעולית במיקור חוץ לארגונים בישראל</title>
+<meta name="description" content="Mogatek מספקת מחלקות מצוינות תפעולית במיקור חוץ: ניהול פרויקטים, הכשרות, ייעוץ, KPI ומדדים ארגוניים — בלי להגדיל את מבנה הכוח אדם הקבוע.">
+<meta name="robots" content="index,follow">
 <link rel="canonical" href="https://izhaktoashi-droid.github.io/consulting-website/">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="Mogatek">
-<meta property="og:title" content="Mogatek | מצוינות תפעולית במיקור חוץ לארגונים">
-<meta property="og:description" content="מחלקות מצוינות תפעולית חוץ-ארגוניות: ניהול פרויקטים, הכשרות, KPI, מדדים ובקרה — בלי להעמיס על המבנה הארגוני.">
+<meta property="og:title" content="Mogatek | מצוינות תפעולית במיקור חוץ">
+<meta property="og:description" content="ניהול פרויקטים, הכשרות, KPI ומדדים ארגוניים — במיקור חוץ.">
 <meta property="og:url" content="https://izhaktoashi-droid.github.io/consulting-website/">
 <meta property="og:image" content="https://izhaktoashi-droid.github.io/consulting-website/og-image.jpg">
-<meta property="og:image:alt" content="Mogatek — מצוינות תפעולית במיקור חוץ לארגונים">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Mogatek | מצוינות תפעולית במיקור חוץ">
 <meta name="twitter:description" content="ניהול פרויקטים, הכשרות, KPI ומדדים ארגוניים — במיקור חוץ.">
 <meta name="twitter:image" content="https://izhaktoashi-droid.github.io/consulting-website/og-image.jpg">
 
-<link rel="icon" href="./favicon.ico">
-<link rel="apple-touch-icon" href="./apple-touch-icon.png">
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --navy:#0d1f33;
-  --navy-2:#12314d;
-  --blue:#2c6fa8;
+  --navy:#0e2237;
+  --blue:#1f5f8b;
   --teal:#0f9c8f;
   --gold:#c9a15a;
-  --ink:#1d2b3a;
-  --muted:#66788a;
-  --bg:#f7f9fb;
-  --line:#e4eaf1;
-  --white:#fff;
-  --shadow:0 22px 60px rgba(13,31,51,.10);
-  --radius:22px;
+  --ink:#22303d;
+  --muted:#67788a;
+  --bg:#f6f8fa;
+  --line:#e3e9ef;
 }
 
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:96px}
+html{scroll-behavior:smooth}
 body{
   font-family:"Heebo",Arial,sans-serif;
   color:var(--ink);
   line-height:1.75;
   background:#fff;
-  overflow-x:hidden;
 }
-a{color:inherit;text-decoration:none}
-button,input,select,textarea{font:inherit}
-img{max-width:100%;display:block}
 
-.container{width:min(1180px,92%);margin:auto}
+.container{width:min(1080px,90%);margin:auto}
 
 /* Header */
 header{
-  position:sticky;top:0;z-index:80;
-  background:rgba(255,255,255,.88);
-  backdrop-filter:blur(18px);
-  border-bottom:1px solid rgba(228,234,241,.9);
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
 }
 .nav{
-  min-height:82px;
-  display:flex;align-items:center;justify-content:space-between;gap:24px;
+  min-height:72px;
+  display:flex;align-items:center;justify-content:space-between;
 }
 .logo{
-  display:flex;align-items:center;gap:12px;
-  font-size:25px;font-weight:900;color:var(--navy);letter-spacing:-.5px;
-}
-.logo-mark{
-  width:38px;height:38px;border-radius:11px;
-  background:linear-gradient(135deg,var(--navy),var(--blue));
-  display:grid;place-items:center;color:#fff;font-size:15px;font-weight:900;
+  font-size:23px;font-weight:800;color:var(--navy);letter-spacing:-.5px;
 }
 .logo span{color:var(--teal)}
-.navlinks{display:flex;align-items:center;gap:28px;font-size:14.5px;font-weight:600}
-.navlinks a{position:relative;padding:6px 0;color:#41566b}
-.navlinks a:after{
-  content:"";position:absolute;right:0;bottom:0;height:2px;width:0;
-  background:var(--teal);transition:width .28s ease;
+.nav a{
+  font-size:14px;font-weight:600;color:#44586a;margin-inline-start:22px;
 }
-.navlinks a:hover{color:var(--navy)}
-.navlinks a:hover:after{width:100%}
-.navcta{
-  background:var(--navy);color:#fff;padding:12px 22px;border-radius:99px;
-  font-weight:700;font-size:13.5px;transition:.25s;
-  box-shadow:0 10px 24px rgba(13,31,51,.14);
+.nav a:hover{color:var(--teal)}
+.cta-small{
+  background:var(--navy);color:#fff;
+  padding:10px 18px;border-radius:99px;font-weight:700;font-size:13px;
 }
-.navcta:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(13,31,51,.18)}
-.menu{
-  display:none;border:0;background:#eef3f8;color:var(--navy);
-  padding:9px 13px;border-radius:12px;font-size:21px;cursor:pointer;
-}
+.cta-small:hover{background:var(--teal)}
 
 /* Hero */
 .hero{
-  position:relative;overflow:hidden;color:#fff;
+  padding:110px 0 90px;
+  color:#fff;
   background:
-    radial-gradient(circle at 85% 15%,rgba(201,161,90,.16),transparent 34%),
-    radial-gradient(circle at 8% 85%,rgba(15,156,143,.20),transparent 32%),
-    linear-gradient(135deg,#0d1f33 0%,#153c5f 55%,#1d5a7d 100%);
-  padding:130px 0 120px;
+    radial-gradient(circle at 85% 20%,rgba(201,161,90,.15),transparent 35%),
+    linear-gradient(135deg,#0e2237,#1d5478);
 }
-.hero:before,.hero:after{
-  content:"";position:absolute;border-radius:50%;pointer-events:none;
-}
-.hero:before{
-  width:520px;height:520px;left:-180px;top:-220px;
-  border:1px solid rgba(255,255,255,.08);
-  animation:drift 18s ease-in-out infinite;
-}
-.hero:after{
-  width:320px;height:320px;right:-90px;bottom:-140px;
-  border:1px solid rgba(255,255,255,.10);
-  animation:drift 14s ease-in-out infinite reverse;
-}
-.hero-inner{position:relative;z-index:2;max-width:860px}
-.eyebrow{
-  display:inline-flex;align-items:center;gap:9px;
-  color:#d9e8f3;font-size:12.5px;font-weight:700;letter-spacing:1.4px;
-  margin-bottom:22px;
-}
-.eyebrow:before{
-  content:"";width:34px;height:1px;background:var(--gold);
-}
-h1{
-  font-size:clamp(38px,5.2vw,66px);
-  line-height:1.13;letter-spacing:-1.2px;
-  margin-bottom:24px;font-weight:800;
+.hero h1{
+  font-size:clamp(34px,4.6vw,54px);
+  line-height:1.18;
+  letter-spacing:-1px;
+  margin-bottom:20px;
+  font-weight:800;
 }
 .hero h1 em{
   font-style:normal;color:#e6c98d;
 }
 .hero p{
-  font-size:18px;color:#d7e3ee;max-width:720px;margin-bottom:36px;
+  max-width:680px;
+  font-size:17.5px;
+  color:#d9e4ee;
+  margin-bottom:32px;
 }
-.actions{display:flex;gap:14px;flex-wrap:wrap}
 .btn{
-  display:inline-flex;align-items:center;justify-content:center;gap:9px;
-  border:0;border-radius:99px;padding:15px 28px;
-  font-weight:700;font-size:14.5px;cursor:pointer;transition:.28s;
+  display:inline-block;
+  padding:14px 26px;
+  border-radius:99px;
+  font-weight:700;font-size:14.5px;
+  transition:.25s;
 }
 .btn-primary{
   background:var(--gold);color:#10263c;
-  box-shadow:0 14px 32px rgba(201,161,90,.22);
 }
-.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 40px rgba(201,161,90,.28)}
+.btn-primary:hover{transform:translateY(-3px)}
 .btn-ghost{
-  border:1px solid rgba(255,255,255,.38);color:#fff;
+  border:1px solid rgba(255,255,255,.4);color:#fff;margin-inline-start:12px;
 }
-.btn-ghost:hover{background:#fff;color:var(--navy);transform:translateY(-3px)}
-.hero-stats{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
-  max-width:760px;margin-top:58px;
-}
-.stat{
-  border-top:1px solid rgba(255,255,255,.18);padding-top:18px;
-}
-.stat b{display:block;font-size:27px;color:#fff;line-height:1.2}
-.stat span{font-size:13px;color:#b9cad9}
+.btn-ghost:hover{background:#fff;color:var(--navy)}
 
 /* Sections */
-section{padding:104px 0}
-.sectionhead{max-width:760px;margin:0 auto 60px;text-align:center}
-.sectionhead .eyebrow{justify-content:center;color:var(--teal)}
-.sectionhead .eyebrow:before{background:var(--teal)}
+section{padding:80px 0}
 h2{
-  font-size:clamp(29px,3.8vw,44px);
-  line-height:1.22;color:var(--navy);
-  letter-spacing:-.8px;margin-bottom:16px;font-weight:800;
+  font-size:clamp(27px,3.4vw,38px);
+  color:var(--navy);
+  margin-bottom:14px;
+  font-weight:800;
 }
-.sectionhead p{color:var(--muted);font-size:16.5px}
-
-.soft{background:var(--bg)}
-
-/* Cards */
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card{
-  border:1px solid var(--line);border-radius:var(--radius);
-  padding:36px 30px;background:#fff;box-shadow:0 8px 30px rgba(13,31,51,.05);
-  transition:.35s cubic-bezier(.2,.7,.3,1);
-  display:flex;flex-direction:column;position:relative;overflow:hidden;
-}
-.card:before{
-  content:"";position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(15,156,143,.06),transparent 55%);
-  opacity:0;transition:.35s;
-}
-.card:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:#c8dcea}
-.card:hover:before{opacity:1}
-.card-num{
-  font-size:12px;font-weight:800;color:var(--teal);letter-spacing:1.5px;margin-bottom:18px;
-}
-.card h3{font-size:22px;color:var(--navy);line-height:1.35;margin-bottom:12px}
-.card p{font-size:14.5px;color:var(--muted);margin-bottom:20px}
-.card ul{padding-right:18px;color:#54677a;font-size:14px;margin-bottom:24px}
-.card li{margin:7px 0}
-.card .more{
-  margin-top:auto;color:var(--blue);font-weight:700;font-size:14px;
-  display:inline-flex;align-items:center;gap:7px;
-}
-.card .more:hover{color:var(--teal)}
-
-/* Split */
-.split{display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center}
-.lead{color:var(--muted);font-size:16.5px;margin-bottom:18px}
-.value-list{list-style:none;margin-top:26px}
-.value-list li{
-  display:flex;gap:14px;align-items:flex-start;margin:18px 0;
-  color:#41566b;font-size:15px;
-}
-.value-list b{color:var(--navy)}
-.value-list span{
-  flex:0 0 34px;height:34px;border-radius:10px;
-  background:#e8f5f3;color:var(--teal);display:grid;place-items:center;font-weight:800;
-}
-.panel{
-  padding:44px;border-radius:26px;color:#fff;
-  background:linear-gradient(140deg,#0d1f33,#173f61 60%,#1d5a7d);
-  box-shadow:var(--shadow);position:relative;overflow:hidden;
-}
-.panel:before{
-  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
-  border:1px solid rgba(255,255,255,.10);right:-90px;top:-90px;
-}
-.panel h3{font-size:25px;color:#e6c98d;margin-bottom:14px}
-.panel p{color:#d7e3ee}
-.panel .model{
-  margin-top:26px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14);
+.section-p{
+  color:var(--muted);
+  max-width:680px;
+  margin-bottom:40px;
 }
 
-/* Benefits */
-.benefits{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.benefit{
-  padding:30px 26px;border:1px solid var(--line);border-radius:18px;background:#fff;
+/* Services */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+.box{
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:28px;
+  background:#fff;
   transition:.3s;
 }
-.benefit:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(13,31,51,.08)}
-.benefit b{
-  display:flex;align-items:center;gap:10px;color:var(--navy);
-  font-size:16.5px;margin-bottom:10px;
+.box:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 40px rgba(14,34,55,.08);
 }
-.benefit b i{
-  width:30px;height:30px;border-radius:9px;background:#e8f5f3;color:var(--teal);
-  display:grid;place-items:center;font-size:12px;font-weight:800;font-style:normal;
+.box h3{
+  color:var(--navy);
+  font-size:19px;
+  margin-bottom:10px;
 }
-.benefit p{font-size:13.5px;color:var(--muted)}
-
-/* Process */
-.process{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.step{
-  padding:32px 26px;border-radius:20px;background:#fff;
-  border:1px solid var(--line);position:relative;
+.box p{
+  font-size:14.5px;color:var(--muted);
 }
-.step:before{
-  content:"";position:absolute;top:0;right:26px;width:44px;height:3px;
-  background:var(--teal);border-radius:99px;
-}
-.step b{display:block;color:var(--navy);font-size:17px;margin:14px 0 8px}
-.step span{
-  font-size:12px;font-weight:800;color:var(--teal);letter-spacing:1.5px;
-}
-.step p{font-size:14px;color:var(--muted)}
-
-/* CTA */
-.cta{
-  background:linear-gradient(135deg,#0d1f33,#173f61 58%,#1d5a7d);
-  color:#fff;text-align:center;position:relative;overflow:hidden;
-}
-.cta:before{
-  content:"";position:absolute;width:560px;height:560px;border-radius:50%;
-  border:1px solid rgba(255,255,255,.07);left:50%;top:-260px;transform:translateX(-50%);
-}
-.cta h2{color:#fff}
-.cta p{max-width:680px;margin:0 auto 32px;color:#d7e3ee}
 
 /* Contact */
-.contactgrid{
-  display:grid;grid-template-columns:.85fr 1.15fr;gap:24px;
-  max-width:1060px;margin:auto;
+.contact{
+  background:var(--bg);
 }
-.contactinfo,.formbox{
-  border:1px solid var(--line);border-radius:24px;padding:38px;
-  background:#fff;box-shadow:var(--shadow);
+.form{
+  max-width:640px;
+  margin:auto;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:34px;
+  box-shadow:0 18px 50px rgba(14,34,55,.07);
 }
-.contactinfo{
-  background:linear-gradient(150deg,#0d1f33,#173f61 60%,#1d5a7d);
-  color:#fff;border:0;
+.field{
+  margin-bottom:14px;
 }
-.contactinfo h3{font-size:25px;color:#e6c98d;margin-bottom:10px}
-.contactinfo p{color:#d7e3ee;margin-bottom:24px}
-.contactline{
-  direction:ltr;text-align:right;margin:16px 0;font-weight:600;font-size:15px;
+label{
+  display:block;
+  font-size:13px;font-weight:700;color:var(--navy);
+  margin-bottom:6px;
 }
-.contactline a:hover{color:#e6c98d}
-.whatsapp{
-  display:inline-flex;align-items:center;justify-content:center;
-  margin-top:24px;padding:13px 22px;border-radius:99px;
-  background:rgba(255,255,255,.10);color:#fff;font-weight:700;font-size:14px;
-  border:1px solid rgba(255,255,255,.20);transition:.25s;
+input,select,textarea{
+  width:100%;
+  padding:12px 14px;
+  border:1px solid #d8e3ee;
+  border-radius:11px;
+  background:#fbfdff;
+  font:inherit;
+  outline:none;
 }
-.whatsapp:hover{background:#fff;color:var(--navy)}
-.formbox h3{color:var(--navy);font-size:24px;margin-bottom:6px}
-.formbox>p{font-size:13.5px;color:var(--muted);margin-bottom:22px}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.field{display:flex;flex-direction:column;gap:6px}
-.field.full{grid-column:1/-1}
-.field label{font-size:13px;font-weight:700;color:var(--navy)}
-.field input,.field select,.field textarea{
-  border:1px solid #d8e3ee;border-radius:12px;padding:13px 14px;
-  background:#fbfdff;outline:none;width:100%;transition:.2s;
+input:focus,select:focus,textarea:focus{
+  border-color:var(--teal);
+  box-shadow:0 0 0 3px rgba(15,156,143,.10);
 }
-.field input:focus,.field select:focus,.field textarea:focus{
-  border-color:var(--teal);box-shadow:0 0 0 4px rgba(15,156,143,.10);
+textarea{min-height:110px;resize:vertical}
+button{
+  width:100%;
+  margin-top:10px;
+  border:0;
+  background:var(--navy);
+  color:#fff;
+  padding:14px;
+  border-radius:99px;
+  font-weight:700;
+  cursor:pointer;
+  transition:.25s;
 }
-.field textarea{min-height:120px;resize:vertical}
-.formbox button{width:100%;margin-top:18px}
-.note{font-size:11.5px;color:var(--muted);margin-top:12px;text-align:center}
-
-/* FAQ */
-.faq{max-width:840px;margin:auto}
-.faq details{
-  padding:20px 24px;border:1px solid var(--line);border-radius:16px;
-  margin:12px 0;background:#fff;transition:.25s;
+button:hover{background:var(--teal)}
+.note{
+  font-size:11.5px;color:var(--muted);margin-top:10px;text-align:center;
 }
-.faq details[open]{border-color:#c8dcea;box-shadow:0 10px 30px rgba(13,31,51,.06)}
-.faq summary{
-  font-weight:700;color:var(--navy);cursor:pointer;list-style:none;
-  display:flex;justify-content:space-between;gap:16px;
-}
-.faq summary:after{content:"+";color:var(--teal);font-weight:800}
-.faq details[open] summary:after{content:"–"}
-.faq details p{color:var(--muted);font-size:14.5px;margin-top:12px}
 
 /* Footer */
-footer{background:#0a1826;color:#b8c8d6;padding:36px 0;text-align:center;font-size:13.5px}
-footer strong{color:#fff;font-size:18px;letter-spacing:.6px}
-footer p{margin-top:6px}
-footer a:hover{color:#fff}
-
-/* Reveal */
-.reveal{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease}
-.reveal.show{opacity:1;transform:translateY(0)}
-
-/* Back to top */
-.backtop{
-  position:fixed;bottom:24px;left:24px;width:46px;height:46px;
-  border:0;border-radius:50%;background:var(--navy);color:#fff;
-  font-size:20px;z-index:70;box-shadow:var(--shadow);
-  opacity:0;visibility:hidden;transition:.25s;cursor:pointer;
+footer{
+  background:#0a1826;
+  color:#b8c8d6;
+  padding:28px 0;
+  text-align:center;
+  font-size:13.5px;
 }
-.backtop.show{opacity:1;visibility:visible}
-.backtop:hover{background:var(--teal)}
+footer strong{color:#fff;font-size:17px}
+footer p{margin-top:5px}
 
-@keyframes drift{
-  0%,100%{transform:translateY(0) rotate(0)}
-  50%{transform:translateY(26px) rotate(8deg)}
-}
-
-@media(max-width:1000px){
-  .cards{grid-template-columns:1fr 1fr}
-  .benefits,.process{grid-template-columns:1fr 1fr}
-  .split{grid-template-columns:1fr;gap:36px}
-}
-@media(max-width:680px){
-  .nav{min-height:70px;flex-wrap:wrap;padding:10px 0}
-  .menu{display:block}
-  .navlinks{
-    display:none;order:3;width:100%;flex-direction:column;align-items:stretch;
-    gap:0;padding:8px 0;border-top:1px solid var(--line);
-  }
-  .navlinks.open{display:flex}
-  .navlinks a{padding:11px 4px}
-  .navcta{display:none}
-  .hero{padding:90px 0}
-  .hero-stats{grid-template-columns:1fr;gap:14px}
-  section{padding:72px 0}
-  .cards,.benefits,.process{grid-template-columns:1fr}
-  .formgrid{grid-template-columns:1fr}
-  .field.full{grid-column:auto}
-  .contactinfo,.formbox{padding:28px 22px}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-  .reveal{opacity:1;transform:none}
+@media(max-width:760px){
+  .grid{grid-template-columns:1fr}
+  .nav a{display:none}
+  .cta-small{display:none}
+  .hero{padding:80px 0}
+  section{padding:60px 0}
 }
 </style>
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"ProfessionalService",
-  "name":"Mogatek",
-  "url":"https://izhaktoashi-droid.github.io/consulting-website/",
-  "email":"izhaktoashi@gmail.com",
-  "telephone":"+972545363347",
-  "description":"מיקור חוץ למצוינות תפעולית: ניהול פרויקטי רכש, אחזקה ותשתיות, הכשרות וייעוץ, וניהול KPI ומדדים ארגוניים לארגונים בישראל.",
-  "areaServed":{"@type":"Country","name":"Israel"},
-  "availableLanguage":["he"],
-  "serviceType":["Operational Excellence Outsourcing","Project Management","KPI Management","Corporate Training","Procurement Consulting"]
-}
-</script>
 </head>
 
 <body>
 
 <header>
   <div class="container nav">
-    <a class="logo" href="./" aria-label="Mogatek - מעבר לדף הבית">
-      <span class="logo-mark">M</span>
-      MOGA<span>TEK</span>
-    </a>
-
-    <button class="menu" id="menuBtn" aria-label="פתיחת תפריט" aria-expanded="false" aria-controls="navLinks">☰</button>
-
-    <nav class="navlinks" id="navLinks" aria-label="ניווט ראשי">
+    <a class="logo" href="./">MOGA<span>TEK</span></a>
+    <nav>
       <a href="#services">השירותים</a>
-      <a href="#model">המודל שלנו</a>
-      <a href="#process">איך עובדים</a>
-      <a href="#faq">שאלות נפוצות</a>
       <a href="#contact">יצירת קשר</a>
+      <a class="cta-small" href="#contact">לתיאום שיחה</a>
     </nav>
-
-    <a class="navcta" href="#contact">לתיאום שיחת היכרות</a>
   </div>
 </header>
 
 <main>
 
-  <section class="hero">
-    <div class="container">
-      <div class="hero-inner">
-        <div class="eyebrow">OPERATIONAL EXCELLENCE • OUTSOURCING • ISRAEL</div>
+<section class="hero">
+  <div class="container">
+    <h1>
+      מצוינות תפעולית במיקור חוץ —<br>
+      <em>בלי להעמיס על הארגון.</em>
+    </h1>
 
-        <h1>
-          מצוינות תפעולית במיקור חוץ,<br>
-          <em>בלי להעמיס על הארגון.</em>
-        </h1>
+    <p>
+      Mogatek מקימה ומנהלת עבורכם מחלקות מצוינות תפעולית חוץ-ארגוניות: ניהול פרויקטי רכש, אחזקה ותשתיות; הכשרות וייעוץ; וניהול KPI, מדדים ובקרה — כדי שתוכלו להתמקד בליבה העסקית.
+    </p>
 
+    <a class="btn btn-primary" href="#contact">לתיאום שיחת היכרות</a>
+    <a class="btn btn-ghost" href="#services">להכיר את השירותים</a>
+  </div>
+</section>
+
+<section id="services">
+  <div class="container">
+    <h2>מה אנחנו עושים עבורכם</h2>
+    <p class="section-p">
+      אנחנו מספקים יכולת ניהולית ומקצועית במיקור חוץ — בלי צורך להקים מחלקות פנימיות או להגדיל את מבנה הכוח אדם הקבוע.
+    </p>
+
+    <div class="grid">
+      <div class="box">
+        <h3>ניהול פרויקטי רכש, אחזקה ותשתיות</h3>
         <p>
-          Mogatek מקימה ומנהלת עבורכם מחלקות מצוינות תפעולית חוץ-ארגוניות: ניהול פרויקטי רכש, אחזקה ותשתיות; הכשרות וייעוץ; ומערכי KPI, מדדים ובקרה — כדי שתוכלו להתמקד בליבה העסקית.
+          ניהול והובלת פרויקטים במיקור חוץ: השוואת הצעות, ניהול ספקים, תכנון תקציב, פיקוח ומעקב עד למסירה.
         </p>
-
-        <div class="actions">
-          <a class="btn btn-primary" href="#contact">לתיאום שיחת היכרות</a>
-          <a class="btn btn-ghost" href="#services">להכיר את השירותים</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat"><b>פרויקטים</b><span>ניהול, מעקב והובלה</span></div>
-          <div class="stat"><b>KPI</b><span>מדידה, ניתוח ובקרה</span></div>
-          <div class="stat"><b>מומחיות</b><span>בלי גיוס קבוע</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="model">
-    <div class="container split">
-      <div class="reveal">
-        <div class="eyebrow">MOGATEK | OUTSOURCED EXCELLENCE</div>
-        <h2>המצוינות התפעולית לא צריכה להיות מחלקה פנימית.</h2>
-
-        <p class="lead">
-          ברוב הארגונים, ניהול תהליכים, מדדים, פרויקטים ושיפור מתמשך נדחק בשל עומס התפעול, המכירות והמשימות היומיומיות. Mogatek מספקת את היכולת הזו כשירות חוץ — ממוקד, מקצועי וזמין לפי הצורך.
-        </p>
-
-        <ul class="value-list">
-          <li><span>01</span><div><b>מחלקה חוץ-ארגונית</b> — יכולת ניהולית ומקצועית בלי להקים מחלקת ארגון ושיטות או מצוינות תפעולית פנימית.</div></li>
-          <li><span>02</span><div><b>מיקוד בליבה העסקית</b> — הצוותים שלכם מתמקדים בלקוחות, בייצור ובצמיחה; אנחנו מנהלים את השיפור והבקרה.</div></li>
-          <li><span>03</span><div><b>גמישות תפעולית</b> — שירות לפי פרויקט, חודש או התקשרות מתמשכת, בהתאם לצורך הארגוני.</div></li>
-          <li><span>04</span><div><b>תוצרים מדידים</b> — הגדרת מדדים, מעקב KPI, דוחות והמלצות לשיפור.</div></li>
-        </ul>
       </div>
 
-      <div class="panel reveal">
-        <h3>המודל של Mogatek</h3>
+      <div class="box">
+        <h3>הכשרות, ייעוץ וליווי ניהולי</h3>
         <p>
-          אנחנו לא מספקים “עוד ייעוץ”. אנחנו מקימים מערך עבודה שמחובר לשטח, מנהל פרויקטים, מלווה גורמים בארגון ומייצר שקיפות ניהולית.
+          הכשרות וליווי לעובדים ולמנהלים בתחומי רכש, לוגיסטיקה, תפעול, תפ״י ושרשרת אספקה.
         </p>
+      </div>
 
-        <div class="model">
-          <p><b>מגדירים</b> את הצורך, היקף העבודה ומדדי ההצלחה.</p>
-          <p><b>מקימים</b> מערך שירות, צוות מתאים ותהליכי עבודה.</p>
-          <p><b>מבצעים</b> ניהול פרויקטים, הכשרות ובקרה.</p>
-          <p><b>מודדים</b> תוצאות, מציגים KPI ומשפרים באופן מתמשך.</p>
-        </div>
+      <div class="box">
+        <h3>ניהול KPI, מדדים ובקרה</h3>
+        <p>
+          הקמה וניהול של מערך מדידה ארגוני: KPI, דוחות, לוחות מחוונים, ניתוח חריגות ושיפור מתמשך.
+        </p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="services" class="soft">
-    <div class="container">
-      <div class="sectionhead reveal">
-        <div class="eyebrow">שלושה מסלולי שירות</div>
-        <h2>מצוינות תפעולית — במיקור חוץ</h2>
-        <p>שירותים משלימים שמאפשרים לארגון לקבל יכולת ניהולית, מקצועית ואנליטית בלי להגדיל את מבנה הכוח אדם הקבוע.</p>
+<section id="contact" class="contact">
+  <div class="container">
+    <h2>בואו נדבר על הצורך שלכם</h2>
+    <p class="section-p">
+      השאירו פרטים ונחזור אליכם לבחינת הצורך, היקף השירות ואפשרויות ההתקשרות.
+    </p>
+
+    <form class="form" action="https://formsubmit.co/izhaktoashi@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="true">
+      <input type="hidden" name="_next" value="https://izhaktoashi-droid.github.io/consulting-website/thank-you.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
+      <div class="field">
+        <label for="full_name">שם מלא *</label>
+        <input id="full_name" name="full_name" required autocomplete="name">
       </div>
 
-      <div class="cards">
-        <article class="card reveal">
-          <div class="card-num">01</div>
-          <h3>ניהול פרויקטי רכש, אחזקה ותשתיות</h3>
-          <p>ניהול והובלת פרויקטים במיקור חוץ — מהגדרת הצורך, השוואת הצעות וניהול ספקים ועד לביצוע, בקרה ומסירה.</p>
-          <ul>
-            <li>ניהול פרויקטי רכש ואחזקה</li>
-            <li>השוואת הצעות מחיר וניהול ספקים</li>
-            <li>תכנון תקציב ולוחות זמנים</li>
-            <li>פיקוח, מעקב ודיווח התקדמות</li>
-          </ul>
-          <a class="more" href="#contact">לבחירת השירות <span aria-hidden="true">←</span></a>
-        </article>
-
-        <article class="card reveal">
-          <div class="card-num">02</div>
-          <h3>הכשרות, ייעוץ וליווי ניהולי</h3>
-          <p>העברת ידע, הכשרות וליווי לעובדים ולמנהלים בתחומי תעשייה, רכש, לוגיסטיקה, תפעול ותפ״י.</p>
-          <ul>
-            <li>רכש וניהול ספקים</li>
-            <li>לוגיסטיקה ושרשרת אספקה</li>
-            <li>תפעול, תפ״י ויעילות</li>
-            <li>ייעוץ וליווי מנהלים וצוותים</li>
-          </ul>
-          <a class="more" href="#contact">לבחירת השירות <span aria-hidden="true">←</span></a>
-        </article>
-
-        <article class="card reveal">
-          <div class="card-num">03</div>
-          <h3>ניהול KPI, מדדים ובקרה</h3>
-          <p>הקמה וניהול של מערך מדידה ארגוני: KPI, דוחות, לוחות מחוונים, ניתוח חריגות ותמיכה בקבלת החלטות.</p>
-          <ul>
-            <li>הגדרת KPI ומילון מדדים</li>
-            <li>דוחות ולוחות מחוונים</li>
-            <li>מדדי רכש, מלאי ותפעול</li>
-            <li>ניתוח מגמות, חריגות ושיפור</li>
-          </ul>
-          <a class="more" href="#contact">לבחירת השירות <span aria-hidden="true">←</span></a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="process">
-    <div class="container">
-      <div class="sectionhead reveal">
-        <div class="eyebrow">איך עובדים</div>
-        <h2>תהליך ברור, מקצועי ומדיד</h2>
-        <p>מהבנת הצורך ועד למדידת תוצאות — תהליך עבודה שקוף שמחבר בין האסטרטגיה לביצוע בשטח.</p>
+      <div class="field">
+        <label for="company">שם הארגון</label>
+        <input id="company" name="company" autocomplete="organization">
       </div>
 
-      <div class="process">
-        <div class="step reveal">
-          <span>שלב 01</span>
-          <b>מיפוי הצורך</b>
-          <p>הבנת האתגר הארגוני, היעדים, בעלי העניין והיקף השירות הנדרש.</p>
-        </div>
-        <div class="step reveal">
-          <span>שלב 02</span>
-          <b>הגדרת תכולה</b>
-          <p>הגדרת משימות, תוצרים, לוחות זמנים, ממשקי עבודה ומדדי הצלחה.</p>
-        </div>
-        <div class="step reveal">
-          <span>שלב 03</span>
-          <b>הקמת המערך</b>
-          <p>גיוס והקצאת אנשי מקצוע מתאימים, הגדרת תהליכי עבודה והתחלת ביצוע.</p>
-        </div>
-        <div class="step reveal">
-          <span>שלב 04</span>
-          <b>מדידה ושיפור</b>
-          <p>מעקב KPI, דוחות תקופתיים, ניתוח תוצאות והמשך שיפור מתמשך.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta">
-    <div class="container reveal">
-      <div class="eyebrow" style="justify-content:center;color:#e6c98d">מוכנים להתקדם?</div>
-      <h2>בואו נבנה את מערך המצוינות התפעולית שלכם</h2>
-      <p>נבחן יחד את הצרכים, נגדיר תכולה ומדדים, ונקים מערך שירות שמתאים לארגון וליעדים שלכם.</p>
-      <a class="btn btn-primary" href="#contact">לתיאום שיחת היכרות</a>
-    </div>
-  </section>
-
-  <section id="contact" class="soft">
-    <div class="container">
-      <div class="sectionhead reveal">
-        <div class="eyebrow">יצירת קשר</div>
-        <h2>ספרו לנו מה הארגון שלכם צריך</h2>
-        <p>השאירו פרטים ונחזור אליכם לבחינת הצורך, היקף השירות ואפשרויות ההתקשרות.</p>
+      <div class="field">
+        <label for="phone">טלפון *</label>
+        <input id="phone" name="phone" type="tel" required autocomplete="tel">
       </div>
 
-      <div class="contactgrid">
-        <aside class="contactinfo reveal">
-          <h3>Mogatek</h3>
-          <p>מיקור חוץ למצוינות תפעולית, ניהול פרויקטים, הכשרות וניהול KPI לארגונים בישראל.</p>
-
-          <div class="contactline">
-            ✉️ <a href="mailto:izhaktoashi@gmail.com">izhaktoashi@gmail.com</a>
-          </div>
-
-          <div class="contactline">
-            ☎️ <a href="tel:+972545363347">+972-54-536-3347</a>
-          </div>
-
-          <p>אפשר גם לפנות ישירות ב-WhatsApp.</p>
-
-          <a class="whatsapp" href="https://wa.me/972545363347" target="_blank" rel="noopener">
-            שליחת הודעה ב-WhatsApp
-          </a>
-        </aside>
-
-        <form class="formbox reveal" action="https://formsubmit.co/izhaktoashi@gmail.com" method="POST">
-          <input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek — מצוינות תפעולית במיקור חוץ">
-          <input type="hidden" name="_template" value="table">
-          <input type="hidden" name="_captcha" value="true">
-          <input type="hidden" name="_next" value="https://izhaktoashi-droid.github.io/consulting-website/thank-you.html">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-          <h3>השאירו פרטים</h3>
-          <p>נחזור אליכם בהקדם האפשרי.</p>
-
-          <div class="formgrid">
-            <div class="field">
-              <label for="full_name">שם מלא *</label>
-              <input id="full_name" name="full_name" required autocomplete="name">
-            </div>
-
-            <div class="field">
-              <label for="company">שם הארגון</label>
-              <input id="company" name="company" autocomplete="organization">
-            </div>
-
-            <div class="field">
-              <label for="phone">טלפון *</label>
-              <input id="phone" name="phone" type="tel" required autocomplete="tel">
-            </div>
-
-            <div class="field">
-              <label for="email">דוא״ל *</label>
-              <input id="email" name="email" type="email" required autocomplete="email">
-            </div>
-
-            <div class="field full">
-              <label for="service">באיזה שירות אתם מתעניינים?</label>
-              <select id="service" name="service">
-                <option value="">בחרו תחום</option>
-                <option value="projects">ניהול פרויקטי רכש, אחזקה ותשתיות</option>
-                <option value="training">הכשרות, ייעוץ וליווי ניהולי</option>
-                <option value="kpi">ניהול KPI, מדדים ובקרה</option>
-                <option value="outsourcing">מחלקת מצוינות תפעולית במיקור חוץ</option>
-                <option value="other">שירות משולב / אחר</option>
-              </select>
-            </div>
-
-            <div class="field full">
-              <label for="message">כמה מילים על הצורך שלכם</label>
-              <textarea id="message" name="message"></textarea>
-            </div>
-          </div>
-
-          <button class="btn btn-primary" type="submit">שליחת פנייה</button>
-
-          <div class="note">
-            הפרטים ישמשו לצורך טיפול בפנייה בלבד. הטופס מופעל באמצעות FormSubmit.
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <section id="faq">
-    <div class="container faq">
-      <div class="sectionhead">
-        <div class="eyebrow">שאלות נפוצות</div>
-        <h2>איך עובד מיקור חוץ למצוינות תפעולית?</h2>
+      <div class="field">
+        <label for="email">דוא״ל *</label>
+        <input id="email" name="email" type="email" required autocomplete="email">
       </div>
 
-      <details>
-        <summary>האם השירות מתאים גם לחברות קטנות ובינוניות?</summary>
-        <p>כן. השירות מותאם לארגונים שאינם מעוניינים להקים מחלקה פנימית, אך זקוקים לניהול פרויקטים, מדדים, הכשרות ושיפור תהליכים.</p>
-      </details>
+      <div class="field">
+        <label for="service">באיזה שירות אתם מתעניינים?</label>
+        <select id="service" name="service">
+          <option value="">בחרו תחום</option>
+          <option value="projects">ניהול פרויקטי רכש, אחזקה ותשתיות</option>
+          <option value="training">הכשרות, ייעוץ וליווי ניהולי</option>
+          <option value="kpi">ניהול KPI, מדדים ובקרה</option>
+          <option value="outsourcing">מחלקת מצוינות תפעולית במיקור חוץ</option>
+          <option value="other">שירות משולב / אחר</option>
+        </select>
+      </div>
 
-      <details>
-        <summary>האם ניתן להתחיל בפרויקט ממוקד ולהרחיב בהמשך?</summary>
-        <p>בהחלט. ניתן להתחיל בפרויקט חד-פעמי, בהגדרת KPI או בהכשרה, ולהתקדם להתקשרות מתמשכת לפי הצורך.</p>
-      </details>
+      <div class="field">
+        <label for="message">כמה מילים על הצורך שלכם</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
 
-      <details>
-        <summary>האם Mogatek מגייסת עובדים עבור הפרויקט?</summary>
-        <p>כן. בהתאם להיקף ולתחום, ניתן לגייס ולהקצות אנשי מקצוע ייעודיים לפרויקט, כולל ניהול, הכשרה ופיקוח.</p>
-      </details>
+      <button type="submit">שליחת פנייה</button>
 
-      <details>
-        <summary>האם השירות כולל דוחות ומעקב KPI?</summary>
-        <p>כן. ניתן להגדיר מדדים, לוחות מחוונים ודוחות תקופתיים, ולנהל מעקב אחר ביצועים, חריגות ותוכניות שיפור.</p>
-      </details>
-    </div>
-  </section>
+      <div class="note">
+        הפרטים ישמשו לצורך טיפול בפנייה בלבד. הטופס מופעל באמצעות FormSubmit.
+      </div>
+    </form>
+  </div>
+</section>
 
 </main>
 
@@ -713,58 +356,12 @@ footer a:hover{color:#fff}
   <div class="container">
     <strong>MOGATEK</strong>
     <p>מיקור חוץ למצוינות תפעולית, ניהול פרויקטים, הכשרות וניהול KPI לארגונים בישראל.</p>
-    <p>© <span data-year></span> Mogatek. כל הזכויות שמורות.</p>
+    <p>© <span id="year"></span> Mogatek. כל הזכויות שמורות.</p>
   </div>
 </footer>
 
-<button class="backtop" aria-label="חזרה לראש העמוד">↑</button>
-
 <script>
-const menuBtn=document.getElementById('menuBtn');
-const nav=document.getElementById('navLinks');
-
-if(menuBtn&&nav){
-  menuBtn.addEventListener('click',()=>{
-    const open=nav.classList.toggle('open');
-    menuBtn.setAttribute('aria-expanded',String(open));
-    menuBtn.textContent=open?'✕':'☰';
-  });
-
-  nav.querySelectorAll('a').forEach(link=>{
-    link.addEventListener('click',()=>{
-      nav.classList.remove('open');
-      menuBtn.setAttribute('aria-expanded','false');
-      menuBtn.textContent='☰';
-    });
-  });
-}
-
-const revealObserver=new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-      revealObserver.unobserve(entry.target);
-    }
-  });
-},{threshold:.14});
-
-document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
-
-const topBtn=document.querySelector('.backtop');
-
-if(topBtn){
-  window.addEventListener('scroll',()=>{
-    topBtn.classList.toggle('show',window.scrollY>500);
-  },{passive:true});
-
-  topBtn.addEventListener('click',()=>{
-    window.scrollTo({top:0,behavior:'smooth'});
-  });
-}
-
-document.querySelectorAll('[data-year]').forEach(el=>{
-  el.textContent=new Date().getFullYear();
-});
+document.getElementById('year').textContent=new Date().getFullYear();
 </script>
 
 </body>
