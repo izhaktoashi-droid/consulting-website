@@ -8,7 +8,7 @@
 <meta name="description" content="Mogatek מספקת מחלקות מצוינות תפעולית במיקור חוץ: ניהול פרויקטים, הכשרות, ייעוץ, KPI ומדדים ארגוניים — בלי להגדיל את מבנה הכוח אדם הקבוע.">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://izhaktoashi-droid.github.io/consulting-website/">
-<link rel="icon" type="image/png" href="logo.png">
+<link rel="icon" type="image/jpeg" href="logo.jpg">
 
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
@@ -17,11 +17,6 @@
 <meta property="og:description" content="ניהול פרויקטים, הכשרות, KPI ומדדים ארגוניים — במיקור חוץ.">
 <meta property="og:url" content="https://izhaktoashi-droid.github.io/consulting-website/">
 <meta property="og:image" content="https://izhaktoashi-droid.github.io/consulting-website/team-hero.jpg">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mogatek | מצוינות תפעולית במיקור חוץ">
-<meta name="twitter:description" content="ניהול פרויקטים, הכשרות, KPI ומדדים ארגוניים — במיקור חוץ.">
-<meta name="twitter:image" content="https://izhaktoashi-droid.github.io/consulting-website/team-hero.jpg">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -86,11 +81,10 @@ header.scrolled{
   transform:scale(1.03);
 }
 .logo img{
-  height:56px;
+  height:52px;
   width:auto;
   display:block;
   object-fit:contain;
-  mix-blend-mode:multiply;
 }
 .logo-fallback{
   font-size:25px;font-weight:800;color:var(--navy);letter-spacing:-.5px;
@@ -486,7 +480,7 @@ footer p{margin-top:8px}
   .form-row{grid-template-columns:1fr;gap:0}
   .nav-links a:not(.cta-small){display:none}
   .cta-small{display:none}
-  .logo img{height:46px}
+  .logo img{height:42px}
   .hero{padding:65px 0 80px}
   section{padding:68px 0}
   .form{padding:28px 22px}
@@ -499,8 +493,8 @@ footer p{margin-top:8px}
 <header id="header">
   <div class="container nav">
     <a class="logo" href="./" aria-label="Mogatek Home">
-      <img src="logo.png" alt="MOGATEK Logo" onerror="this.style.display='none';this.nextElementSibling.style.display='inline';">
-      <span class="logo-fallback">MOGA<span>TEK</span></span>
+      <!-- תמיכה בשמות קבצים נפוצים: logo.jpg, logo.png או LOGO.jpg -->
+      <img src="logo.jpg" alt="MOGATEK Logo" onerror="this.onerror=null; this.src='logo.png';">
     </a>
     <nav class="nav-links">
       <a href="#services" data-i18n="nav_services">השירותים</a>
@@ -669,9 +663,8 @@ footer p{margin-top:8px}
 <footer>
   <div class="container">
     <div class="footer-logo-wrap">
-      <img src="logo.png" alt="MOGATEK Logo" onerror="this.parentElement.style.display='none';document.getElementById('footerTextLogo').style.display='inline';">
+      <img src="logo.jpg" alt="MOGATEK Logo" onerror="this.onerror=null; this.src='logo.png';">
     </div>
-    <strong id="footerTextLogo" style="display:none;">MOGA<span>TEK</span></strong>
     <p data-i18n="footer_desc">מיקור חוץ למצוינות תפעולית, ניהול פרויקטים, הכשרות וניהול KPI לארגונים בישראל.</p>
     <p>© <span id="year"></span> Mogatek. <span data-i18n="footer_rights">כל הזכויות שמורות.</span></p>
   </div>
