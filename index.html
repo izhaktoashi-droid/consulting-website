@@ -522,444 +522,1067 @@ color:var(--muted);
 font-size:15px;
 }
 
-/* SERVICE MODEL */
-
-.service-model {
-background:#fff8f0;
-border-top:1px solid #f5dfca;
-border-bottom:1px solid #f5dfca;
-}
 
-.model-grid {
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:18px;
-}
+  ### חלק 3 מתוך 4 – תוכן האתר, השירותים, הדוחות וטופס יצירת הקשר
+
+```html
+<body>
+
+<header>
+<div class="container nav">
+
+<a class="logo" href="./" aria-label="Mogatek Home">
+<img src="logo.jpg" alt="Mogatek – שירותי הנדסת תעשייה וניהול" width="280" height="76">
+</a>
+
+<div class="nav-right">
+<div class="contact-icons" aria-label="יצירת קשר">
+<a class="contact-icon whatsapp" href="https://wa.me/972545363347" target="_blank" rel="noopener noreferrer" aria-label="פתיחת שיחה בוואטסאפ" title="WhatsApp">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.52 3.48A11.86 11.86 0 0 0 12.08 0C5.5 0 .15 5.35.15 11.93c0 2.1.55 4.15 1.6 5.96L.05 24l6.27-1.64a11.9 11.9 0 0 0 5.76 1.47h.01c6.58 0 11.93-5.35 11.93-11.93 0-3.19-1.24-6.19-3.5-8.42ZM12.09 21.8h-.01a9.9 9.9 0 0 1-5.04-1.38l-.36-.21-3.72.97.99-3.63-.24-.37a9.87 9.87 0 0 1-1.52-5.25c0-5.46 4.45-9.91 9.92-9.91a9.84 9.84 0 0 1 7.01 2.91 9.84 9.84 0 0 1 2.9 7.01c0 5.47-4.45 9.92-9.93 9.92Zm5.44-7.43c-.3-.15-1.77-.87-2.05-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.47-.89-.79-1.49-1.77-1.66-2.07-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.38-.02-.53-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.08-.8.38-.27.3-1.04 1.02-1.04 2.49s1.07 2.89 1.22 3.09c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.5 1.7.64.72.23 1.37.2 1.88.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.08-.13-.27-.2-.57-.35Z"/></svg>
+</a>
+<a class="contact-icon email" href="mailto:izhaktoashi@gmail.com" aria-label="שליחת דואר אלקטרוני" title="Email">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Zm0 10H4V9.9l8 5 8-5V18Z"/></svg>
+</a>
+</div>
+
+<nav aria-label="Main navigation">
+<ul class="nav-links" id="menu">
+<li><a href="#services" data-i18n="navServices">השירותים שלנו</a></li>
+<li><a href="#reporting" data-i18n="navReporting">דוחות וניתוחים</a></li>
+<li><a href="#process" data-i18n="navProcess">איך זה עובד</a></li>
+<li><a href="#faq" data-i18n="navFaq">שאלות נפוצות</a></li>
+<li><a class="btn btn-primary" href="#contact" data-i18n="navContact">שיחת היכרות</a></li>
+</ul>
+</nav>
+
+<button class="lang-btn" id="languageBtn" type="button" onclick="toggleLanguage()">EN</button>
+<button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="תפריט">☰</button>
+</div>
+</div>
+</header>
+
+<main>
+
+<!-- BRAND INTRO -->
+<section class="brand-intro">
+<div class="container">
+<h1 data-i18n="brandTitle">מוגה-טק | שירותי הנדסת תעשייה וניהול</h1>
+<div class="brand-tagline" data-i18n="brandTagline">מצוינות תפעולית במיקור חוץ לעסק שלך</div>
+<p data-i18n="brandDescription">ניהול נתונים, ניתוח ביצועים, בניית מדדי KPI ודוחות BI, בקרה ניהולית ושיפור תהליכים – בשירות שבועי או חודשי, המותאם בדיוק למטרות העסק שלך.</p>
+</div>
+</section>
+
+<!-- HERO -->
+<section class="hero">
+<div class="container hero-grid">
+<div>
+<h2 data-i18n-html="heroTitle">המידע שהעסק שלך צריך. בלי להעסיק עובד נוסף.</h2>
+<p class="hero-subtitle" data-i18n="heroSubtitle">אנחנו מנהלים ומנתחים את הנתונים. אתם מקבלים תמונת מצב ברורה והחלטות טובות יותר.</p>
+<p class="lead" data-i18n="heroDescription">Mogatek מספקת שירות חיצוני קבוע של איסוף, עיבוד וניתוח נתונים עסקיים ותפעוליים. השירות נבנה לפי הצרכים, היעדים ומערכות המידע של הארגון, ומסופק בתדירות שבועית או חודשית – עם דוחות, מדדים, תובנות והמלצות מעשיות.</p>
+<ul class="hero-benefits">
+<li data-i18n="heroPoint1">שירות קבוע וגמיש – שבועי או חודשי, לפי צורכי העסק</li>
+<li data-i18n="heroPoint2">מדדים, דוחות KPI ו-BI וניתוח נתונים בהתאמה אישית</li>
+<li data-i18n="heroPoint3">עלות נמוכה משמעותית מהעסקת עובד ייעודי בתוך העסק</li>
+<li data-i18n="heroPoint4">התחייבות מלאה לשמירה על סודיות המידע העסקי</li>
+</ul>
+<div class="actions">
+<a class="btn btn-primary" href="#contact" data-i18n="heroButton">בדקו איך השירות יכול להתאים לעסק שלכם</a>
+<a class="btn btn-ghost" href="#services" data-i18n="heroServicesButton">לכל השירותים</a>
+</div>
+</div>
+<div class="hero-img">
+<img src="team-hero.jpg" width="1200" height="750" fetchpriority="high" alt="Mogatek – שירותי ניתוח נתונים ומצוינות תפעולית">
+</div>
+</div>
+</section>
+
+<!-- TRUST -->
+
+<section class="trust">
+<div class="container trust-grid">
+
+<div class="trust-item">
+<strong data-i18n="trust1">📊 נתונים</strong>
+<span data-i18n="trust1sub">איסוף וניתוח מידע</span>
+</div>
+
+<div class="trust-item">
+<strong data-i18n="trust2">📈 ביצועים</strong>
+<span data-i18n="trust2sub">מדידה ובקרה שוטפת</span>
+</div>
+
+<div class="trust-item">
+<strong data-i18n="trust3">💡 תובנות</strong>
+<span data-i18n="trust3sub">מסקנות והמלצות</span>
+</div>
+
+<div class="trust-item">
+<strong data-i18n="trust4">🎯 תוצאות</strong>
+<span data-i18n="trust4sub">שיפור ביצועים עסקיים</span>
+</div>
+
+</div>
+</section>
+
+<!-- SERVICE MODEL -->
+<section class="service-model">
+<div class="container">
+<div class="section-head">
+<h2 data-i18n="modelTitle">שירות קבוע, בהיקף שמתאים לעסק שלכם</h2>
+<p class="section-sub" data-i18n="modelSubtitle">לא צריך לגייס עובד, להכשיר אותו ולנהל עוד משרה. מקבלים שירות מקצועי חיצוני שמותאם לצרכים ולתקציב שלכם.</p>
+</div>
+<div class="model-grid">
+<div class="model-item"><strong data-i18n="model1Title">דיווח שבועי</strong><p data-i18n="model1Desc">מעקב תדיר אחר מדדים, נתונים וחריגות, עם עדכונים שוטפים ותובנות בזמן.</p></div>
+<div class="model-item"><strong data-i18n="model2Title">דיווח חודשי</strong><p data-i18n="model2Desc">דוח ביצועים תקופתי, ניתוח מגמות, השוואה ליעדים והמלצות להמשך.</p></div>
+<div class="model-item"><strong data-i18n="model3Title">התאמה אישית מלאה</strong><p data-i18n="model3Desc">בוחרים יחד את המדדים, מקורות המידע, התוצרים ותדירות העבודה – לפי מטרות העסק.</p></div>
+</div>
+<div class="security-note" data-i18n="confidentialityNote">המידע העסקי שלכם נשאר חסוי. Mogatek מתחייבת לשמירה מלאה על סודיות המידע, וההתחייבות תעוגן במסגרת הסכם ההתקשרות.</div>
+</div>
+</section>
+
+<!-- SERVICES -->
+
+<section id="services">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2 data-i18n="servicesTitle">מה אנחנו עושים עבור העסק שלכם?</h2>
+
+<p class="section-sub" data-i18n="servicesSubtitle">
+אנחנו הופכים נתונים למידע ניהולי ברור, שמאפשר לכם לקבל החלטות טובות יותר ולנהל את העסק בצורה יעילה.
+</p>
+
+</div>
+
+<div class="grid">
+
+<article class="card">
+<div class="card-icon">📊</div>
+<h3 data-i18n="service1Title">ניתוח ביצועים ודוחות ניהוליים</h3>
+<p data-i18n="service1Desc">
+איסוף וניתוח נתוני הארגון, הכנת דוחות תקופתיים, בחינת מגמות והשוואת ביצועים מול יעדים. אתם מקבלים תמונת מצב ברורה של העסק.
+</p>
+</article>
+
+<article class="card">
+<div class="card-icon">💰</div>
+<h3 data-i18n="service2Title">ניתוחים כלכליים ובקרת עלויות</h3>
+<p data-i18n="service2Desc">
+ניתוח הוצאות, תקציבים, עלויות תפעול, רווחיות ומגמות כלכליות. זיהוי הזדמנויות להתייעלות ולחיסכון במשאבים.
+</p>
+</article>
+
+<article class="card">
+<div class="card-icon">📈</div>
+<h3 data-i18n="service3Title">KPI ומדדי ביצוע</h3>
+<p data-i18n="service3Desc">
+הגדרת מדדי ביצוע מרכזיים, בניית לוחות מחוונים ומעקב שוטף אחר יעדים. זיהוי חריגות והצפת נושאים הדורשים התערבות ניהולית.
+</p>
+</article>
+
+<article class="card">
+<div class="card-icon">⚙️</div>
+<h3 data-i18n="service4Title">מצוינות תפעולית ושיפור תהליכים</h3>
+<p data-i18n="service4Desc">
+מיפוי תהליכים, זיהוי צווארי בקבוק, איתור בזבוזים ושיפור תהליכי עבודה. הפיכת המידע לתוכנית פעולה מעשית.
+</p>
+</article>
+
+<article class="card">
+<div class="card-icon">📑</div>
+<h3 data-i18n="service5Title">מצגות ודיווח להנהלה</h3>
+<p data-i18n="service5Desc">
+הכנת מצגות ניהוליות, סיכומים תקופתיים והצגת הממצאים החשובים להנהלה. מידע ממוקד, ברור ומוכן לקבלת החלטות.
+</p>
+</article>
+
+<article class="card">
+<div class="card-icon">🤝</div>
+<h3 data-i18n="service6Title">ליווי ניהולי מתמשך</h3>
+<p data-i18n="service6Desc">
+שותפות מקצועית לאורך זמן, מעקב אחר משימות והחלטות, בקרה על יישום תוכניות עבודה וליווי מנהלים בשיפור הביצועים.
+</p>
+</article>
 
-.model-item {
-background:#fff;
-border:1px solid #f0dfcf;
-border-radius:15px;
-padding:24px;
-text-align:center;
-}
+<article class="card">
+<div class="card-icon">🗂️</div>
+<h3 data-i18n="service7Title">ניהול פרויקטים במיקור חוץ</h3>
+<p data-i18n="service7Desc">תכנון וניהול פרויקטים, בניית תוכניות עבודה, מעקב אחר לוחות זמנים ותקציבים, ניהול ממשקים ובקרה על ביצוע עד להשלמה.</p>
+</article>
+
+<article class="card">
+<div class="card-icon">🏭</div>
+<h3 data-i18n="service8Title">ניהול תשתיות ואחזקה</h3>
+<p data-i18n="service8Desc">ניהול מערך אחזקה ותשתיות, תוכניות תחזוקה מונעת, מעקב אחר ספקים, ציוד, קריאות שירות, עלויות וביצועי אחזקה.</p>
+</article>
 
-.model-item strong {
-display:block;
-color:var(--navy);
-font-size:19px;
-margin-bottom:8px;
-}
+</div>
+</div>
+</section>
 
-.model-item p {
-color:var(--muted);
-font-size:15px;
-}
+<!-- REPORTING -->
+
+<section id="reporting" class="reporting">
+
+<div class="container">
+
+<div class="section-head">
+
+<h2 data-i18n="reportTitle">תפסיקו לבזבז זמן על דוחות. התחילו לנהל באמצעות מידע.</h2>
+
+<p class="section-sub" data-i18n="reportSubtitle">
+אנחנו נעשה עבורכם את עבודת הניתוח, ונעביר לכם את התוצאות בצורה ברורה ומוכנה לשימוש.
+</p>
+
+</div>
+
+<div class="reporting-grid">
+
+<div class="reporting-content">
+
+<p data-i18n="reportText">
+מנהלים מקבלים מדי יום כמויות גדולות של נתונים ממערכות שונות. אבל נתונים לבדם אינם מספיקים. צריך לדעת לחבר ביניהם, להבין מה הם אומרים, לזהות בעיות ולהסיק מסקנות.
+</p>
 
-.security-note {
-margin-top:24px;
-padding:20px 24px;
-background:#edf7f2;
-border:1px solid #cce8d8;
-border-radius:14px;
-color:#214d37;
-font-weight:600;
-text-align:center;
-}
+<p data-i18n="reportText2">
+Mogatek לוקחת אחריות על תהליך הניתוח והבקרה, ומספקת לכם מידע ניהולי באופן קבוע, בלי שתצטרכו להקדיש שעות להפקת דוחות ולבניית טבלאות.
+</p>
 
-/* REPORTING */
+<ul class="reporting-list">
+
+<li data-i18n="reportPoint1">קבלת דוחות תקופתיים ומידע עדכני</li>
+<li data-i18n="reportPoint2">ניתוח נתונים והצגת מגמות וחריגות</li>
+<li data-i18n="reportPoint3">המלצות לשיפור ביצועים ולחיסכון בעלויות</li>
+<li data-i18n="reportPoint4">מצגות ניהוליות ומידע מוכן לישיבות הנהלה</li>
+<li data-i18n="reportPoint5">ליווי שוטף ומעקב אחר יישום ההחלטות</li>
 
-.reporting {
-background:linear-gradient(120deg,#0b2239,#163a5c);
-color:#fff;
-}
+</ul>
+
+</div>
+
+<div class="report-box">
+
+<h3 data-i18n="reportExampleTitle">דוגמה למידע שתקבלו</h3>
+
+<div class="report-row">
+<span data-i18n="reportExample1">ביצוע מול תקציב</span>
+<strong data-i18n="reportStatus1">במעקב</strong>
+</div>
+
+<div class="report-row">
+<span data-i18n="reportExample2">עמידה ביעדי ביצוע</span>
+<strong data-i18n="reportStatus2">במעקב</strong>
+</div>
+
+<div class="report-row">
+<span data-i18n="reportExample3">עלויות תפעול</span>
+<strong data-i18n="reportStatus3">במעקב</strong>
+</div>
+
+<div class="report-row">
+<span data-i18n="reportExample4">זיהוי חריגות</span>
+<strong data-i18n="reportStatus4">במעקב</strong>
+</div>
+
+<div class="report-row">
+<span data-i18n="reportExample5">המלצות ניהוליות</span>
+<strong data-i18n="reportStatus5">בדוח</strong>
+</div>
+
+<p style="margin-top:18px;color:#566b80;font-size:13px" data-i18n="reportDisclaimer">
+המחשה בלבד – המדדים והתוצרים יותאמו לכל ארגון ולנתונים הזמינים בו.
+</p>
+
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- PROCESS -->
+
+<section id="process" class="alt">
+
+<div class="container">
+
+<div class="section-head">
+<h2 data-i18n="processTitle">איך מתחילים לעבוד ביחד?</h2>
+<p class="section-sub" data-i18n="processSubtitle">
+תהליך פשוט שמאפשר לנו להכיר את העסק ולהתחיל לספק לכם ערך.
+</p>
+</div>
+
+<ol class="steps">
+
+<li>
+<h3 data-i18n="step1Title">היכרות ואבחון</h3>
+<p data-i18n="step1Desc">לומדים את הארגון, מבינים את הצרכים, המטרות והנתונים הקיימים.</p>
+</li>
+
+<li>
+<h3 data-i18n="step2Title">הגדרת מדדים</h3>
+<p data-i18n="step2Desc">בוחרים מדדי ביצוע, מגדירים יעדים וקובעים את מבנה הדיווח.</p>
+</li>
+
+<li>
+<h3 data-i18n="step3Title">ניתוח ודיווח</h3>
+<p data-i18n="step3Desc">מנתחים נתונים, מכינים דוחות ומציגים מסקנות והמלצות.</p>
+</li>
+
+<li>
+<h3 data-i18n="step4Title">ליווי ושיפור מתמשך</h3>
+<p data-i18n="step4Desc">עוקבים אחר התוצאות, בוחנים את יישום ההחלטות ומשפרים ביצועים לאורך זמן.</p>
+</li>
+
+</ol>
+</div>
+</section>
+
+<!-- BENEFITS -->
+
+<section>
+
+<div class="container">
+
+<div class="section-head">
+<h2 data-i18n="benefitsTitle">למה לעבוד עם Mogatek?</h2>
+<p class="section-sub" data-i18n="benefitsSubtitle">
+כי המנהלים שלכם צריכים לנהל את העסק, ולא לבזבז את הזמן על איסוף וניתוח נתונים.
+</p>
+</div>
+
+<div class="grid">
+
+<div class="benefit">
+<div class="benefit-icon">⏱️</div>
+<div>
+<h3 data-i18n="benefit1Title">חיסכון בזמן ניהולי</h3>
+<p data-i18n="benefit1Desc">פחות זמן בהפקת דוחות, איסוף נתונים ובניית טבלאות. יותר זמן לניהול ולקבלת החלטות.</p>
+</div>
+</div>
+
+<div class="benefit">
+<div class="benefit-icon">🎯</div>
+<div>
+<h3 data-i18n="benefit2Title">שליטה טובה יותר בעסק</h3>
+<p data-i18n="benefit2Desc">תמונת מצב שוטפת, מדדים ברורים וזיהוי מוקדם של בעיות והזדמנויות.</p>
+</div>
+</div>
+
+<div class="benefit">
+<div class="benefit-icon">📉</div>
+<div>
+<h3 data-i18n="benefit3Title">חיסכון והתייעלות</h3>
+<p data-i18n="benefit3Desc">זיהוי עלויות עודפות, בזבוזים, חריגות והזדמנויות לשיפור הרווחיות.</p>
+</div>
+</div>
+
+<div class="benefit">
+<div class="benefit-icon">📊</div>
+<div>
+<h3 data-i18n="benefit4Title">החלטות מבוססות נתונים</h3>
+<p data-i18n="benefit4Desc">הנהלה שמקבלת מידע ברור, מסקנות מקצועיות והמלצות מעשיות.</p>
+</div>
+</div>
+
+<div class="benefit">
+<div class="benefit-icon">💸</div>
+<div>
+<h3 data-i18n="benefit5Title">חלופה חסכונית להעסקת עובד</h3>
+<p data-i18n="benefit5Desc">מקבלים שירות מקצועי בהיקף מוגדר, ללא עלויות שכר, תנאים סוציאליים, גיוס והכשרה של עובד נוסף.</p>
+</div>
+</div>
+
+<div class="benefit">
+<div class="benefit-icon">🔒</div>
+<div>
+<h3 data-i18n="benefit6Title">סודיות ודיסקרטיות</h3>
+<p data-i18n="benefit6Desc">העבודה מתבצעת תחת התחייבות מלאה לשמירה על סודיות המידע העסקי, בהתאם להרשאות ולתנאים שיוגדרו בהסכם ההתקשרות.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+
+<!-- FAQ -->
+
+<section id="faq" class="alt">
+
+<div class="container">
+
+<div class="section-head">
+<h2 data-i18n="faqTitle">שאלות נפוצות</h2>
+</div>
+
+<div class="faq">
 
-.reporting h2 {
-color:#fff;
-}
+<details>
+<summary data-i18n="faq1Q">מה בדיוק Mogatek עושה עבור העסק?</summary>
+<p data-i18n="faq1A">אנחנו אוספים ומנתחים מידע עסקי ותפעולי, מכינים דוחות ומצגות, מזהים חריגות והזדמנויות לשיפור ומספקים המלצות ניהוליות באופן שוטף.</p>
+</details>
 
-.reporting .section-sub {
-color:#d6e4ef;
-}
+<details>
+<summary data-i18n="faq2Q">האם מדובר בשירות חד-פעמי או בליווי קבוע?</summary>
+<p data-i18n="faq2A">המודל המרכזי הוא ליווי מתמשך, בהתאם לצרכים של הארגון. ניתן להגדיר תדירות דיווח, מדדים, תוצרים ופגישות עבודה.</p>
+</details>
 
-.reporting-grid {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:40px;
-align-items:center;
-}
+<details>
+<summary data-i18n="faq3Q">האם צריך להחליף את מערכות המידע הקיימות?</summary>
+<p data-i18n="faq3A">לא בהכרח. ניתן להתחיל בעבודה עם הנתונים והדוחות הקיימים בארגון, בהתאם לזמינותם, למבנה הנתונים ולאפשרויות הגישה.</p>
+</details>
 
-.reporting-content p {
-color:#d6e4ef;
-margin-bottom:18px;
-font-size:17px;
-}
+<details>
+<summary data-i18n="faq4Q">האם השירות מתאים גם לעסקים קטנים ובינוניים?</summary>
+<p data-i18n="faq4A">כן. היקף השירות, תדירות הדיווח והניתוחים יותאמו לגודל העסק, למורכבות הפעילות ולצרכים הניהוליים שלו.</p>
+</details>
 
-.reporting-list {
-list-style:none;
-display:grid;
-gap:12px;
-}
+<details>
+<summary data-i18n="faq5Q">האם Mogatek מכינה גם מצגות להנהלה?</summary>
+<p data-i18n="faq5A">כן. ניתן לקבל מצגות ניהוליות, סיכומים תקופתיים, ניתוחי ביצועים והמלצות לשיפור, בהתאם להסכם השירות.</p>
+</details>
 
-.reporting-list li {
-padding-inline-start:28px;
-position:relative;
-}
+<details>
+<summary data-i18n="faq6Q">איך נקבעת עלות השירות?</summary>
+<p data-i18n="faq6A">העלות נקבעת לפי היקף הנתונים, מספר המדדים, מורכבות הניתוחים, התוצרים ותדירות השירות. כך משלמים על השירות הנדרש בפועל, ולא על משרה מלאה.</p>
+</details>
 
-.reporting-list li:before {
-content:"✓";
-position:absolute;
-inset-inline-start:0;
-color:var(--gold);
-font-weight:800;
-}
+<details>
+<summary data-i18n="faq7Q">איך נשמרת סודיות המידע?</summary>
+<p data-i18n="faq7A">העבודה מתבצעת בהתאם להרשאות שיוגדרו, תחת התחייבות מלאה לשמירה על סודיות המידע שתעוגן בהסכם התקשרות ובמסמך NDA.</p>
+</details>
 
-.report-box {
-background:#fff;
-color:var(--navy);
-border-radius:18px;
-padding:30px;
-box-shadow:0 20px 50px rgba(0,0,0,.2);
-}
+</div>
+</div>
+</section>
 
-.report-box h3 {
-margin-bottom:20px;
-}
+<!-- CONTACT -->
 
-.report-row {
-display:flex;
-justify-content:space-between;
-gap:15px;
-padding:14px 0;
-border-bottom:1px solid var(--line);
-font-size:14px;
-}
+<section id="contact">
 
-.report-row strong {
-color:#17865b;
-}
+<div class="container">
 
-/* FAQ */
+<div class="section-head">
 
-.faq {
-max-width:850px;
-margin:auto;
-}
+<h2 data-i18n="contactTitle">בואו להבין טוב יותר מה קורה בעסק שלכם</h2>
 
-details {
-border:1px solid var(--line);
-border-radius:13px;
-background:#fff;
-margin-bottom:12px;
-}
+<p class="section-sub" data-i18n="contactSubtitle">
+השאירו פרטים ונחזור אליכם לשיחת היכרות וייעוץ ראשונית ללא עלות.
+</p>
 
-summary {
-cursor:pointer;
-padding:19px 22px;
-font-weight:700;
-font-size:17px;
-color:var(--navy);
-list-style:none;
-display:flex;
-justify-content:space-between;
-gap:15px;
-}
+</div>
 
-summary::-webkit-details-marker {
-display:none;
-}
+<form class="form"
+action="https://formsubmit.co/izhaktoashi@gmail.com"
+method="POST"
+accept-charset="UTF-8">
 
-summary:after {
-content:"+";
-font-size:23px;
-color:var(--orange);
-}
+<input type="hidden" name="_subject" id="mailSubject" value="פנייה חדשה מאתר Mogatek">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_captcha" value="true">
+<input type="hidden" name="_replyto" id="replyTo">
 
-details[open] summary:after {
-content:"−";
-}
+<input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
-details p {
-padding:0 22px 20px;
-color:var(--muted);
-}
+<div class="form-grid">
 
-/* CONTACT */
-
-.form {
-max-width:720px;
-margin:auto;
-background:#fff;
-border:1px solid var(--line);
-border-radius:20px;
-padding:38px;
-box-shadow:0 18px 44px rgba(11,34,57,.09);
-}
+<div class="field">
+<label for="full_name" data-i18n="formName">שם מלא *</label>
+<input id="full_name" name="full_name" required autocomplete="name">
+</div>
 
-.form-grid {
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:16px;
-}
+<div class="field">
+<label for="company" data-i18n="formCompany">שם הארגון</label>
+<input id="company" name="company" autocomplete="organization">
+</div>
 
-.field {
-margin-bottom:17px;
-}
+</div>
 
-label {
-display:block;
-font-size:14px;
-font-weight:700;
-color:var(--navy);
-margin-bottom:6px;
-}
+<div class="form-grid">
 
-input,select,textarea {
-width:100%;
-padding:13px 15px;
-border:1px solid #cbd8e5;
-border-radius:10px;
-background:#fafcff;
-}
+<div class="field">
+<label for="phone" data-i18n="formPhone">טלפון *</label>
+<input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel">
+</div>
 
-textarea {
-min-height:115px;
-resize:vertical;
-}
+<div class="field">
+<label for="email" data-i18n="formEmail">דוא"ל *</label>
+<input id="email" name="email" type="email" required autocomplete="email">
+</div>
 
-input:focus,select:focus,textarea:focus {
-border-color:#0b857a;
-box-shadow:0 0 0 4px rgba(11,133,122,.12);
-outline:none;
-}
+</div>
 
-.form .btn {
-width:100%;
-background:var(--navy);
-color:#fff;
-padding:16px;
-}
+<div class="field">
 
-.form .btn:hover {
-background:var(--orange);
-}
+<label for="service" data-i18n="formService">באיזה שירות אתם מתעניינים?</label>
 
-.note {
-font-size:13px;
-color:var(--muted);
-margin-top:12px;
-text-align:center;
-}
+<select id="service" name="service">
 
-.alt-contact {
-display:flex;
-justify-content:center;
-gap:12px;
-flex-wrap:wrap;
-margin-top:24px;
-}
+<option value="" data-i18n="formChoose">בחרו תחום</option>
 
-/* FOOTER */
-
-footer {
-background:#061523;
-color:#b8c8d6;
-padding:42px 0 90px;
-text-align:center;
-font-size:14px;
-}
+<option value="Business Performance Analysis" data-i18n="formOption1">ניתוח ביצועים ודוחות ניהוליים</option>
 
-footer p {
-margin-top:9px;
-}
+<option value="Financial Analysis" data-i18n="formOption2">ניתוחים כלכליים ובקרת עלויות</option>
 
-footer a {
-color:#ffb366;
-}
 
-.flogo {
-display:inline-block;
-background:#fff;
-padding:8px 20px;
-border-radius:12px;
-margin-bottom:12px;
-}
 
-.flogo img {
-height:42px;
-width:auto;
-}
 
-/* MOBILE CTA */
+  <option value="KPI" data-i18n="formOption3">KPI ומדדי ביצוע</option>
 
-.mobile-cta {display:none !important;}
+<option value="Operational Excellence" data-i18n="formOption4">מצוינות תפעולית ושיפור תהליכים</option>
 
-/* RESPONSIVE */
+<option value="Management Presentations" data-i18n="formOption5">מצגות ודיווח להנהלה</option>
 
-@media(max-width:1050px) {
+<option value="Ongoing Consulting" data-i18n="formOption6">ליווי ניהולי מתמשך</option>
+<option value="Project Management" data-i18n="formOption8">ניהול פרויקטים במיקור חוץ</option>
+<option value="Infrastructure and Maintenance" data-i18n="formOption9">ניהול תשתיות ואחזקה</option>
+<option value="Other" data-i18n="formOption7">אחר</option>
 
-.hero-grid {
-grid-template-columns:1fr;
-gap:35px;
-}
+</select>
 
-.report-grid,
-.reporting-grid {
-grid-template-columns:1fr;
-}
+</div>
 
-.nav {
-min-height:86px;
-}
+<div class="field">
+<label for="message" data-i18n="formMessage">ספרו לנו בקצרה על העסק והצרכים שלכם</label>
+<textarea id="message" name="message"></textarea>
+</div>
 
-.logo img {
-height:70px;
-}
+<button class="btn" type="submit" data-i18n="formSubmit">
+שליחת פנייה
+</button>
 
-.nav-right {
-gap:10px;
-}
+<p class="note" data-i18n="formNote">
+הפרטים ישמשו לצורך יצירת קשר בנוגע לפנייתכם.
+</p>
 
-.menu-btn {
-display:grid;
-place-items:center;
-}
+</form>
 
-.nav-links {
-display:none;
-position:absolute;
-top:86px;
-inset-inline:0;
-background:#fff;
-flex-direction:column;
-align-items:stretch;
-gap:0;
-padding:15px 4%;
-border-bottom:1px solid var(--line);
-}
+<div class="alt-contact">
 
-.nav-links.open {
-display:flex;
-}
+<a class="btn btn-wa" href="https://wa.me/972545363347" target="_blank" rel="noopener" data-i18n="whatsapp">
+שיחה בוואטסאפ
+</a>
 
-.nav-links li {
-padding:10px 0;
-border-bottom:1px solid var(--bg);
-}
+<a class="btn btn-primary" href="mailto:izhaktoashi@gmail.com" data-i18n="emailButton">
+שליחת מייל
+</a>
 
-.nav-links li:last-child {
-border:0;
-}
+</div>
 
-.steps {
-grid-template-columns:1fr 1fr;
-}
-}
+</div>
+</section>
 
-@media(max-width:800px) {
-.model-grid {grid-template-columns:1fr}
-}
+</main>
 
-@media(max-width:650px) {
+<footer>
 
-.container {
-width:92%;
-}
+<div class="container">
 
-.nav {
-min-height:72px;
-gap:6px;
-}
+<a class="flogo" href="./">
+<img src="logo.jpg" alt="Mogatek" width="126" height="42">
+</a>
 
-.logo img {
-height:58px;
-max-width:40vw;
-}
+<p data-i18n="footerDescription">
+Mogatek – ניתוח ביצועים, בקרה עסקית, מצוינות תפעולית וליווי ניהולי מתמשך.
+</p>
 
-.nav-links {
-top:72px;
-}
+<p>
+© <span id="year">2026</span> Mogatek ·
+<a href="tel:+972545363347">054-536-3347</a> ·
+<a href="mailto:izhaktoashi@gmail.com">izhaktoashi@gmail.com</a>
+</p>
 
-.nav-right {
-gap:6px;
-}
+</div>
+</footer>
 
-.contact-icons {
-gap:6px;
-}
 
-.contact-icon {
-width:38px;
-height:38px;
-}
 
-.contact-icon svg {
-width:19px;
-height:19px;
-}
+<script>
 
-.lang-btn {
-padding:7px 9px;
-font-size:12px;
-}
+/* LANGUAGE DICTIONARY */
 
-.hero {
-padding:58px 0;
-}
+const translations = {
 
-.hero h1,
-.hero h2 {
-font-size:36px;
-}
+he: {
 
-.hero-subtitle {
-font-size:20px;
-}
+title:"מוגה-טק | שירותי הנדסת תעשייה וניהול – ניתוח נתונים במיקור חוץ",
 
-.lead {
-font-size:16px;
-}
+description:"מוגה-טק מספקת שירותי ניתוח נתונים, KPI ו-BI, דוחות ניהוליים, בקרה תפעולית וניהול פרויקטים במיקור חוץ – בשירות שבועי או חודשי המותאם לעסק.",
 
-section {
-padding:60px 0;
-}
+navServices:"השירותים שלנו",
+navReporting:"דוחות וניתוחים",
+navProcess:"איך זה עובד",
+navFaq:"שאלות נפוצות",
+navContact:"שיחת היכרות",
 
-.steps {
-grid-template-columns:1fr;
-}
+brandTitle:"מוגה-טק | שירותי הנדסת תעשייה וניהול",
+brandTagline:"מצוינות תפעולית במיקור חוץ לעסק שלך",
+brandDescription:"ניהול נתונים, ניתוח ביצועים, בניית מדדי KPI ודוחות BI, בקרה ניהולית ושיפור תהליכים – בשירות שבועי או חודשי, המותאם בדיוק למטרות העסק שלך.",
+heroTitle:'המידע שהעסק שלך צריך. <em>בלי להעסיק עובד נוסף.</em>',
+heroSubtitle:"אנחנו מנהלים ומנתחים את הנתונים. אתם מקבלים תמונת מצב ברורה והחלטות טובות יותר.",
+heroDescription:"Mogatek מספקת שירות חיצוני קבוע של איסוף, עיבוד וניתוח נתונים עסקיים ותפעוליים. השירות נבנה לפי הצרכים, היעדים ומערכות המידע של הארגון, ומסופק בתדירות שבועית או חודשית – עם דוחות, מדדים, תובנות והמלצות מעשיות.",
 
-.trust-grid {
-grid-template-columns:1fr 1fr;
-gap:22px;
-}
+heroPoint1:"שירות קבוע וגמיש – שבועי או חודשי, לפי צורכי העסק",
+heroPoint2:"מדדים, דוחות KPI ו-BI וניתוח נתונים בהתאמה אישית",
+heroPoint3:"עלות נמוכה משמעותית מהעסקת עובד ייעודי בתוך העסק",
+heroPoint4:"התחייבות מלאה לשמירה על סודיות המידע העסקי",
 
-.form-grid {
-grid-template-columns:1fr;
-gap:0;
-}
+heroButton:"בדקו איך השירות יכול להתאים לעסק שלכם",
+heroServicesButton:"לכל השירותים",
+whatsapp:"שיחה בוואטסאפ",
 
-.form {
-padding:25px 18px;
-}
+trust1:"📊 נתונים",
+trust1sub:"איסוף וניתוח מידע",
+trust2:"📈 ביצועים",
+trust2sub:"מדידה ובקרה שוטפת",
+trust3:"💡 תובנות",
+trust3sub:"מסקנות והמלצות",
+trust4:"🎯 תוצאות",
+trust4sub:"שיפור ביצועים עסקיים",
+
+modelTitle:"שירות קבוע, בהיקף שמתאים לעסק שלכם",
+modelSubtitle:"לא צריך לגייס עובד, להכשיר אותו ולנהל עוד משרה. מקבלים שירות מקצועי חיצוני שמותאם לצרכים ולתקציב שלכם.",
+model1Title:"דיווח שבועי",
+model1Desc:"מעקב תדיר אחר מדדים, נתונים וחריגות, עם עדכונים שוטפים ותובנות בזמן.",
+model2Title:"דיווח חודשי",
+model2Desc:"דוח ביצועים תקופתי, ניתוח מגמות, השוואה ליעדים והמלצות להמשך.",
+model3Title:"התאמה אישית מלאה",
+model3Desc:"בוחרים יחד את המדדים, מקורות המידע, התוצרים ותדירות העבודה – לפי מטרות העסק.",
+confidentialityNote:"המידע העסקי שלכם נשאר חסוי. Mogatek מתחייבת לשמירה מלאה על סודיות המידע, וההתחייבות תעוגן במסגרת הסכם ההתקשרות.",
+
+servicesTitle:"מה אנחנו עושים עבור העסק שלכם?",
+servicesSubtitle:"שירותים מקצועיים במיקור חוץ, לפי היעדים והצרכים של הארגון – בדיווח שבועי או חודשי ובהתאמה אישית מלאה.",
+
+service1Title:"ניתוח ביצועים ודוחות ניהוליים",
+service1Desc:"איסוף וניתוח נתוני הארגון, הכנת דוחות תקופתיים, בחינת מגמות והשוואת ביצועים מול יעדים. אתם מקבלים תמונת מצב ברורה של העסק.",
+
+service2Title:"ניתוחים כלכליים ובקרת עלויות",
+service2Desc:"ניתוח הוצאות, תקציבים, עלויות תפעול, רווחיות ומגמות כלכליות. זיהוי הזדמנויות להתייעלות ולחיסכון במשאבים.",
+
+service3Title:"KPI ומדדי ביצוע",
+service3Desc:"הגדרת מדדי ביצוע מרכזיים, בניית לוחות מחוונים ומעקב שוטף אחר יעדים. זיהוי חריגות והצפת נושאים הדורשים התערבות ניהולית.",
+
+service4Title:"מצוינות תפעולית ושיפור תהליכים",
+service4Desc:"מיפוי תהליכים, זיהוי צווארי בקבוק, איתור בזבוזים ושיפור תהליכי עבודה. הפיכת המידע לתוכנית פעולה מעשית.",
+
+service5Title:"מצגות ודיווח להנהלה",
+service5Desc:"הכנת מצגות ניהוליות, סיכומים תקופתיים והצגת הממצאים החשובים להנהלה. מידע ממוקד, ברור ומוכן לקבלת החלטות.",
+
+service6Title:"ליווי ניהולי מתמשך",
+service6Desc:"שותפות מקצועית לאורך זמן, מעקב אחר משימות והחלטות, בקרה על יישום תוכניות עבודה וליווי מנהלים בשיפור הביצועים.",
+
+service7Title:"ניהול פרויקטים במיקור חוץ",
+service7Desc:"תכנון וניהול פרויקטים, בניית תוכניות עבודה, מעקב אחר לוחות זמנים ותקציבים, ניהול ממשקים ובקרה על ביצוע עד להשלמה.",
+service8Title:"ניהול תשתיות ואחזקה",
+service8Desc:"ניהול מערך אחזקה ותשתיות, תוכניות תחזוקה מונעת, מעקב אחר ספקים, ציוד, קריאות שירות, עלויות וביצועי אחזקה.",
+
+reportTitle:"הנתונים של העסק צריכים לעבוד בשבילכם.",
+reportSubtitle:"אנחנו נעשה עבורכם את עבודת הניתוח, ונעביר לכם את התוצאות בצורה ברורה ומוכנה לשימוש.",
+reportText:"מנהלים מקבלים מדי יום כמויות גדולות של נתונים ממערכות שונות. אבל נתונים לבדם אינם מספיקים. צריך לדעת לחבר ביניהם, להבין מה הם אומרים, לזהות בעיות ולהסיק מסקנות.",
+reportText2:"Mogatek לוקחת אחריות על תהליך הניתוח והבקרה, ומספקת לכם מידע ניהולי באופן קבוע, בלי שתצטרכו להקדיש שעות להפקת דוחות ולבניית טבלאות.",
+
+reportPoint1:"קבלת דוחות תקופתיים ומידע עדכני",
+reportPoint2:"ניתוח נתונים והצגת מגמות וחריגות",
+reportPoint3:"המלצות לשיפור ביצועים ולחיסכון בעלויות",
+reportPoint4:"מצגות ניהוליות ומידע מוכן לישיבות הנהלה",
+reportPoint5:"ליווי שוטף ומעקב אחר יישום ההחלטות",
 
-.actions .btn {
-width:100%;
+reportExampleTitle:"דוגמה למידע שתקבלו",
+reportExample1:"ביצוע מול תקציב",
+reportExample2:"עמידה ביעדי ביצוע",
+reportExample3:"עלויות תפעול",
+reportExample4:"זיהוי חריגות",
+reportExample5:"המלצות ניהוליות",
+reportStatus1:"במעקב",
+reportStatus2:"במעקב",
+reportStatus3:"במעקב",
+reportStatus4:"במעקב",
+reportStatus5:"בדוח",
+reportDisclaimer:"המחשה בלבד – המדדים והתוצרים יותאמו לכל ארגון ולנתונים הזמינים בו.",
+
+processTitle:"איך מתחילים לעבוד ביחד?",
+processSubtitle:"תהליך פשוט שמאפשר לנו להכיר את העסק ולהתחיל לספק לכם ערך.",
+
+step1Title:"היכרות ואבחון",
+step1Desc:"לומדים את הארגון, מבינים את הצרכים, המטרות והנתונים הקיימים.",
+step2Title:"הגדרת מדדים",
+step2Desc:"בוחרים מדדי ביצוע, מגדירים יעדים וקובעים את מבנה הדיווח.",
+step3Title:"ניתוח ודיווח",
+step3Desc:"מנתחים נתונים, מכינים דוחות ומציגים מסקנות והמלצות.",
+step4Title:"ליווי ושיפור מתמשך",
+step4Desc:"עוקבים אחר התוצאות, בוחנים את יישום ההחלטות ומשפרים ביצועים לאורך זמן.",
+
+benefitsTitle:"למה לעבוד עם Mogatek?",
+benefitsSubtitle:"כי המנהלים שלכם צריכים לנהל את העסק, ולא לבזבז את הזמן על איסוף וניתוח נתונים.",
+
+benefit1Title:"חיסכון בזמן ניהולי",
+benefit1Desc:"פחות זמן בהפקת דוחות, איסוף נתונים ובניית טבלאות. יותר זמן לניהול ולקבלת החלטות.",
+benefit2Title:"שליטה טובה יותר בעסק",
+benefit2Desc:"תמונת מצב שוטפת, מדדים ברורים וזיהוי מוקדם של בעיות והזדמנויות.",
+benefit3Title:"חיסכון והתייעלות",
+benefit3Desc:"זיהוי עלויות עודפות, בזבוזים, חריגות והזדמנויות לשיפור הרווחיות.",
+benefit4Title:"החלטות מבוססות נתונים",
+benefit4Desc:"הנהלה שמקבלת מידע ברור, מסקנות מקצועיות והמלצות מעשיות.",
+benefit5Title:"חלופה חסכונית להעסקת עובד",
+benefit5Desc:"מקבלים שירות מקצועי בהיקף מוגדר, ללא עלויות שכר, תנאים סוציאליים, גיוס והכשרה של עובד נוסף.",
+benefit6Title:"סודיות ודיסקרטיות",
+benefit6Desc:"העבודה מתבצעת תחת התחייבות מלאה לשמירה על סודיות המידע העסקי, בהתאם להרשאות ולתנאים שיוגדרו בהסכם ההתקשרות.",
+
+faqTitle:"שאלות נפוצות",
+
+faq1Q:"מה בדיוק Mogatek עושה עבור העסק?",
+faq1A:"אנחנו אוספים ומנתחים מידע עסקי ותפעולי, מכינים דוחות ומצגות, מזהים חריגות והזדמנויות לשיפור ומספקים המלצות ניהוליות באופן שוטף.",
+
+faq2Q:"האם מדובר בשירות חד-פעמי או בליווי קבוע?",
+faq2A:"המודל המרכזי הוא ליווי מתמשך, בהתאם לצרכים של הארגון. ניתן להגדיר תדירות דיווח, מדדים, תוצרים ופגישות עבודה.",
+
+faq3Q:"האם צריך להחליף את מערכות המידע הקיימות?",
+faq3A:"לא בהכרח. ניתן להתחיל בעבודה עם הנתונים והדוחות הקיימים בארגון, בהתאם לזמינותם, למבנה הנתונים ולאפשרויות הגישה.",
+
+faq4Q:"האם השירות מתאים גם לעסקים קטנים ובינוניים?",
+faq4A:"כן. היקף השירות, תדירות הדיווח והניתוחים יותאמו לגודל העסק, למורכבות הפעילות ולצרכים הניהוליים שלו.",
+
+faq5Q:"האם Mogatek מכינה גם מצגות להנהלה?",
+faq5A:"כן. ניתן לקבל מצגות ניהוליות, סיכומים תקופתיים, ניתוחי ביצועים והמלצות לשיפור, בהתאם להסכם השירות.",
+
+faq6Q:"איך נקבעת עלות השירות?",
+faq6A:"העלות נקבעת לפי היקף הנתונים, מספר המדדים, מורכבות הניתוחים, התוצרים ותדירות השירות. כך משלמים על השירות הנדרש בפועל, ולא על משרה מלאה.",
+faq7Q:"איך נשמרת סודיות המידע?",
+faq7A:"העבודה מתבצעת בהתאם להרשאות שיוגדרו, תחת התחייבות מלאה לשמירה על סודיות המידע שתעוגן בהסכם התקשרות ובמסמך NDA.",
+
+contactTitle:"בואו להבין טוב יותר מה קורה בעסק שלכם",
+contactSubtitle:"השאירו פרטים ונחזור אליכם לשיחת היכרות וייעוץ ראשונית ללא עלות.",
+
+formName:"שם מלא *",
+formCompany:"שם הארגון",
+formPhone:"טלפון *",
+formEmail:'דוא"ל *',
+formService:"באיזה שירות אתם מתעניינים?",
+formChoose:"בחרו תחום",
+formOption1:"ניתוח ביצועים ודוחות ניהוליים",
+formOption2:"ניתוחים כלכליים ובקרת עלויות",
+formOption3:"KPI ומדדי ביצוע",
+formOption4:"מצוינות תפעולית ושיפור תהליכים",
+formOption5:"מצגות ודיווח להנהלה",
+formOption6:"ליווי ניהולי מתמשך",
+formOption7:"אחר",
+formOption8:"ניהול פרויקטים במיקור חוץ",
+formOption9:"ניהול תשתיות ואחזקה",
+formMessage:"ספרו לנו בקצרה על העסק והצרכים שלכם",
+formSubmit:"שליחת פנייה",
+formNote:"הפרטים ישמשו לצורך יצירת קשר בנוגע לפנייתכם.",
+
+emailButton:"שליחת מייל",
+footerDescription:"מוגה-טק – שירותי הנדסת תעשייה וניהול, ניתוח נתונים, KPI ו-BI, מצוינות תפעולית וניהול במיקור חוץ.",
+call:"התקשרו",
+mobileContact:"השאירו פרטים"
+
+},
+
+en: {
+
+title:"Mogatek | Outsourced Data Analysis & Operational Excellence",
+
+description:"Mogatek provides customized weekly or monthly outsourced business data analysis, KPI and BI reporting, performance monitoring, project management and maintenance management.",
+
+navServices:"Our Services",
+navReporting:"Reports & Analysis",
+navProcess:"How It Works",
+navFaq:"FAQ",
+navContact:"Introductory Call",
+
+brandTitle:"Mogatek | Industrial Engineering & Management Services",
+brandTagline:"Outsourced Operational Excellence for Your Business",
+brandDescription:"Business data management, performance analysis, KPI and BI reporting, management control and process improvement – delivered weekly or monthly and fully tailored to your business goals.",
+heroTitle:'The insight your business needs. <em>Without hiring another employee.</em>',
+heroSubtitle:"We manage and analyze the data. You get a clear picture and better decisions.",
+heroDescription:"Mogatek provides an ongoing outsourced service for collecting, processing and analyzing business and operational data. The service is designed around your organization’s needs, goals and information systems, with weekly or monthly reporting, metrics, insights and practical recommendations.",
+
+heroPoint1:"Ongoing, flexible service – weekly or monthly, based on your needs",
+heroPoint2:"Customized KPI metrics, BI reports and data analysis",
+heroPoint3:"Significantly lower cost than hiring a dedicated employee",
+heroPoint4:"Full commitment to protecting your business information",
+
+heroButton:"See How the Service Can Fit Your Business",
+heroServicesButton:"View All Services",
+whatsapp:"WhatsApp",
+
+trust1:"📊 Data",
+trust1sub:"Collection & Analysis",
+trust2:"📈 Performance",
+trust2sub:"Ongoing Measurement & Control",
+trust3:"💡 Insights",
+trust3sub:"Findings & Recommendations",
+trust4:"🎯 Results",
+trust4sub:"Improving Business Performance",
+
+modelTitle:"Ongoing Service, Sized for Your Business",
+modelSubtitle:"No need to recruit, train or manage another employee. Get an external professional service tailored to your needs and budget.",
+model1Title:"Weekly Reporting",
+model1Desc:"Frequent monitoring of metrics, data and deviations, with regular updates and timely insights.",
+model2Title:"Monthly Reporting",
+model2Desc:"Periodic performance report, trend analysis, comparison against targets and recommendations.",
+model3Title:"Fully Customized",
+model3Desc:"Together, we define metrics, data sources, deliverables and work frequency according to your business goals.",
+confidentialityNote:"Your business information remains confidential. Mogatek commits to full confidentiality, formalized in the service agreement.",
+
+servicesTitle:"What Do We Do for Your Business?",
+servicesSubtitle:"Professional outsourced services aligned with your organization's goals and needs, delivered weekly or monthly and fully customized.",
+
+service1Title:"Business Performance & Management Reports",
+service1Desc:"Collecting and analyzing organizational data, preparing periodic reports, reviewing trends and comparing performance against targets. Get a clear picture of your business.",
+
+service2Title:"Financial Analysis & Cost Control",
+service2Desc:"Analysis of expenses, budgets, operating costs, profitability and financial trends. Identify opportunities for efficiency and cost savings.",
+
+service3Title:"KPI & Performance Monitoring",
+service3Desc:"Definition of key performance indicators, dashboard development and ongoing target monitoring. Identify deviations and issues requiring management attention.",
+
+service4Title:"Operational Excellence & Process Improvement",
+service4Desc:"Process mapping, bottleneck identification, waste reduction and workflow improvement. Turn business information into practical action plans.",
+
+service5Title:"Management Presentations & Reporting",
+service5Desc:"Preparation of management presentations, periodic summaries and executive reports. Focused, clear information ready for decision-making.",
+
+service6Title:"Ongoing Management Support",
+service6Desc:"A long-term professional partnership, tracking tasks and decisions, monitoring work plans and supporting managers in improving performance.",
+
+service7Title:"Outsourced Project Management",
+service7Desc:"Project planning and management, work plans, schedule and budget tracking, stakeholder coordination and delivery control through completion.",
+service8Title:"Infrastructure & Maintenance Management",
+service8Desc:"Management of maintenance and infrastructure, preventive maintenance plans, supplier and equipment follow-up, service requests, costs and maintenance performance.",
+
+reportTitle:"Your Business Data Should Work for You.",
+reportSubtitle:"We take care of the analysis and turn your existing information into clear, practical management insights.",
+
+reportText:"Managers receive large amounts of data from multiple systems every day. But data alone is not enough. It needs to be connected, understood and analyzed to identify problems and draw meaningful conclusions.",
+
+reportText2:"Mogatek takes responsibility for the analysis and monitoring process, providing ongoing management insights without requiring your team to spend hours preparing reports and spreadsheets.",
+
+reportPoint1:"Periodic reports and up-to-date business information",
+reportPoint2:"Data analysis, trends and performance deviations",
+reportPoint3:"Recommendations for improved performance and cost savings",
+reportPoint4:"Management presentations and executive meeting materials",
+reportPoint5:"Ongoing support and follow-up on management decisions",
+
+reportExampleTitle:"Examples of What You Receive",
+reportExample1:"Actual vs. Budget",
+reportExample2:"Performance Targets",
+reportExample3:"Operating Costs",
+reportExample4:"Identified Deviations",
+reportExample5:"Management Recommendations",
+reportStatus1:"Monitored",
+reportStatus2:"Monitored",
+reportStatus3:"Monitored",
+reportStatus4:"Monitored",
+reportStatus5:"In Report",
+reportDisclaimer:"Illustrative example only. Metrics and deliverables are customized to each organization and its available data.",
+
+processTitle:"How Do We Start Working Together?",
+processSubtitle:"A straightforward process that helps us understand your business and start delivering value.",
+
+step1Title:"Discovery & Assessment",
+step1Desc:"We learn about your organization, its needs, objectives and available data.",
+step2Title:"Define Performance Metrics",
+step2Desc:"We select key performance indicators, define targets and establish the reporting structure.",
+step3Title:"Analysis & Reporting",
+step3Desc:"We analyze data, prepare reports and present conclusions and recommendations.",
+step4Title:"Ongoing Support & Improvement",
+step4Desc:"We monitor results, follow up on decisions and continuously improve business performance.",
+
+benefitsTitle:"Why Work with Mogatek?",
+benefitsSubtitle:"Your managers should focus on running the business, not spending their time collecting and analyzing data.",
+
+benefit1Title:"Save Management Time",
+benefit1Desc:"Less time preparing reports, collecting data and building spreadsheets. More time for management and decision-making.",
+benefit2Title:"Better Business Control",
+benefit2Desc:"Ongoing visibility, clear performance metrics and early identification of problems and opportunities.",
+benefit3Title:"Efficiency & Cost Savings",
+benefit3Desc:"Identify excess costs, waste, deviations and opportunities to improve profitability.",
+benefit4Title:"Data-Driven Decisions",
+benefit4Desc:"Management receives clear information, professional insights and practical recommendations.",
+benefit5Title:"Cost-Effective Alternative to Hiring",
+benefit5Desc:"Get a defined professional service without the salary, benefits, recruitment and training costs of an additional employee.",
+benefit6Title:"Confidentiality & Discretion",
+benefit6Desc:"Mogatek commits to full confidentiality of business information, under the access permissions and terms defined in the service agreement.",
+
+faqTitle:"Frequently Asked Questions",
+
+faq1Q:"What exactly does Mogatek do for a business?",
+faq1A:"We collect and analyze business and operational information, prepare reports and presentations, identify deviations and improvement opportunities, and provide ongoing management recommendations.",
+
+faq2Q:"Is this a one-time service or ongoing support?",
+faq2A:"Our main model is ongoing support, tailored to your organization's needs. Reporting frequency, metrics, deliverables and working meetings can be defined together.",
+
+faq3Q:"Do we need to replace our existing information systems?",
+faq3A:"Not necessarily. We can begin by working with your existing data and reports, depending on their availability, structure and access permissions.",
+
+faq4Q:"Is the service suitable for small and medium-sized businesses?",
+faq4A:"Yes. The scope of services, reporting frequency and analysis are tailored to the size of the business, its operational complexity and management needs.",
+
+faq5Q:"Does Mogatek also prepare management presentations?",
+faq5A:"Yes. We can provide executive presentations, periodic summaries, performance analysis and improvement recommendations according to the agreed service scope.",
+
+faq6Q:"How is the service fee determined?",
+faq6A:"The fee depends on data volume, number of metrics, analysis complexity, deliverables and service frequency. You pay for the service actually required rather than a full-time position.",
+faq7Q:"How is information confidentiality maintained?",
+faq7A:"Work is performed under agreed access permissions and a full confidentiality commitment, formalized in the service agreement and an NDA.",
+
+contactTitle:"Let's Understand Your Business Better",
+contactSubtitle:"Leave your details and we will contact you for an initial, no-obligation consultation.",
+
+formName:"Full Name *",
+formCompany:"Company",
+formPhone:"Phone *",
+formEmail:"Email *",
+formService:"Which service are you interested in?",
+formChoose:"Select a service",
+formOption1:"Business Performance & Management Reports",
+formOption2:"Financial Analysis & Cost Control",
+formOption3:"KPI & Performance Monitoring",
+formOption4:"Operational Excellence & Process Improvement",
+formOption5:"Management Presentations & Reporting",
+formOption6:"Ongoing Management Support",
+formOption7:"Other",
+formOption8:"Outsourced Project Management",
+formOption9:"Infrastructure & Maintenance Management",
+formMessage:"Tell us briefly about your business and requirements",
+formSubmit:"Send Inquiry",
+formNote:"Your details will be used to contact you regarding your inquiry.",
+
+emailButton:"Send Email",
+footerDescription:"Mogatek – Industrial engineering and management services, outsourced data analysis, KPI and BI, operational excellence and project management.",
+call:"Call",
+mobileContact:"Contact Us"
+
 }
+
+};
+
+/* LANGUAGE ENGINE */
+
+let currentLanguage = "he";
+
+function setLanguage(lang) {
+
+if (!translations[lang]) return;
+
+currentLanguage = lang;
+
+const t = translations[lang];
 
-.mobile-cta {
-display:flex;
+document.documentElement.lang = lang;
+document.documentElement.dir = lang === "he" ? "rtl" : "ltr";
+
+document.title = t.title;
+
+document.querySelector('meta[name="description"]').content = t.description;
+
+document.querySelector('meta[property="og:locale"]').content =
+lang === "he" ? "he_IL" : "en_US";
+
+document.getElementById("languageBtn").textContent =
+lang === "he" ? "EN" : "עברית";
+
+document.getElementById("menuBtn").setAttribute(
+"aria-label",
+lang === "he" ? "תפריט" : "Menu"
+);
+
+document.querySelectorAll("[data-i18n]").forEach(element => {
+
+const key = element.dataset.i18n;
+
+if (t[key] !== undefined) {
+element.textContent = t[key];
 }
+
+});
+
+document.querySelectorAll("[data-i18n-html]").forEach(element => {
 
-footer {
-padding-bottom:42px;
+const key = element.dataset.i18nHtml;
+
+if (t[key] !== undefined) {
+element.innerHTML = t[key];
 }
+
+});
+
+document.getElementById("mailSubject").value =
+lang === "he"
+? "פנייה חדשה מאתר Mogatek"
+: "New inquiry from Mogatek website";
+
+try {
+localStorage.setItem("mogatek-language",lang);
+} catch(e) {}
+
 }
 
-@media(prefers-reduced-motion:reduce) {
-* {
-transition:none!important;
-scroll-behavior:auto!important;
+function toggleLanguage() {
+
+setLanguage(currentLanguage === "he" ? "en" : "he");
+
 }
+
+/* CONTACT FORM */
+
+document.querySelector(".form").addEventListener("submit",function(e) {
+
+const email = document.getElementById("email").value.trim();
+
+document.getElementById("replyTo").value = email;
+
+});
+
+/* NAVIGATION */
+
+const menu = document.getElementById("menu");
+const menuButton = document.getElementById("menuBtn");
+
+menuButton.addEventListener("click",()=>{
+
+const opened = menu.classList.toggle("open");
+
+menuButton.setAttribute("aria-expanded",opened);
+
+});
+
+menu.addEventListener("click",e=>{
+
+if(e.target.closest("a")) {
+
+menu.classList.remove("open");
+
+menuButton.setAttribute("aria-expanded","false");
+
 }
+
+});
+
+/* YEAR */
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+/* INITIAL LANGUAGE */
+
+let savedLanguage = "he";
+
+try {
+const saved = localStorage.getItem("mogatek-language");
+if (saved === "en" || saved === "he") savedLanguage = saved;
+} catch(e) {}
+
+setLanguage(savedLanguage);
+
+</script>
+
+</body>
+</html>
 
-</style>
+  </body>
+</html>
