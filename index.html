@@ -1,14 +1,20 @@
+
 <!doctype html>
 <html lang="he" dir="rtl">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Mogatek | שירותי מצוינות תפעולית לארגונים – מדידה, בקרה וזיהוי צווארי בקבוק</title>
-<meta name="description" content="Mogatek מספקת לארגונים שירותי מצוינות תפעולית: התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק, חיסכון במשאבים והרחבת ידע לבניית אסטרטגיה ארגונית.">
+
+<meta name="description" content="Mogatek מעניקה שירותי מצוינות תפעולית לארגונים: שיפור תהליכים, מדדי KPI, בקרה ניהולית, זיהוי צווארי בקבוק, התייעלות וחיסכון במשאבים.">
 <meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="author" content="Mogatek">
 <meta name="theme-color" content="#0b2239">
+
 <link rel="canonical" href="https://izhaktoashi-droid.github.io/consulting-website/">
 <link rel="icon" type="image/jpeg" href="logo.jpg">
+
 <meta property="og:type" content="website">
 <meta property="og:locale" content="he_IL">
 <meta property="og:site_name" content="Mogatek">
@@ -16,212 +22,854 @@
 <meta property="og:description" content="התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק וחיסכון במשאבים.">
 <meta property="og:url" content="https://izhaktoashi-droid.github.io/consulting-website/">
 <meta property="og:image" content="https://izhaktoashi-droid.github.io/consulting-website/team-hero.jpg">
+<meta property="og:image:alt" content="צוות Mogatek – שירותי מצוינות תפעולית ושיפור תהליכים">
+
+<meta name="twitter:title" content="Mogatek | מצוינות תפעולית לארגונים">
+<meta name="twitter:description" content="שיפור תהליכים, KPI, בקרה ניהולית, זיהוי צווארי בקבוק וחיסכון במשאבים.">
+<meta name="twitter:image" content="https://izhaktoashi-droid.github.io/consulting-website/team-hero.jpg">
 <meta name="twitter:card" content="summary_large_image">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet">
+
 <style>
-:root{--navy:#0b2239;--navy2:#163a5c;--orange:#e8710a;--orange-d:#c85f05;--gold:#e8c98a;--ink:#1c2a38;--muted:#566b80;--bg:#f4f7fa;--line:#dde6ee}
+:root{
+--navy:#0b2239;
+--navy2:#163a5c;
+--orange:#e8710a;
+--orange-d:#c85f05;
+--gold:#e8c98a;
+--ink:#1c2a38;
+--muted:#566b80;
+--bg:#f4f7fa;
+--line:#dde6ee
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:86px}
-body{font-family:"Heebo",Arial,sans-serif;color:var(--ink);line-height:1.7;background:#fff;overflow-x:hidden}
+
+html{
+scroll-behavior:smooth;
+scroll-padding-top:86px
+}
+
+body{
+font-family:"Heebo",Arial,sans-serif;
+color:var(--ink);
+line-height:1.7;
+background:#fff;
+overflow-x:hidden
+}
+
 a{color:inherit;text-decoration:none}
+
 button,input,select,textarea{font:inherit}
+
 img{max-width:100%;display:block}
-:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
-.container{width:min(1140px,92%);margin:auto}
-header{position:sticky;top:0;z-index:80;background:rgba(255,255,255,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
-.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo img{height:54px;width:auto;mix-blend-mode:multiply}
-.nav-links{display:flex;align-items:center;gap:22px;list-style:none}
-.nav-links a:not(.btn){font-size:15px;font-weight:500;color:#3d5266;border-bottom:2px solid transparent;padding:4px 0}
-.nav-links a:not(.btn):hover{color:var(--navy);border-color:var(--orange)}
-.menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:10px;width:44px;height:44px;cursor:pointer;color:var(--navy)}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;border-radius:99px;font-weight:700;font-size:15px;border:1px solid transparent;transition:.25s;cursor:pointer}
-.btn-primary{background:var(--orange);color:#fff}.btn-primary:hover{background:var(--orange-d);transform:translateY(-2px)}
-.btn-wa{background:#1fa855;color:#fff}.btn-wa:hover{background:#188a46}
-.btn-ghost{border-color:rgba(255,255,255,.4);color:#fff}.btn-ghost:hover{background:#fff;color:var(--navy)}
-.btn-sm{padding:10px 20px;font-size:14px}
-.hero{background:linear-gradient(135deg,#071a2d,var(--navy2) 70%,#1b5a7d);color:#fff;padding:90px 0}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
-h1{font-size:clamp(32px,4.4vw,52px);line-height:1.18;font-weight:800;letter-spacing:-1px;margin-bottom:20px}
-h1 em{font-style:normal;color:var(--gold)}
-.lead{font-size:18px;color:#d3e1ee;max-width:60ch;margin-bottom:22px}
-.points{list-style:none;margin-bottom:30px;display:grid;gap:8px}
-.points li{padding-inline-start:26px;position:relative;color:#e6eff7}
-.points li::before{content:"✓";position:absolute;inset-inline-start:0;color:var(--gold);font-weight:800}
-.actions{display:flex;flex-wrap:wrap;gap:12px}
-.hero-img{border-radius:20px;padding:8px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);box-shadow:0 30px 70px rgba(3,10,20,.45)}
-.hero-img img{border-radius:14px;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+
+:focus-visible{
+outline:3px solid var(--orange);
+outline-offset:3px;
+border-radius:6px
+}
+
+.container{
+width:min(1140px,92%);
+margin:auto
+}
+
+header{
+position:sticky;
+top:0;
+z-index:80;
+background:rgba(255,255,255,.96);
+backdrop-filter:blur(14px);
+border-bottom:1px solid var(--line)
+}
+
+/* LOGO - הגדלה פי 2 */
+
+.nav{
+min-height:128px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:16px
+}
+
+.logo img{
+height:108px;
+width:auto;
+max-width:min(45vw,360px);
+object-fit:contain;
+mix-blend-mode:multiply
+}
+
+.nav-links{
+display:flex;
+align-items:center;
+gap:22px;
+list-style:none
+}
+
+.nav-links a:not(.btn){
+font-size:15px;
+font-weight:500;
+color:#3d5266;
+border-bottom:2px solid transparent;
+padding:4px 0
+}
+
+.nav-links a:not(.btn):hover{
+color:var(--navy);
+border-color:var(--orange)
+}
+
+.menu-btn{
+display:none;
+background:none;
+border:1px solid var(--line);
+border-radius:10px;
+width:44px;
+height:44px;
+cursor:pointer;
+color:var(--navy)
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:14px 26px;
+border-radius:99px;
+font-weight:700;
+font-size:15px;
+border:1px solid transparent;
+transition:.25s;
+cursor:pointer
+}
+
+.btn-primary{
+background:var(--orange);
+color:#fff
+}
+
+.btn-primary:hover{
+background:var(--orange-d);
+transform:translateY(-2px)
+}
+
+.btn-wa{
+background:#1fa855;
+color:#fff
+}
+
+.btn-wa:hover{background:#188a46}
+
+.btn-ghost{
+border-color:rgba(255,255,255,.4);
+color:#fff
+}
+
+.btn-ghost:hover{
+background:#fff;
+color:var(--navy)
+}
+
+.btn-sm{
+padding:10px 20px;
+font-size:14px
+}
+
+.hero{
+background:linear-gradient(135deg,#071a2d,var(--navy2) 70%,#1b5a7d);
+color:#fff;
+padding:90px 0
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1.1fr .9fr;
+gap:52px;
+align-items:center
+}
+
+h1{
+font-size:clamp(32px,4.4vw,52px);
+line-height:1.18;
+font-weight:800;
+letter-spacing:-1px;
+margin-bottom:20px
+}
+
+h1 em{
+font-style:normal;
+color:var(--gold)
+}
+
+.lead{
+font-size:18px;
+color:#d3e1ee;
+max-width:60ch;
+margin-bottom:22px
+}
+
+.points{
+list-style:none;
+margin-bottom:30px;
+display:grid;
+gap:8px
+}
+
+.points li{
+padding-inline-start:26px;
+position:relative;
+color:#e6eff7
+}
+
+.points li::before{
+content:"✓";
+position:absolute;
+inset-inline-start:0;
+color:var(--gold);
+font-weight:800
+}
+
+.actions{
+display:flex;
+flex-wrap:wrap;
+gap:12px
+}
+
+.hero-img{
+border-radius:20px;
+padding:8px;
+background:rgba(255,255,255,.1);
+border:1px solid rgba(255,255,255,.18);
+box-shadow:0 30px 70px rgba(3,10,20,.45)
+}
+
+.hero-img img{
+border-radius:14px;
+width:100%;
+height:auto;
+aspect-ratio:16/10;
+object-fit:cover
+}
+
 section{padding:84px 0}
+
 .alt{background:var(--bg)}
-.head{max-width:740px;margin:0 auto 48px;text-align:center}
-h2{font-size:clamp(27px,3.3vw,38px);line-height:1.25;color:var(--navy);letter-spacing:-.5px;font-weight:800;margin-bottom:12px}
-.sub{color:var(--muted);font-size:17px}
-h3{color:var(--navy);font-size:20px;margin-bottom:9px;line-height:1.3}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
-.card{border:1px solid var(--line);border-radius:14px;padding:30px 26px;background:#fff;transition:.3s}
-.card:hover{box-shadow:0 18px 44px rgba(11,34,57,.09)}
-.card p{color:var(--muted);font-size:15.5px}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:26px;list-style:none;counter-reset:s}
-.steps li{counter-increment:s;border-inline-start:3px solid var(--orange);padding-inline-start:20px}
-.steps li::before{content:counter(s);display:block;font-size:32px;font-weight:800;color:var(--orange);line-height:1;margin-bottom:8px}
-.steps p{color:var(--muted);font-size:15px}
-.faq{max-width:820px;margin:auto}
-details{border:1px solid var(--line);border-radius:14px;background:#fff;margin-bottom:12px}
-summary{cursor:pointer;padding:19px 22px;font-weight:700;font-size:17px;color:var(--navy);list-style:none;display:flex;justify-content:space-between;gap:14px}
+
+.head{
+max-width:740px;
+margin:0 auto 48px;
+text-align:center
+}
+
+h2{
+font-size:clamp(27px,3.3vw,38px);
+line-height:1.25;
+color:var(--navy);
+letter-spacing:-.5px;
+font-weight:800;
+margin-bottom:12px
+}
+
+.sub{
+color:var(--muted);
+font-size:17px
+}
+
+h3{
+color:var(--navy);
+font-size:20px;
+margin-bottom:9px;
+line-height:1.3
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px
+}
+
+.card{
+border:1px solid var(--line);
+border-radius:14px;
+padding:30px 26px;
+background:#fff;
+transition:.3s
+}
+
+.card:hover{
+box-shadow:0 18px 44px rgba(11,34,57,.09)
+}
+
+.card p{
+color:var(--muted);
+font-size:15.5px
+}
+
+.steps{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:26px;
+list-style:none;
+counter-reset:s
+}
+
+.steps li{
+counter-increment:s;
+border-inline-start:3px solid var(--orange);
+padding-inline-start:20px
+}
+
+.steps li::before{
+content:counter(s);
+display:block;
+font-size:32px;
+font-weight:800;
+color:var(--orange);
+line-height:1;
+margin-bottom:8px
+}
+
+.steps p{
+color:var(--muted);
+font-size:15px
+}
+
+.faq{
+max-width:820px;
+margin:auto
+}
+
+details{
+border:1px solid var(--line);
+border-radius:14px;
+background:#fff;
+margin-bottom:12px
+}
+
+summary{
+cursor:pointer;
+padding:19px 22px;
+font-weight:700;
+font-size:17px;
+color:var(--navy);
+list-style:none;
+display:flex;
+justify-content:space-between;
+gap:14px
+}
+
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font-size:24px;line-height:1;color:var(--orange);transition:transform .25s}
-details[open] summary::after{transform:rotate(45deg)}
-details p{padding:0 22px 20px;color:var(--muted)}
-.form{max-width:700px;margin:auto;background:#fff;border:1px solid var(--line);border-radius:20px;padding:38px;box-shadow:0 18px 44px rgba(11,34,57,.09)}
-.row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+
+summary::after{
+content:"+";
+font-size:24px;
+line-height:1;
+color:var(--orange);
+transition:transform .25s
+}
+
+details[open] summary::after{
+transform:rotate(45deg)
+}
+
+details p{
+padding:0 22px 20px;
+color:var(--muted)
+}
+
+.form{
+max-width:700px;
+margin:auto;
+background:#fff;
+border:1px solid var(--line);
+border-radius:20px;
+padding:38px;
+box-shadow:0 18px 44px rgba(11,34,57,.09)
+}
+
+.row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:16px
+}
+
 .field{margin-bottom:17px}
-label{display:block;font-size:14px;font-weight:700;color:var(--navy);margin-bottom:6px}
-input,select,textarea{width:100%;padding:13px 15px;border:1px solid #cbd8e5;border-radius:10px;background:#fafcff}
-input:focus,select:focus,textarea:focus{border-color:#0b857a;box-shadow:0 0 0 4px rgba(11,133,122,.12);outline:none}
-textarea{min-height:105px;resize:vertical}
-.form .btn{width:100%;background:var(--navy);color:#fff;padding:16px}.form .btn:hover{background:var(--orange)}
-.note{font-size:13px;color:var(--muted);margin-top:12px;text-align:center}
-.alt-contact{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:24px}
-footer{background:#061523;color:#b8c8d6;padding:42px 0 90px;text-align:center;font-size:14.5px}
-footer p{margin-top:8px}footer a{color:#ffb366}
-.flogo{display:inline-block;background:#fff;padding:8px 20px;border-radius:12px;margin-bottom:12px}.flogo img{height:42px;width:auto}
-.mobile-cta{display:none;position:fixed;bottom:0;inset-inline:0;z-index:90}
-.mobile-cta a{flex:1;text-align:center;padding:15px 0;color:#fff;font-weight:700;font-size:14px}
+
+label{
+display:block;
+font-size:14px;
+font-weight:700;
+color:var(--navy);
+margin-bottom:6px
+}
+
+input,select,textarea{
+width:100%;
+padding:13px 15px;
+border:1px solid #cbd8e5;
+border-radius:10px;
+background:#fafcff
+}
+
+input:focus,select:focus,textarea:focus{
+border-color:#0b857a;
+box-shadow:0 0 0 4px rgba(11,133,122,.12);
+outline:none
+}
+
+textarea{
+min-height:105px;
+resize:vertical
+}
+
+.form .btn{
+width:100%;
+background:var(--navy);
+color:#fff;
+padding:16px
+}
+
+.form .btn:hover{background:var(--orange)}
+
+.note{
+font-size:13px;
+color:var(--muted);
+margin-top:12px;
+text-align:center
+}
+
+.alt-contact{
+display:flex;
+justify-content:center;
+gap:12px;
+flex-wrap:wrap;
+margin-top:24px
+}
+
+footer{
+background:#061523;
+color:#b8c8d6;
+padding:42px 0 90px;
+text-align:center;
+font-size:14.5px
+}
+
+footer p{margin-top:8px}
+footer a{color:#ffb366}
+
+.flogo{
+display:inline-block;
+background:#fff;
+padding:8px 20px;
+border-radius:12px;
+margin-bottom:12px
+}
+
+.flogo img{
+height:42px;
+width:auto
+}
+
+.mobile-cta{
+display:none;
+position:fixed;
+bottom:0;
+inset-inline:0;
+z-index:90
+}
+
+.mobile-cta a{
+flex:1;
+text-align:center;
+padding:15px 0;
+color:#fff;
+font-weight:700;
+font-size:14px
+}
+
 @media(max-width:1000px){
+
 .hero-grid{grid-template-columns:1fr;gap:38px}
+
 .steps{grid-template-columns:1fr 1fr}
-.menu-btn{display:grid;place-items:center}
-.nav-links{display:none;position:absolute;top:76px;inset-inline:0;background:#fff;flex-direction:column;align-items:stretch;gap:0;padding:10px 4%;border-bottom:1px solid var(--line)}
-.nav-links.open{display:flex}.nav-links li{padding:10px 0;border-bottom:1px solid var(--bg)}.nav-links li:last-child{border:0}}
+
+.menu-btn{
+display:grid;
+place-items:center
+}
+
+.nav-links{
+display:none;
+position:absolute;
+top:128px;
+inset-inline:0;
+background:#fff;
+flex-direction:column;
+align-items:stretch;
+gap:0;
+padding:10px 4%;
+border-bottom:1px solid var(--line)
+}
+
+.nav-links.open{display:flex}
+
+.nav-links li{
+padding:10px 0;
+border-bottom:1px solid var(--bg)
+}
+
+.nav-links li:last-child{border:0}
+}
+
 @media(max-width:760px){
+
 .row,.steps{grid-template-columns:1fr}
-.hero{padding:60px 0}section{padding:60px 0}.form{padding:26px 18px}
-.logo img{height:44px}.mobile-cta{display:flex}.actions .btn{width:100%}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.hero{padding:60px 0}
+
+section{padding:60px 0}
+
+.form{padding:26px 18px}
+
+.nav{min-height:104px}
+
+.nav-links{top:104px}
+
+.logo img{
+height:88px;
+max-width:58vw
+}
+
+.mobile-cta{display:flex}
+
+.actions .btn{width:100%}
+}
+
+@media(prefers-reduced-motion:reduce){
+*{transition:none!important;scroll-behavior:auto!important}
+}
 </style>
+
 <script type="application/ld+json">
-{"@context":"https://schema.org","@graph":[
-{"@type":["ProfessionalService","Organization"],"@id":"https://izhaktoashi-droid.github.io/consulting-website/#org","name":"Mogatek","url":"https://izhaktoashi-droid.github.io/consulting-website/","logo":"https://izhaktoashi-droid.github.io/consulting-website/logo.jpg","image":"https://izhaktoashi-droid.github.io/consulting-website/team-hero.jpg","email":"izhaktoashi@gmail.com","telephone":"+972-54-536-3347","description":"שירותי מצוינות תפעולית לארגונים: התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק, חיסכון במשאבים והרחבת ידע לבניית אסטרטגיה ארגונית.","areaServed":{"@type":"Country","name":"Israel"},"knowsLanguage":["he","en"],
-"hasOfferCatalog":{"@type":"OfferCatalog","name":"שירותי Mogatek","itemListElement":[
+{
+"@context":"https://schema.org",
+"@graph":[
+{
+"@type":["ProfessionalService","Organization"],
+"@id":"https://izhaktoashi-droid.github.io/consulting-website/#org",
+"name":"Mogatek",
+"url":"https://izhaktoashi-droid.github.io/consulting-website/",
+"logo":"https://izhaktoashi-droid.github.io/consulting-website/logo.jpg",
+"image":"https://izhaktoashi-droid.github.io/consulting-website/team-hero.jpg",
+"email":"izhaktoashi@gmail.com",
+"telephone":"+972-54-536-3347",
+"description":"שירותי מצוינות תפעולית לארגונים: התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק, חיסכון במשאבים והרחבת ידע לבניית אסטרטגיה ארגונית.",
+"areaServed":{"@type":"Country","name":"Israel"},
+"knowsLanguage":["he","en"],
+"hasOfferCatalog":{
+"@type":"OfferCatalog",
+"name":"שירותי Mogatek",
+"itemListElement":[
 {"@type":"Offer","itemOffered":{"@type":"Service","name":"התנעת תהליכים ופרויקטים שנתיים"}},
 {"@type":"Offer","itemOffered":{"@type":"Service","name":"מדידה ובקרה – KPI ולוחות מחוונים"}},
 {"@type":"Offer","itemOffered":{"@type":"Service","name":"זיהוי צווארי בקבוק ושיפור תהליכים"}},
-{"@type":"Offer","itemOffered":{"@type":"Service","name":"הרחבת ידע ובניית אסטרטגיה ארגונית"}}]}},
-{"@type":"WebSite","url":"https://izhaktoashi-droid.github.io/consulting-website/","name":"Mogatek","inLanguage":"he-IL"},
-{"@type":"FAQPage","mainEntity":[
-{"@type":"Question","name":"מהם שירותי מצוינות תפעולית לארגונים?","acceptedAnswer":{"@type":"Answer","text":"שירותים שמטרתם לשפר את אופן העבודה בארגון: התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק וחיסכון במשאבים."}},
-{"@type":"Question","name":"איך מזהים צווארי בקבוק בארגון?","acceptedAnswer":{"@type":"Answer","text":"ממפים את התהליכים, מגדירים מדדי KPI, מנתחים נתונים וחריגות ומאתרים את השלבים שמעכבים את הביצועים או מייקרים אותם, ואז בונים תוכנית שיפור."}},
-{"@type":"Question","name":"איך השירות חוסך משאבים?","acceptedAnswer":{"@type":"Answer","text":"על ידי צמצום בזבוז, יישור תהליכים, שליטה בעלויות ובקרה שוטפת, בלי הצורך להקים מחלקה פנימית קבועה."}},
-{"@type":"Question","name":"האם השירות כולל בניית אסטרטגיה ארגונית?","acceptedAnswer":{"@type":"Answer","text":"כן. אנחנו מרחיבים את הידע המקצועי בארגון ומשתמשים בנתוני המדידה כדי לבנות אסטרטגיה ויעדים שנתיים."}}]}
-]}
+{"@type":"Offer","itemOffered":{"@type":"Service","name":"הרחבת ידע ובניית אסטרטגיה ארגונית"}}
+]
+}
+},
+{
+"@type":"WebSite",
+"url":"https://izhaktoashi-droid.github.io/consulting-website/",
+"name":"Mogatek",
+"inLanguage":"he-IL"
+},
+{
+"@type":"FAQPage",
+"mainEntity":[
+{
+"@type":"Question",
+"name":"מהם שירותי מצוינות תפעולית לארגונים?",
+"acceptedAnswer":{"@type":"Answer","text":"שירותים שמטרתם לשפר את אופן העבודה בארגון: התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק וחיסכון במשאבים."}
+},
+{
+"@type":"Question",
+"name":"איך מזהים צווארי בקבוק בארגון?",
+"acceptedAnswer":{"@type":"Answer","text":"ממפים את התהליכים, מגדירים מדדי KPI, מנתחים נתונים וחריגות ומאתרים את השלבים שמעכבים את הביצועים או מייקרים אותם, ואז בונים תוכנית שיפור."}
+},
+{
+"@type":"Question",
+"name":"איך השירות חוסך משאבים?",
+"acceptedAnswer":{"@type":"Answer","text":"על ידי צמצום בזבוז, יישור תהליכים, שליטה בעלויות ובקרה שוטפת, בלי הצורך להקים מחלקה פנימית קבועה."}
+},
+{
+"@type":"Question",
+"name":"האם השירות כולל בניית אסטרטגיה ארגונית?",
+"acceptedAnswer":{"@type":"Answer","text":"כן. אנחנו מרחיבים את הידע המקצועי בארגון ומשתמשים בנתוני המדידה כדי לבנות אסטרטגיה ויעדים שנתיים."}
+}
+]
+}
+]
+}
 </script>
 </head>
+
 <body>
+
 <header>
 <div class="container nav">
-<a class="logo" href="./" aria-label="Mogatek – דף הבית"><img src="logo.jpg" alt="Mogatek" width="162" height="54" onerror="this.style.display='none'"></a>
-<button class="menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="menu" aria-label="תפריט"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
-<nav aria-label="ניווט ראשי"><ul class="nav-links" id="menu">
+
+<a class="logo" href="./" aria-label="Mogatek – דף הבית">
+<img src="logo.jpg"
+alt="לוגו Mogatek – מצוינות תפעולית לארגונים"
+width="324"
+height="108"
+decoding="async"
+onerror="this.style.display='none'">
+</a>
+
+<button class="menu-btn" id="menuBtn" type="button"
+aria-expanded="false" aria-controls="menu" aria-label="תפריט">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+stroke="currentColor" stroke-width="2" stroke-linecap="round">
+<path d="M4 7h16M4 12h16M4 17h16"/>
+</svg>
+</button>
+
+<nav aria-label="ניווט ראשי">
+<ul class="nav-links" id="menu">
 <li><a href="#services">שירותים</a></li>
 <li><a href="#process">איך זה עובד</a></li>
 <li><a href="#goals">מה תקבלו</a></li>
 <li><a href="#faq">שאלות נפוצות</a></li>
 <li><a class="btn btn-primary btn-sm" href="#contact">שיחת ייעוץ ללא עלות</a></li>
-</ul></nav>
+</ul>
+</nav>
+
 </div>
 </header>
 
 <main>
+
 <section class="hero">
 <div class="container hero-grid">
+
 <div>
-<h1>שירותי מצוינות תפעולית לארגונים: <em>חוסכים משאבים ובונים אסטרטגיה.</em></h1>
-<p class="lead">Mogatek מתניעה תהליכים ופרויקטים שנתיים, מודדת ובוקרת ביצועים ומזהה צווארי בקבוק, כדי שהארגון שלכם יעבוד יעיל יותר ויתקדם ליעדים ברורים.</p>
+
+<h1>
+שירותי מצוינות תפעולית לארגונים:
+<em>חוסכים משאבים ובונים אסטרטגיה.</em>
+</h1>
+
+<p class="lead">
+Mogatek מתניעה תהליכים ופרויקטים שנתיים, מודדת ובוקרת ביצועים ומזהה צווארי בקבוק, כדי שהארגון שלכם יעבוד יעיל יותר ויתקדם ליעדים ברורים.
+</p>
+
 <ul class="points">
 <li>התנעת תהליכים ופרויקטים שנתיים</li>
 <li>מדידה, בקרה וזיהוי צווארי בקבוק</li>
 <li>חיסכון במשאבים והרחבת הידע הארגוני</li>
 </ul>
+
 <div class="actions">
 <a class="btn btn-primary" href="#contact">תיאום שיחת ייעוץ ללא עלות</a>
 <a class="btn btn-wa" href="https://wa.me/972545363347" target="_blank" rel="noopener">שיחה בוואטסאפ</a>
 <a class="btn btn-ghost" href="tel:+972545363347">054-536-3347</a>
 </div>
+
 </div>
-<div class="hero-img"><img src="team-hero.jpg" width="1200" height="750" fetchpriority="high" decoding="async" alt="צוות Mogatek – שירותי מצוינות תפעולית לארגונים"></div>
+
+<div class="hero-img">
+<img src="team-hero.jpg"
+width="1200"
+height="750"
+fetchpriority="high"
+decoding="async"
+alt="צוות Mogatek – שירותי מצוינות תפעולית לארגונים">
+</div>
+
 </div>
 </section>
 
 <section id="services">
 <div class="container">
+
 <div class="head">
 <h2>במה אנחנו עוזרים לארגון</h2>
 <p class="sub">ארבעה שירותים שעובדים יחד: מההתנעה ועד אסטרטגיה מבוססת נתונים.</p>
 </div>
+
 <div class="grid">
-<article class="card"><h3>התנעת תהליכים ופרויקטים שנתיים</h3><p>בניית תוכנית עבודה שנתית, הגדרת פרויקטים ואחראים, ניהול ספקים ותקציב והובלה עד למסירה.</p></article>
-<article class="card"><h3>מדידה ובקרה</h3><p>הקמת מערך KPI, דוחות ולוחות מחוונים, ומעקב שוטף שמאפשר לראות איפה הארגון עומד.</p></article>
-<article class="card"><h3>זיהוי צווארי בקבוק</h3><p>מיפוי תהליכים וניתוח חריגות לאיתור העיכובים, הבזבוזים והעלויות הנסתרות, ובניית תוכנית שיפור.</p></article>
-<article class="card"><h3>הרחבת ידע ובניית אסטרטגיה</h3><p>הכשרות וליווי ניהולי בתחומי רכש, לוגיסטיקה ותפעול, ובניית אסטרטגיה ויעדים על בסיס נתוני המדידה.</p></article>
+<article class="card">
+<h3>התנעת תהליכים ופרויקטים שנתיים</h3>
+<p>בניית תוכנית עבודה שנתית, הגדרת פרויקטים ואחראים, ניהול ספקים ותקציב והובלה עד למסירה.</p>
+</article>
+
+<article class="card">
+<h3>מדידה ובקרה</h3>
+<p>הקמת מערך KPI, דוחות ולוחות מחוונים, ומעקב שוטף שמאפשר לראות איפה הארגון עומד.</p>
+</article>
+
+<article class="card">
+<h3>זיהוי צווארי בקבוק</h3>
+<p>מיפוי תהליכים וניתוח חריגות לאיתור העיכובים, הבזבוזים והעלויות הנסתרות, ובניית תוכנית שיפור.</p>
+</article>
+
+<article class="card">
+<h3>הרחבת ידע ובניית אסטרטגיה</h3>
+<p>הכשרות וליווי ניהולי בתחומי רכש, לוגיסטיקה ותפעול, ובניית אסטרטגיה ויעדים על בסיס נתוני המדידה.</p>
+</article>
 </div>
+
 </div>
 </section>
 
 <section id="process" class="alt">
 <div class="container">
-<div class="head"><h2>איך זה עובד</h2><p class="sub">תהליך קצר ושקוף, מהשיחה הראשונה ועד תוצאות מדידות.</p></div>
+
+<div class="head">
+<h2>איך זה עובד</h2>
+<p class="sub">תהליך קצר ושקוף, מהשיחה הראשונה ועד תוצאות מדידות.</p>
+</div>
+
 <ol class="steps">
-<li><h3>אבחון</h3><p>מבינים את הארגון, מקבלים תמונת מצב ומאתרים צווארי בקבוק.</p></li>
-<li><h3>תוכנית שנתית</h3><p>מגדירים פרויקטים, יעדים, אחראים ומדדי הצלחה.</p></li>
-<li><h3>התנעה וביצוע</h3><p>מניעים את התהליכים, מלווים את הצוותים ומנהלים את הפרויקטים.</p></li>
-<li><h3>מדידה ושיפור</h3><p>בקרה שוטפת, דוחות תקופתיים ושיפור מתמשך.</p></li>
+<li>
+<h3>אבחון</h3>
+<p>מבינים את הארגון, מקבלים תמונת מצב ומאתרים צווארי בקבוק.</p>
+</li>
+<li>
+<h3>תוכנית שנתית</h3>
+<p>מגדירים פרויקטים, יעדים, אחראים ומדדי הצלחה.</p>
+</li>
+<li>
+<h3>התנעה וביצוע</h3>
+<p>מניעים את התהליכים, מלווים את הצוותים ומנהלים את הפרויקטים.</p>
+</li>
+<li>
+<h3>מדידה ושיפור</h3>
+<p>בקרה שוטפת, דוחות תקופתיים ושיפור מתמשך.</p>
+</li>
 </ol>
+
 </div>
 </section>
 
 <section id="goals">
 <div class="container">
-<div class="head"><h2>מה הארגון מרוויח</h2><p class="sub">המטרה: לחסוך משאבים, להרחיב את הידע ולבנות אסטרטגיה ארגונית ברורה.</p></div>
-<div class="grid">
-<div class="card"><h3>חיסכון במשאבים</h3><p>פחות בזבוז, פחות עיכובים ושליטה טובה יותר בעלויות, בלי להקים מחלקה קבועה.</p></div>
-<div class="card"><h3>הרחבת ידע ארגוני</h3><p>הכשרות והעברת כלים לצוותים ולמנהלים, כך שהידע נשאר בארגון.</p></div>
-<div class="card"><h3>אסטרטגיה מבוססת נתונים</h3><p>החלטות ויעדים שנתיים שנבנים על מדידה אמיתית ולא על תחושות.</p></div>
+
+<div class="head">
+<h2>מה הארגון מרוויח</h2>
+<p class="sub">המטרה: לחסוך משאבים, להרחיב את הידע ולבנות אסטרטגיה ארגונית ברורה.</p>
 </div>
+
+<div class="grid">
+<div class="card">
+<h3>חיסכון במשאבים</h3>
+<p>פחות בזבוז, פחות עיכובים ושליטה טובה יותר בעלויות, בלי להקים מחלקה קבועה.</p>
+</div>
+
+<div class="card">
+<h3>הרחבת ידע ארגוני</h3>
+<p>הכשרות והעברת כלים לצוותים ולמנהלים, כך שהידע נשאר בארגון.</p>
+</div>
+
+<div class="card">
+<h3>אסטרטגיה מבוססת נתונים</h3>
+<p>החלטות ויעדים שנתיים שנבנים על מדידה אמיתית ולא על תחושות.</p>
+</div>
+</div>
+
 </div>
 </section>
 
 <section id="faq" class="alt">
 <div class="container">
-<div class="head"><h2>שאלות נפוצות</h2></div>
+
+<div class="head">
+<h2>שאלות נפוצות</h2>
+</div>
+
 <div class="faq">
-<details><summary>מהם שירותי מצוינות תפעולית לארגונים?</summary><p>שירותים שמטרתם לשפר את אופן העבודה בארגון: התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק וחיסכון במשאבים.</p></details>
-<details><summary>איך מזהים צווארי בקבוק בארגון?</summary><p>ממפים את התהליכים, מגדירים מדדי KPI, מנתחים נתונים וחריגות ומאתרים את השלבים שמעכבים את הביצועים או מייקרים אותם, ואז בונים תוכנית שיפור.</p></details>
-<details><summary>איך השירות חוסך משאבים?</summary><p>על ידי צמצום בזבוז, יישור תהליכים, שליטה בעלויות ובקרה שוטפת, בלי הצורך להקים מחלקה פנימית קבועה.</p></details>
-<details><summary>האם השירות כולל בניית אסטרטגיה ארגונית?</summary><p>כן. אנחנו מרחיבים את הידע המקצועי בארגון ומשתמשים בנתוני המדידה כדי לבנות אסטרטגיה ויעדים שנתיים.</p></details>
+
+<details>
+<summary>מהם שירותי מצוינות תפעולית לארגונים?</summary>
+<p>שירותים שמטרתם לשפר את אופן העבודה בארגון: התנעת תהליכים ופרויקטים שנתיים, מדידה ובקרה, זיהוי צווארי בקבוק וחיסכון במשאבים.</p>
+</details>
+
+<details>
+<summary>איך מזהים צווארי בקבוק בארגון?</summary>
+<p>ממפים את התהליכים, מגדירים מדדי KPI, מנתחים נתונים וחריגות ומאתרים את השלבים שמעכבים את הביצועים או מייקרים אותם, ואז בונים תוכנית שיפור.</p>
+</details>
+
+<details>
+<summary>איך השירות חוסך משאבים?</summary>
+<p>על ידי צמצום בזבוז, יישור תהליכים, שליטה בעלויות ובקרה שוטפת, בלי הצורך להקים מחלקה פנימית קבועה.</p>
+</details>
+
+<details>
+<summary>האם השירות כולל בניית אסטרטגיה ארגונית?</summary>
+<p>כן. אנחנו מרחיבים את הידע המקצועי בארגון ומשתמשים בנתוני המדידה כדי לבנות אסטרטגיה ויעדים שנתיים.</p>
+</details>
+
 </div>
 </div>
 </section>
 
 <section id="contact">
 <div class="container">
-<div class="head"><h2>תיאום שיחת ייעוץ ללא עלות</h2><p class="sub">השאירו פרטים ונחזור אליכם לבחינת הצורך והיקף העבודה.</p></div>
-<form class="form" action="https://formsubmit.co/izhaktoashi@gmail.com" method="POST">
+
+<div class="head">
+<h2>תיאום שיחת ייעוץ ללא עלות</h2>
+<p class="sub">השאירו פרטים ונחזור אליכם לבחינת הצורך והיקף העבודה.</p>
+</div>
+
+<form class="form"
+action="https://formsubmit.co/izhaktoashi@gmail.com"
+method="POST"
+accept-charset="UTF-8">
+
 <input type="hidden" name="_subject" value="פנייה חדשה מאתר Mogatek">
 <input type="hidden" name="_template" value="table">
+<input type="hidden" name="_url" value="https://izhaktoashi-droid.github.io/consulting-website/">
 <input type="hidden" name="_captcha" value="true">
-<input type="hidden" name="_next" value="https://izhaktoashi-droid.github.io/consulting-website/thank-you.html">
+
 <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+
 <div class="row">
-<div class="field"><label for="full_name">שם מלא *</label><input id="full_name" name="full_name" required autocomplete="name"></div>
-<div class="field"><label for="company">שם הארגון</label><input id="company" name="company" autocomplete="organization"></div>
+
+<div class="field">
+<label for="full_name">שם מלא *</label>
+<input id="full_name" name="full_name" required autocomplete="name">
 </div>
+
+<div class="field">
+<label for="company">שם הארגון</label>
+<input id="company" name="company" autocomplete="organization">
+</div>
+
+</div>
+
 <div class="row">
-<div class="field"><label for="phone">טלפון *</label><input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel"></div>
-<div class="field"><label for="email">דוא״ל *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+
+<div class="field">
+<label for="phone">טלפון *</label>
+<input id="phone" name="phone" type="tel" required autocomplete="tel" inputmode="tel">
 </div>
-<div class="field"><label for="service">במה אתם מתעניינים?</label>
+
+<div class="field">
+<label for="email">דוא״ל *</label>
+<input id="email" name="email" type="email" required autocomplete="email">
+</div>
+
+</div>
+
+<div class="field">
+<label for="service">במה אתם מתעניינים?</label>
 <select id="service" name="service">
 <option value="">בחרו תחום</option>
 <option>התנעת תהליכים ופרויקטים שנתיים</option>
@@ -229,24 +877,49 @@ footer p{margin-top:8px}footer a{color:#ffb366}
 <option>זיהוי צווארי בקבוק</option>
 <option>הכשרות ובניית אסטרטגיה ארגונית</option>
 <option>שירות משולב / אחר</option>
-</select></div>
-<div class="field"><label for="message">כמה מילים על הצורך שלכם</label><textarea id="message" name="message"></textarea></div>
+</select>
+</div>
+
+<div class="field">
+<label for="message">כמה מילים על הצורך שלכם</label>
+<textarea id="message" name="message"></textarea>
+</div>
+
 <button class="btn" type="submit">שליחת פנייה</button>
-<p class="note">הפרטים נשלחים ישירות ליצחק ומשמשים רק לחזרה אליכם.</p>
+
+<p class="note">
+לאחר השליחה תועברו למסך אישור של FormSubmit.
+הפרטים ישמשו ליצירת קשר בנוגע לפנייתכם.
+</p>
+
 </form>
+
 <div class="alt-contact">
 <a class="btn btn-wa" href="https://wa.me/972545363347" target="_blank" rel="noopener">שיחה מהירה ב-WhatsApp</a>
 <a class="btn btn-primary" href="mailto:izhaktoashi@gmail.com">שליחת מייל</a>
 </div>
+
 </div>
 </section>
+
 </main>
 
 <footer>
 <div class="container">
-<a class="flogo" href="./"><img src="logo.jpg" alt="Mogatek" width="126" height="42" onerror="this.parentElement.style.display='none'"></a>
+
+<a class="flogo" href="./">
+<img src="logo.jpg" alt="Mogatek" width="126" height="42"
+onerror="this.parentElement.style.display='none'">
+</a>
+
 <p>שירותי מצוינות תפעולית לארגונים: התנעת תהליכים, מדידה ובקרה, זיהוי צווארי בקבוק ובניית אסטרטגיה.</p>
-<p>© <span id="year">2026</span> Mogatek · כל הזכויות שמורות · <a href="https://wa.me/972545363347" target="_blank" rel="noopener">WhatsApp 054-536-3347</a> · <a href="mailto:izhaktoashi@gmail.com">izhaktoashi@gmail.com</a></p>
+
+<p>
+© <span id="year">2026</span> Mogatek · כל הזכויות שמורות ·
+<a href="https://wa.me/972545363347" target="_blank" rel="noopener">WhatsApp 054-536-3347</a> ·
+<a href="mailto:izhaktoashi@gmail.com">izhaktoashi@gmail.com</a>
+</p>
+
 </div>
 </footer>
 
@@ -258,9 +931,22 @@ footer p{margin-top:8px}footer a{color:#ffb366}
 
 <script>
 document.getElementById('year').textContent=new Date().getFullYear();
-const menu=document.getElementById('menu'),mb=document.getElementById('menuBtn');
-mb.addEventListener('click',()=>{const o=menu.classList.toggle('open');mb.setAttribute('aria-expanded',o)});
-menu.addEventListener('click',e=>{if(e.target.closest('a')){menu.classList.remove('open');mb.setAttribute('aria-expanded','false')}});
+
+const menu=document.getElementById('menu');
+const mb=document.getElementById('menuBtn');
+
+mb.addEventListener('click',()=>{
+const o=menu.classList.toggle('open');
+mb.setAttribute('aria-expanded',o);
+});
+
+menu.addEventListener('click',e=>{
+if(e.target.closest('a')){
+menu.classList.remove('open');
+mb.setAttribute('aria-expanded','false');
+}
+});
 </script>
+
 </body>
 </html>
